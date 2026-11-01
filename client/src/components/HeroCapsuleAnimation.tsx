@@ -6,7 +6,7 @@ import { ArrowDown } from "lucide-react";
 // Register GSAP plugin
 gsap.registerPlugin(ScrollTrigger);
 
-const img = { hero: "/city-aerial.jpg" };
+const img = { hero: "/city-aerial.webp" };
 
 // Preload image
 const preloadImage = (src: string) => {
@@ -214,7 +214,7 @@ export function HeroCapsuleAnimation() {
               loop
               playsInline
               preload="auto"
-              poster="/city-aerial.jpg"
+              poster="/city-aerial.webp"
               style={{
                 position: "absolute",
                 top: 0,
@@ -440,7 +440,7 @@ export function HeroCapsuleAnimation() {
             height: "65vh",
             borderRadius: "200px 200px 0px 0px",
             boxShadow: "0 20px 60px rgba(0,0,0,0.3)",
-            backgroundImage: "url(/mobile_city_aerial.jpg)",
+            backgroundImage: "url(/mobile_city_aerial.webp)",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

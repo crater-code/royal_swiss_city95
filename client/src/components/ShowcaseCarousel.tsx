@@ -71,6 +71,8 @@ export function ShowcaseCarousel({ cards }: { cards: any[] }) {
             <img 
               src={prevCard.image} 
               alt="Previous project"
+              width={120}
+              height={280}
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
               loading="lazy"
             />
@@ -90,6 +92,8 @@ export function ShowcaseCarousel({ cards }: { cards: any[] }) {
             <img 
               src={currentCard.image} 
               alt={currentCard.title} 
+              width={300}
+              height={280}
               style={{ 
                 width: "100%", 
                 height: "100%", 
@@ -121,6 +125,8 @@ export function ShowcaseCarousel({ cards }: { cards: any[] }) {
             <img 
               src={nextCard.image} 
               alt="Next project"
+              width={120}
+              height={280}
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
               loading="lazy"
             />
