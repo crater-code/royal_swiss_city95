@@ -399,7 +399,7 @@ export default function Developer() {
         <a href="https://youtube.com/@royalswisscity" target="_blank" rel="noopener noreferrer" title="YouTube"><Youtube size={24} /></a>
         <a href="https://x.com/royalswisscity" target="_blank" rel="noopener noreferrer" title="X"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.637l-5.1-6.694-5.867 6.694h-3.306l7.733-8.835L2.25 2.25h6.814l4.882 6.45L18.244 2.25zM17.083 18.386h1.83L6.959 4.155H5.049l12.034 14.231z" /></svg></a>
       </div>
-      <div className="footer-contact"><b>Engineering the Nation Since 1962</b><span>© 2026 HABIB RAFIQ CONSTRUCTION PVT LTD · PRIVACY POLICY · SITEMAP</span></div>
+      <div className="footer-contact"><b>Engineering the Nation Since 1962</b><span>© 2026 HABIB RAFIQ CONSTRUCTION PVT LTD · PRIVACY POLICY · <a href="/sitemap.html" style={{ color: "inherit", textDecoration: "none" }}>SITEMAP</a></span></div>
     </footer>
 
     <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>

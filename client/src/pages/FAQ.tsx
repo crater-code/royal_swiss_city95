@@ -1229,7 +1229,7 @@ export default function FAQ() {
 
         <div className="footer-contact">
           <b>Where life happens.</b>
-          <span>© 2026 ROYAL SWISS CITY · PRIVACY POLICY · SITEMAP</span>
+          <span>© 2026 ROYAL SWISS CITY · PRIVACY POLICY · <a href="/sitemap.html" style={{ color: "inherit", textDecoration: "none" }}>SITEMAP</a></span>
         </div>
       </footer>
     </main>

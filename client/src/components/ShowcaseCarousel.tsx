@@ -129,13 +129,20 @@ export function ShowcaseCarousel({ cards }: { cards: any[] }) {
       </div>
 
       {/* Carousel Indicators */}
-      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "8px", marginTop: "16px" }}>
+      <div 
+        role="tablist" 
+        aria-label="Project showcase slides" 
+        style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "8px", marginTop: "16px" }}
+      >
         {cards.map((_, index) => (
-          <div
+          <button
+            type="button"
             key={index}
             style={{
               width: "8px",
               height: "8px",
+              padding: 0,
+              border: "none",
               borderRadius: "50%",
               backgroundColor: index === currentIndex ? "#8B6F47" : "#d4c5a9",
               cursor: "pointer",
@@ -143,6 +150,7 @@ export function ShowcaseCarousel({ cards }: { cards: any[] }) {
             }}
             onClick={() => setCurrentIndex(index)}
             aria-label={`Go to slide ${index + 1}`}
+            aria-current={index === currentIndex ? "true" : undefined}
           />
         ))}
       </div>

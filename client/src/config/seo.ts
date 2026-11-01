@@ -153,6 +153,13 @@ export const SEO_CONFIG = {
       keywords: "Royal Swiss City inquiry, plot prices, payment plan, contact Royal Swiss City, investment opportunity, booking information",
       canonical: "https://royalswisscity.com/enquire",
     },
+
+    faq: {
+      title: "FAQ & Buyer Knowledge Base - Royal Swiss City Lahore | Habib Rafiq",
+      description: "Find verified answers to common questions about Royal Swiss City Lahore. Explore residential & commercial plot sizes, flexible payment installment plans, legal approvals, NOC status, and HRL CONSTRUCTION PVT LIMITED development milestones.",
+      keywords: "Royal Swiss City FAQ, frequently asked questions, royal swiss city plots, lahore gated community, property investment lahore, habib rafiq legacy, plot prices lahore",
+      canonical: "https://royalswisscity.com/faq",
+    },
   },
 
   // Structured Data (Schema.org)
@@ -162,7 +169,7 @@ export const SEO_CONFIG = {
       "@type": "Organization",
       "name": "Royal Swiss City",
       "url": "https://royalswisscity.com",
-      "logo": "https://royalswisscity.com/logo.png",
+      "logo": "https://royalswisscity.com/logo.webp",
       "description": "Premium gated community in Lahore, Pakistan with 60+ years of Habib Rafiq legacy",
       "sameAs": [
         "https://www.facebook.com/royalswisscity",
@@ -190,7 +197,7 @@ export const SEO_CONFIG = {
       "@type": "RealEstateAgent",
       "name": "Royal Swiss City",
       "description": "Best gated community and residential society in Lahore",
-      "image": "https://royalswisscity.com/city-aerial.jpg",
+      "image": "https://royalswisscity.com/desktop_city_aerial.webp",
       "areaServed": ["Lahore", "Punjab", "Pakistan", "International"],
       "priceRange": "$$$$",
       "url": "https://royalswisscity.com",

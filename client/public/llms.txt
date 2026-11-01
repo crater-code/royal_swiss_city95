@@ -8,8 +8,8 @@ Royal Swiss City represents a new standard in premium real estate development in
 
 - [Home Page](https://royalswisscity.com): Overview of Royal Swiss City with hero section and key highlights
 - [The City](https://royalswisscity.com/the-city): Detailed information about community features, amenities, location benefits, and infrastructure
-- [Developer](https://royalswisscity.com/developer): Information about Habib Rafiq, development expertise, and company history
-- [Projects](https://royalswisscity.com/projects): Showcase of past and current projects by Habib Rafiq
+- [Developer](https://royalswisscity.com/developer): Information about Habib Rafiq, 60+ years development expertise, and portfolio of iconic projects
+- [FAQ](https://royalswisscity.com/faq): Comprehensive answers to plot sizes, payment plans, NOC status, and community guidelines
 - [Enquire](https://royalswisscity.com/enquire): Contact form for inquiries about properties and investment opportunities
 
 ## Key Information

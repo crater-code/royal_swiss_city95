@@ -93,6 +93,12 @@
   <FilesMatch "\.webm$">
     Header set Content-Type "video/webm"
   </FilesMatch>
+  
+  # Manifests & JSON - CORS for AI Agents & Registries
+  <FilesMatch "\.json$">
+    Header set Access-Control-Allow-Origin "*"
+    Header set Content-Type "application/json; charset=utf-8"
+  </FilesMatch>
 </IfModule>
 
 # ============================================================
@@ -107,9 +113,9 @@
 # ENABLE MOD_REWRITE - For SPA routing
 # ============================================================
 <IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteBase /
-  
+  # Redirect deprecated sitemaps
+  RewriteRule ^sitemap-urdu\.xml$ /sitemap.xml [R=301,L]
+
   # Don't rewrite existing files or directories
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d

@@ -478,7 +478,7 @@ export default function Home() {
 
     </section>
 
-    <section className="future-section reveal-section" style={{ backgroundImage: window.innerWidth > 768 ? "url('/thefuture_bg_desktop.webp')" : "none", backgroundSize: window.innerWidth > 768 ? "1000px 600px" : "280px auto", backgroundPosition: window.innerWidth > 768 ? "top -50px right" : "0px 0px", backgroundRepeat: "no-repeat", minHeight: window.innerWidth > 768 ? "350px" : "400px", display: "flex", flexDirection: "column", justifyContent: "flex-start", paddingTop: "0px", paddingLeft: window.innerWidth > 768 ? "8vw" : "8vw", paddingRight: "8vw", backgroundColor: "#f4f4f4", backgroundClip: "padding-box" }}>
+    <section id="features" className="future-section reveal-section" style={{ backgroundImage: window.innerWidth > 768 ? "url('/thefuture_bg_desktop.webp')" : "none", backgroundSize: window.innerWidth > 768 ? "1000px 600px" : "280px auto", backgroundPosition: window.innerWidth > 768 ? "top -50px right" : "0px 0px", backgroundRepeat: "no-repeat", minHeight: window.innerWidth > 768 ? "350px" : "400px", display: "flex", flexDirection: "column", justifyContent: "flex-start", paddingTop: "0px", paddingLeft: window.innerWidth > 768 ? "8vw" : "8vw", paddingRight: "8vw", backgroundColor: "#f4f4f4", backgroundClip: "padding-box" }}>
       {window.innerWidth <= 768 && (
         <div style={{ display: "flex", justifyContent: "center", marginBottom: "0px", width: "100%", marginLeft: "-8vw", marginRight: "-8vw", paddingLeft: "8vw", paddingRight: "8vw" }}>
           <img src="/thefuture_bg_mobile.webp" alt="The Future - Royal Swiss City Vision for Sustainable Development in Lahore" width={500} height={300} style={{ width: "90vw", maxWidth: "500px", height: "auto", display: "block", border: "none" }} />
@@ -522,7 +522,7 @@ export default function Home() {
       </div>
     </section>
 
-    <section style={{ background: "linear-gradient(135deg, #fae3bb 0%, #c9bfb3 50%, #d6d0c6 100%)", padding: "40px 0 80px 0" }}>
+    <section id="residential-plots" style={{ background: "linear-gradient(135deg, #fae3bb 0%, #c9bfb3 50%, #d6d0c6 100%)", padding: "40px 0 80px 0" }}>
       <div style={{ maxWidth: "100%", margin: "0 auto", paddingLeft: window.innerWidth <= 768 ? "4vw" : "8vw", paddingRight: window.innerWidth <= 768 ? "4vw" : "8vw" }}>
         <div style={{ textAlign: "center", marginBottom: "40px" }}>
           <span style={{ fontSize: "12px", letterSpacing: "0.15em", textTransform: "uppercase", color: "#b2996a", margin: "0 0 12px 0", fontWeight: 500, display: "block" }}>THE OPPORTUNITY</span>
@@ -598,7 +598,7 @@ export default function Home() {
           </div>
 
           {/* Commercial Card 1 */}
-          <div style={{ background: "#fff", borderRadius: "8px", border: "1px solid #e0d9d1", overflow: "hidden" }}>
+          <div id="commercial-plots" style={{ background: "#fff", borderRadius: "8px", border: "1px solid #e0d9d1", overflow: "hidden" }}>
             <div style={{ height: "120px", overflow: "hidden", backgroundColor: "#f0f0f0" }}>
               <img src="/commerical_plots.webp" alt="Commercial Plots in Royal Swiss City - MARLA 2, 4, and 8 Sizes" width={300} height={100} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
             </div>
@@ -654,6 +654,12 @@ export default function Home() {
                   key={`group1-${i}`} 
                   className="partner-tile"
                   onClick={() => setSelectedDealer(dealer)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      setSelectedDealer(dealer);
+                    }
+                  }}
                   role="button"
                   tabIndex={0}
                   title={dealer.name}
@@ -676,15 +682,11 @@ export default function Home() {
                 <div 
                   key={`group2-${i}`} 
                   className="partner-tile"
-                  onClick={() => setSelectedDealer(dealer)}
-                  role="button"
-                  tabIndex={0}
-                  title={dealer.name}
-                  aria-label={dealer.name}
+                  tabIndex={-1}
                 >
                   <div className="partner-tile-logo-wrap">
                     {dealer.logo ? (
-                      <img src={dealer.logo} alt={dealer.name} loading="lazy" />
+                      <img src={dealer.logo} alt="" loading="lazy" />
                     ) : (
                       <span style={{ fontSize: "12px", color: "#256131", fontWeight: 700 }}>{dealer.name}</span>
                     )}
@@ -764,7 +766,7 @@ export default function Home() {
           })}
         </div>
       </div>
-      <div className="footer-socials"><a href="https://instagram.com/royalswisscity" target="_blank" rel="noopener noreferrer" title="Instagram"><Instagram size={24} /></a><a href="https://facebook.com/royalswisscity" target="_blank" rel="noopener noreferrer" title="Facebook"><Facebook size={24} /></a><a href="https://tiktok.com/@royalswisscity" target="_blank" rel="noopener noreferrer" title="TikTok"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.68v13.67a2.4 2.4 0 0 1-2.4 2.4 2.4 2.4 0 0 1-2.4-2.4 2.4 2.4 0 0 1 2.4-2.4c.34 0 .67.05.98.15V9.41a5.81 5.81 0 0 0-.98-.08 6.04 6.04 0 0 0-6.04 6.04 6.04 6.04 0 0 0 6.04 6.04 6.04 6.04 0 0 0 6.04-6.04v-3.1a7.7 7.7 0 0 0 3.77 1.01V9.81a4.77 4.77 0 0 1-.77-.06z" /></svg></a><a href="https://linkedin.com/company/royalswisscity" target="_blank" rel="noopener noreferrer" title="LinkedIn"><Linkedin size={24} /></a><a href="https://youtube.com/@royalswisscity" target="_blank" rel="noopener noreferrer" title="YouTube"><Youtube size={24} /></a><a href="https://x.com/royalswisscity" target="_blank" rel="noopener noreferrer" title="X"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.637l-5.1-6.694-5.867 6.694h-3.306l7.733-8.835L2.25 2.25h6.814l4.882 6.45L18.244 2.25zM17.083 18.386h1.83L6.959 4.155H5.049l12.034 14.231z" /></svg></a></div><div className="footer-contact"><b>Where life happens.</b><span>© 2026 ROYAL SWISS CITY · PRIVACY POLICY · SITEMAP</span></div></footer>
+      <div className="footer-socials"><a href="https://instagram.com/royalswisscity" target="_blank" rel="noopener noreferrer" title="Instagram"><Instagram size={24} /></a><a href="https://facebook.com/royalswisscity" target="_blank" rel="noopener noreferrer" title="Facebook"><Facebook size={24} /></a><a href="https://tiktok.com/@royalswisscity" target="_blank" rel="noopener noreferrer" title="TikTok"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.68v13.67a2.4 2.4 0 0 1-2.4 2.4 2.4 2.4 0 0 1-2.4-2.4 2.4 2.4 0 0 1 2.4-2.4c.34 0 .67.05.98.15V9.41a5.81 5.81 0 0 0-.98-.08 6.04 6.04 0 0 0-6.04 6.04 6.04 6.04 0 0 0 6.04 6.04 6.04 6.04 0 0 0 6.04-6.04v-3.1a7.7 7.7 0 0 0 3.77 1.01V9.81a4.77 4.77 0 0 1-.77-.06z" /></svg></a><a href="https://linkedin.com/company/royalswisscity" target="_blank" rel="noopener noreferrer" title="LinkedIn"><Linkedin size={24} /></a><a href="https://youtube.com/@royalswisscity" target="_blank" rel="noopener noreferrer" title="YouTube"><Youtube size={24} /></a><a href="https://x.com/royalswisscity" target="_blank" rel="noopener noreferrer" title="X"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.637l-5.1-6.694-5.867 6.694h-3.306l7.733-8.835L2.25 2.25h6.814l4.882 6.45L18.244 2.25zM17.083 18.386h1.83L6.959 4.155H5.049l12.034 14.231z" /></svg></a></div><div className="footer-contact"><b>Where life happens.</b><span>© 2026 ROYAL SWISS CITY · PRIVACY POLICY · <a href="/sitemap.html" style={{ color: "inherit", textDecoration: "none" }}>SITEMAP</a></span></div></footer>
 
     <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
       <div className="mobile-menu__top">

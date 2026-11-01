@@ -20,6 +20,8 @@ export default function App() {
     page = <TheCity />;
   } else if (location === "/faq") {
     page = <FAQ />;
+  } else if (location === "/projects") {
+    page = <Developer />;
   } else {
     page = <Home />;
   }

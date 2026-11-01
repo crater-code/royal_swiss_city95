@@ -6,11 +6,11 @@
   <!-- Homepage -->
   <url>
     <loc>https://royalswisscity.com/</loc>
-    <lastmod>2026-09-24T00:00:00Z</lastmod>
+    <lastmod>2026-11-02T00:00:00Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://royalswisscity.com/city-aerial.jpg</image:loc>
+      <image:loc>https://royalswisscity.com/desktop_city_aerial.webp</image:loc>
       <image:title>Royal Swiss City - Best Gated Community in Lahore</image:title>
     </image:image>
     <image:image>
@@ -22,7 +22,7 @@
   <!-- The City Page -->
   <url>
     <loc>https://royalswisscity.com/the-city</loc>
-    <lastmod>2026-09-24T00:00:00Z</lastmod>
+    <lastmod>2026-11-02T00:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <image:image>
@@ -35,12 +35,12 @@
     </image:image>
   </url>
 
-  <!-- Projects Page -->
+  <!-- Developer & Projects Page -->
   <url>
-    <loc>https://royalswisscity.com/projects</loc>
-    <lastmod>2026-09-24T00:00:00Z</lastmod>
+    <loc>https://royalswisscity.com/developer</loc>
+    <lastmod>2026-11-02T00:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.90</priority>
     <image:image>
       <image:loc>https://royalswisscity.com/convention-centre-islamabad.webp</image:loc>
       <image:title>Convention Center Islamabad - Habib Rafiq Project</image:title>
@@ -57,14 +57,6 @@
       <image:loc>https://royalswisscity.com/grand-jamia-mosque-bahria-town-lahore.webp</image:loc>
       <image:title>Grand Jamia Mosque Bahria Town Lahore - 70,000 Capacity</image:title>
     </image:image>
-  </url>
-
-  <!-- Developer Page -->
-  <url>
-    <loc>https://royalswisscity.com/developer</loc>
-    <lastmod>2026-09-24T00:00:00Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
     <image:image>
       <image:loc>https://royalswisscity.com/hrl-highrise.webp</image:loc>
       <image:title>Habib Rafiq - Real Estate Developer with 60+ Years Legacy</image:title>
@@ -82,7 +74,7 @@
   <!-- FAQ Page -->
   <url>
     <loc>https://royalswisscity.com/faq</loc>
-    <lastmod>2026-09-24T00:00:00Z</lastmod>
+    <lastmod>2026-11-02T00:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -90,25 +82,9 @@
   <!-- Enquire Page -->
   <url>
     <loc>https://royalswisscity.com/enquire</loc>
-    <lastmod>2026-09-24T00:00:00Z</lastmod>
+    <lastmod>2026-11-02T00:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
-  </url>
-
-  <!-- Dealers Page -->
-  <url>
-    <loc>https://royalswisscity.com/dealers</loc>
-    <lastmod>2026-09-24T00:00:00Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <!-- Partnerships Page -->
-  <url>
-    <loc>https://royalswisscity.com/partnerships</loc>
-    <lastmod>2026-09-24T00:00:00Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
   </url>
 
 </urlset>
