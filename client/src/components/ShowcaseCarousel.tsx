@@ -136,8 +136,8 @@ export function ShowcaseCarousel({ cards }: { cards: any[] }) {
 
       {/* Carousel Indicators */}
       <div 
-        role="tablist" 
-        aria-label="Project showcase slides" 
+        role="group" 
+        aria-label="Project showcase slide indicators" 
         style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "8px", marginTop: "16px" }}
       >
         {cards.map((_, index) => (
