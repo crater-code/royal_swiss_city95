@@ -1,0 +1,9 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/royalswi/public_html
+    - /bin/mkdir -p $DEPLOYPATH
+    - /bin/cp -a dist/public/. $DEPLOYPATH
+    - /bin/cp -f dist/public/.htaccess $DEPLOYPATH
+    - /bin/cp -R dist/public/.well-known $DEPLOYPATH/ 2>/dev/null || true
+

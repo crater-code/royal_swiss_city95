@@ -1,0 +1,46 @@
+{
+  "$schema": "https://agenticresourcediscovery.org/spec/schemas/ard-entry.schema.json",
+  "specVersion": "0.91",
+  "@context": "https://agenticresourcediscovery.org/context/v1",
+  "host": {
+    "domain": "royalswisscity.com"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:royalswisscity.com:agent:knowledge-base",
+      "displayName": "Royal Swiss City Knowledge Base",
+      "type": "application/agent-skills+md",
+      "url": "https://royalswisscity.com/llms.txt",
+      "description": "Comprehensive knowledge base and discovery resource for Royal Swiss City Lahore, developed by Habib Rafiq (HRL). Contains verified details on residential and commercial plot sizes, pricing, installment payment plans, NOC approvals, and master plan amenities.",
+      "capabilities": [
+        "PlotSearch",
+        "PaymentPlanInfo",
+        "DeveloperLegacy",
+        "MasterPlanDetails"
+      ],
+      "representativeQueries": [
+        "What are the residential plot sizes and payment plans at Royal Swiss City Lahore?",
+        "Who is the developer of Royal Swiss City and what are their past projects?",
+        "Where is Royal Swiss City located along the M-2 motorway?",
+        "How can I book a 5 marla or 10 marla plot in Royal Swiss City?"
+      ]
+    },
+    {
+      "identifier": "urn:air:royalswisscity.com:service:property-inquiry",
+      "displayName": "Royal Swiss City Property Inquiry & Booking",
+      "type": "application/agent-card+json",
+      "url": "https://royalswisscity.com/enquire",
+      "description": "Direct inquiry and booking service for premium residential and commercial plots at Royal Swiss City Lahore.",
+      "capabilities": [
+        "PropertyBooking",
+        "InquirySubmission",
+        "DealerConsultation"
+      ],
+      "representativeQueries": [
+        "Submit a plot inquiry for Royal Swiss City Lahore",
+        "Book a commercial plot at Royal Swiss City",
+        "Contact Royal Swiss City authorized sales partner"
+      ]
+    }
+  ]
+}
