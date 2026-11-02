@@ -36,9 +36,11 @@ function Logo() {
 function Anchor({ item }: { item: string }) {
   if (item === "DEVELOPER") return <a href="/developer">{item}</a>;
   if (item === "HOME") return <a href="/">{item}</a>;
+  if (item === "THE CITY") return <a href="/the-city">{item}</a>;
+  if (item === "PAYMENT PLAN") return <a href="/payment-plan">{item}</a>;
+  if (item === "LOCATION") return <a href="/location">{item}</a>;
   if (item === "ENQUIRE") return <a href="/enquire">{item}</a>;
   if (item === "FAQ") return <a href="/faq">{item}</a>;
-  if (item === "THE CITY") return <a href="/the-city">{item}</a>;
   if (item === "PARTNERS/DEALERS" || item === "PARTNER" || item === "DEALER") return <a href="/#partner">{item}</a>;
   return <a href={`/#${item.toLowerCase().replaceAll(" ", "-")}`}>{item}</a>;
 }
@@ -63,16 +65,17 @@ export default function Enquire() {
     message: "",
   });
 
-  const nav = ["HOME", "THE CITY", "DEVELOPER", "FAQ", "PARTNERS/DEALERS", "ENQUIRE"];
-  const navMobile = ["HOME", "THE CITY", "DEVELOPER", "FAQ", "PARTNERS/DEALERS", "ENQUIRE"];
-  const footerLinks = ["Residential Plots", "Commercial Plots", "The City", "Developer", "Location", "FAQ", "Partner", "Enquire"];
+  const nav = ["HOME", "THE CITY", "PAYMENT PLAN", "LOCATION", "DEVELOPER", "ENQUIRE"];
+  const navMobile = ["HOME", "THE CITY", "PAYMENT PLAN", "LOCATION", "DEVELOPER", "ENQUIRE"];
+  const footerLinks = ["Residential Plots", "Commercial Plots", "Payment Plan", "Location", "The City", "Developer", "FAQ", "Enquire"];
   
   const footerDescriptions = {
     "Residential Plots": "Discover a range of residential plot sizes to suit your needs. Choose from MARLA 3.5, MARLA 5, MARLA 10, KANAL 1, and KANAL 2 options designed for modern living.",
     "Commercial Plots": "Explore commercial plot opportunities perfect for your business. Available in MARLA 2, MARLA 4, and MARLA 8 to accommodate various commercial ventures.",
+    "Payment Plan": "Official 3 to 4 year quarterly installment schedules for residential and commercial plots engineered by HRL Construction Pvt Limited.",
+    "Location": "Prime location on Ravi Riverfront, Lahore with direct connectivity to Lahore Ring Road, M-2 Motorway, and City Center.",
     "The City": "Discover a considered way to experience the city at Royal Swiss City.",
     "Developer": "Discover a considered way to experience developer at Royal Swiss City.",
-    "Location": "Discover a considered way to experience location at Royal Swiss City.",
     "FAQ": "Discover a considered way to experience faq at Royal Swiss City.",
     "Partner": "Discover a considered way to experience partner at Royal Swiss City.",
     "Enquire": "Discover a considered way to experience enquire at Royal Swiss City."
@@ -81,6 +84,8 @@ export default function Enquire() {
   const getFooterLink = (item: string): string => {
     switch (item) {
       case "The City": return "/the-city";
+      case "Payment Plan": return "/payment-plan";
+      case "Location": return "/location";
       case "Developer": return "/developer";
       case "FAQ": return "/faq";
       case "Partner": return "/#partner";
@@ -186,8 +191,9 @@ export default function Enquire() {
         title={SEO_CONFIG.pages.enquire.title}
         description={SEO_CONFIG.pages.enquire.description}
         keywords={SEO_CONFIG.pages.enquire.keywords}
-        canonical={SEO_CONFIG.pages.enquire.canonical}
-        language="en"
+        canonical="https://royalswisscity.com/enquire"
+        ogImage="https://royalswisscity.com/images/og-share.jpg"
+        structuredData={SEO_CONFIG.schema.organization}
       />
       
       {/* Breadcrumb Navigation */}
@@ -856,7 +862,7 @@ export default function Enquire() {
         
         <div className="footer-contact">
           <b>Where life happens.</b>
-          <span>© 2026 ROYAL SWISS CITY · PRIVACY POLICY · <a href="/sitemap.html" style={{ color: "inherit", textDecoration: "none" }}>SITEMAP</a></span>
+          <span>© 2026 ROYAL SWISS CITY · HRL CONSTRUCTION PVT LIMITED · PRIVACY POLICY · <a href="/sitemap.xml" style={{ color: "inherit", textDecoration: "none" }}>SITEMAP</a></span>
         </div>
       </footer>
 
@@ -871,6 +877,8 @@ export default function Enquire() {
             let href = "";
             if (item === "HOME") href = "/";
             else if (item === "THE CITY") href = "/the-city";
+            else if (item === "PAYMENT PLAN") href = "/payment-plan";
+            else if (item === "LOCATION") href = "/location";
             else if (item === "DEVELOPER") href = "/developer";
             else if (item === "ENQUIRE") href = "/enquire";
             else if (item === "FAQ") href = "/faq";

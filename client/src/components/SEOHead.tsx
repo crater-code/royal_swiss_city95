@@ -24,15 +24,15 @@ interface SEOHeadProps {
 }
 
 export function SEOHead({
-  title = "Royal Swiss City - Best Gated Community in Lahore",
-  description = "Premium gated community in Lahore with 60+ years of Habib Rafiq legacy. Best society for residential living in Pakistan.",
-  keywords = "best society lahore, gated community, luxury housing, habib rafiq",
-  canonical = "https://royalswisscity.com",
-  ogImage = "https://royalswisscity.com/og-image.jpg",
+  title = "Royal Swiss City Lahore | Official Portal | HRL Construction",
+  description = "Official website of Royal Swiss City Lahore by HRL Construction Pvt Limited. Explore luxury residential & commercial plots on Ravi Riverfront with flexible installment plans.",
+  keywords = "Royal Swiss City Lahore, payment plan, installment schedule, location map, HRL Construction Pvt Limited, Habib Rafiq, Ravi Riverfront",
+  canonical = "https://royalswisscity.com/",
+  ogImage = "https://royalswisscity.com/images/og-share.jpg",
   ogType = "website",
   ogTitle,
   ogDescription,
-  twitterImage = ogImage,
+  twitterImage,
   structuredData,
   language = "en",
   alternate = [],
@@ -62,35 +62,40 @@ export function SEOHead({
       element.setAttribute("content", content);
     };
 
+    const resolvedOgImage = ogImage || "https://royalswisscity.com/images/og-share.jpg";
+    const resolvedTwitterImage = twitterImage || resolvedOgImage;
+
     // Core Meta Tags
     setMeta("description", description);
     setMeta("keywords", keywords);
-    setMeta("author", "Habib Rafiq");
+    setMeta("author", "HRL Construction Pvt Limited");
     setMeta("viewport", "width=device-width, initial-scale=1.0, maximum-scale=5.0");
     setMeta("robots", `${noindex ? "noindex" : "index"},${nofollow ? "nofollow" : "follow"},max-snippet:-1,max-image-preview:large,max-video-preview:-1`);
     setMeta("googlebot", "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1");
     setMeta("language", language === "ur" ? "Urdu" : "English");
 
-    // Open Graph Tags
+    // Open Graph Tags (Standardized Global Technical SEO)
+    setMeta("og:site_name", "Royal Swiss City Lahore", true);
     setMeta("og:title", ogTitle || title, true);
     setMeta("og:description", ogDescription || description, true);
     setMeta("og:url", canonical, true);
-    setMeta("og:type", ogType, true);
-    setMeta("og:image", ogImage, true);
+    setMeta("og:type", ogType || "website", true);
+    setMeta("og:image", resolvedOgImage, true);
+    setMeta("og:image:alt", "Royal Swiss City Lahore Master Plan & Riverfront", true);
     setMeta("og:image:width", "1200", true);
     setMeta("og:image:height", "630", true);
-    setMeta("og:locale", language === "ur" ? "ur_PK" : "en_PK", true);
+    setMeta("og:locale", "en_PK", true);
     
     // Twitter Card Tags
     setMeta("twitter:card", "summary_large_image");
-    setMeta("twitter:title", title);
-    setMeta("twitter:description", description);
-    setMeta("twitter:image", twitterImage);
+    setMeta("twitter:title", ogTitle || title);
+    setMeta("twitter:description", ogDescription || description);
+    setMeta("twitter:image", resolvedTwitterImage);
     setMeta("twitter:site", "@royalswisscity");
-    setMeta("twitter:creator", "@habibrafiq");
+    setMeta("twitter:creator", "@royalswisscity");
 
     // Business Tags
-    setMeta("business:contact_data:street_address", "Royal Swiss City, Lahore");
+    setMeta("business:contact_data:street_address", "Ravi Riverfront Development Zone");
     setMeta("business:contact_data:locality", "Lahore");
     setMeta("business:contact_data:region", "Punjab");
     setMeta("business:contact_data:postal_code", "54000");
@@ -100,7 +105,7 @@ export function SEOHead({
     setMeta("theme-color", "#0B1E2B");
     setMeta("msapplication-TileColor", "#0B1E2B");
 
-    // Canonical Link
+    // Canonical Link (Self-referencing canonical on every route)
     let canonicalLink = document.querySelector("link[rel='canonical']");
     if (!canonicalLink) {
       canonicalLink = document.createElement("link");
@@ -110,10 +115,8 @@ export function SEOHead({
     canonicalLink.setAttribute("href", canonical);
 
     // Alternate Language Links (Hreflang)
-    // Remove old hreflang tags
     document.querySelectorAll("link[rel='alternate'][hreflang]").forEach((el) => el.remove());
 
-    // Add new hreflang tags
     alternate.forEach(({ hrefLang, href }) => {
       const altLink = document.createElement("link");
       altLink.setAttribute("rel", "alternate");
@@ -122,22 +125,22 @@ export function SEOHead({
       document.head.appendChild(altLink);
     });
 
-    // Add hreflang for x-default
     const xDefaultLink = document.createElement("link");
     xDefaultLink.setAttribute("rel", "alternate");
     xDefaultLink.setAttribute("hreflang", "x-default");
     xDefaultLink.setAttribute("href", canonical);
     document.head.appendChild(xDefaultLink);
 
-    // Structured Data (JSON-LD)
+    // Structured Data (Route-specific JSON-LD)
     if (structuredData) {
-      let scriptTag = document.querySelector('script[type="application/ld+json"]');
+      let scriptTag = document.querySelector('script[data-route-jsonld="true"]');
       if (!scriptTag) {
         scriptTag = document.createElement("script");
         scriptTag.setAttribute("type", "application/ld+json");
+        scriptTag.setAttribute("data-route-jsonld", "true");
         document.head.appendChild(scriptTag);
       }
-      scriptTag.innerHTML = JSON.stringify(structuredData);
+      scriptTag.textContent = JSON.stringify(structuredData, null, 2);
     }
 
     // Preconnect to external domains for performance

@@ -18,18 +18,19 @@ const SEO_KEYWORDS = {
   quinary: "luxury housing lahore",
   senary: "habib rafiq royal swiss city"
 };
-const nav = ["HOME", "THE CITY", "DEVELOPER", "FAQ", "PARTNERS/DEALERS", "ENQUIRE"];
-const navMobile = ["HOME", "THE CITY", "DEVELOPER", "FAQ", "PARTNERS/DEALERS", "ENQUIRE"];
-const footerLinks = ["Residential Plots", "Commercial Plots", "The City", "Developer", "Location", "FAQ", "Partner", "Enquire"];
+const nav = ["HOME", "THE CITY", "PAYMENT PLAN", "LOCATION", "DEVELOPER", "ENQUIRE"];
+const navMobile = ["HOME", "THE CITY", "PAYMENT PLAN", "LOCATION", "DEVELOPER", "ENQUIRE"];
+const footerLinks = ["Residential Plots", "Commercial Plots", "Payment Plan", "Location", "The City", "Developer", "FAQ", "Partner", "Enquire"];
 const footerDescriptions = {
   "Residential Plots": "Discover a range of residential plot sizes to suit your needs. Choose from MARLA 3.5, MARLA 5, MARLA 10, KANAL 1, and KANAL 2 options designed for modern living.",
   "Commercial Plots": "Explore commercial plot opportunities perfect for your business. Available in MARLA 2, MARLA 4, and MARLA 8 to accommodate various commercial ventures.",
-  "The City": "Discover a considered way to experience the city at Royal Swiss City.",
-  "Developer": "Discover a considered way to experience developer at Royal Swiss City.",
-  "Location": "Discover a considered way to experience location at Royal Swiss City.",
-  "FAQ": "Discover a considered way to experience faq at Royal Swiss City.",
-  "Partner": "Discover a considered way to experience partner at Royal Swiss City.",
-  "Enquire": "Discover a considered way to experience enquire at Royal Swiss City."
+  "Payment Plan": "Official 2026 payment plans and flexible 3 to 4 year quarterly installment schedules for residential and commercial plots.",
+  "Location": "Prime location on Lahore's Ravi Riverfront with direct connectivity to Lahore Ring Road, M-2 Motorway, and Allama Iqbal International Airport.",
+  "The City": "Discover sustainable riverfront urban living at Royal Swiss City featuring solar infrastructure and world-class amenities.",
+  "Developer": "Royal Swiss City is engineered and built by HRL Construction Pvt Limited (Habib Rafiq) with over 60 years of infrastructure leadership.",
+  "FAQ": "Frequently asked questions regarding booking process, possession schedules, legal approvals, and HRL development.",
+  "Partner": "Authorized marketing and sales partners network for Royal Swiss City.",
+  "Enquire": "Connect directly with our sales team for personalized consultation, payment plans, and site visits."
 };
 const communityCards = [
   { eyebrow: "BUILDINGS", title: "Convention Center Islamabad", body: "An EPC contract completed in record 11 months with 2,000 seats capacity and 18,000 m² area featuring advanced audio-visual facilities.", image: "/convention-centre-islamabad.webp" },
@@ -55,6 +56,12 @@ function Anchor({ item }: { item: string }) {
   }
   if (item === "HOME") {
     return <a href="/">{item}</a>
+  }
+  if (item === "PAYMENT PLAN") {
+    return <a href="/payment-plan">{item}</a>
+  }
+  if (item === "LOCATION") {
+    return <a href="/location">{item}</a>
   }
   if (item === "ENQUIRE") {
     return <a href="/enquire">{item}</a>
@@ -105,11 +112,7 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false); const [scrolled, setScrolled] = useState(false); const [scrollY, setScrollY] = useState(0); const [openFooter, setOpenFooter] = useState<string | null>(null); const [selectedDealer, setSelectedDealer] = useState<any>(null); const [isMobile, setIsMobile] = useState(typeof window !== "undefined" && window.innerWidth <= 768);
 
   // SEO Head - Home Page
-  const homePageStructuredData = {
-    ...SEO_CONFIG.schema.organization,
-    ...SEO_CONFIG.schema.realEstateProject,
-    "areaServed": ["Lahore", "Pakistan", "International"],
-  };
+  const homePageStructuredData = SEO_CONFIG.schema.home;
   useEffect(() => { let f = 0; const fn = () => { cancelAnimationFrame(f); f = requestAnimationFrame(() => { setScrollY(window.scrollY); setScrolled(window.scrollY > 28) }) }; fn(); window.addEventListener("scroll", fn, { passive: true }); return () => { cancelAnimationFrame(f); window.removeEventListener("scroll", fn) } }, []);
   useEffect(() => { const checkMobile = () => { const mobile = window.innerWidth <= 768; setIsMobile(mobile); console.log("Mobile check:", mobile, "Width:", window.innerWidth); }; checkMobile(); window.addEventListener("resize", checkMobile); return () => window.removeEventListener("resize", checkMobile); }, []);
   useEffect(() => { const o = new IntersectionObserver(es => es.forEach(e => e.isIntersecting && e.target.classList.add("is-visible")), { threshold: .12, rootMargin: "0px 0px -70% 0px" }); document.querySelectorAll(".reveal-section,.reveal-item").forEach(n => o.observe(n)); return () => o.disconnect() }, []);
@@ -131,15 +134,10 @@ export default function Home() {
       description={SEO_CONFIG.pages.home.description}
       keywords={SEO_CONFIG.pages.home.keywords}
       canonical={SEO_CONFIG.pages.home.canonical}
-      ogImage="https://royalswisscity.com/city-aerial.jpg"
-      ogDescription="Experience premium gated community living at Royal Swiss City - 60+ years of Habib Rafiq legacy"
+      ogImage="https://royalswisscity.com/images/og-share.jpg"
+      ogDescription={SEO_CONFIG.pages.home.description}
       language="en"
       structuredData={homePageStructuredData}
-      alternate={[
-        { hrefLang: "ur", href: "https://royalswisscity.com/ur" },
-        { hrefLang: "en-pk", href: "https://royalswisscity.com" },
-        { hrefLang: "en", href: "https://royalswisscity.com/en" },
-      ]}
     />
     
     {/* Breadcrumb Navigation */}
@@ -148,7 +146,7 @@ export default function Home() {
     <header className={`walk-header ${scrolled ? "is-scrolled" : ""}`}><button className="mobile-menu-trigger" aria-label="Menu" onClick={() => setMenuOpen(true)}><Menu size={22} strokeWidth={1.4} /></button><nav className="desktop-links desktop-links--left">{nav.slice(0, 3).map(item => <Anchor key={item} item={item} />)}</nav><a className="centered-brand" href="/"><Logo /></a><nav className="desktop-links desktop-links--right">{nav.slice(3).map(item => <Anchor key={item} item={item} />)}</nav></header>
     {/* Main H1 - Primary page topic for SEO */}
     <h1 style={{ position: "absolute", left: "-9999px", top: "-9999px", width: "1px", height: "1px", overflow: "hidden" }}>
-      Royal Swiss City Lahore - Best Gated Community & Luxury Housing by Habib Rafiq
+      Royal Swiss City Lahore – Premium Riverfront Living
     </h1>
     
     <HeroCapsuleAnimation />
@@ -369,10 +367,10 @@ export default function Home() {
       {/* Section Header */}
       <div className="legacy-section-header">
         <div className="header-title">
-          <h2>LEADERSHIP & LEGACY</h2>
+          <h2>Master Planned Community by HRL Construction Pvt Limited</h2>
           <span style={{ fontSize: "18px", fontWeight: 400, color: "#b2996a", letterSpacing: "0.1em", marginTop: "10px", display: "block" }}></span>
         </div>
-        <p className="header-subtitle">TWO GENERATIONS. ONE ENDURING VISION. | Building the best place to live in lahore since 1962</p>
+        <p className="header-subtitle">SIX DECADES OF ENGINEERING & INFRASTRUCTURE EXCELLENCE | Two Generations of Vision & Governance</p>
         <div className="header-divider">
           <span></span>
           <svg width="8" height="8" viewBox="0 0 8 8" fill="currentColor">
@@ -484,7 +482,7 @@ export default function Home() {
           <img src="/thefuture_bg_mobile.webp" alt="The Future - Royal Swiss City Vision for Sustainable Development in Lahore" width={500} height={300} style={{ width: "90vw", maxWidth: "500px", height: "auto", display: "block", border: "none" }} />
         </div>
       )}
-      <div style={{ display: "flex", flexDirection: "row", gap: "6vw", alignItems: "center", maxWidth: "100%", overflow: "hidden", paddingTop: window.innerWidth > 768 ? "20px" : "0px" }}><div style={{ flex: 1, minWidth: 0 }}><span className="section-kicker">THE FUTURE</span><h2 style={{ fontFamily: "var(--serif)", fontSize: "clamp(45px, 6vw, 85px)", fontWeight: 300, lineHeight: 0.84, marginBottom: "20px", color: "#1a3a52" }}>Built around<br /><em>sustainable living.</em></h2><p style={{ fontSize: "14px", lineHeight: 1.75, color: "#6b645c", maxWidth: "430px" }}>Royal Swiss City is designed with environmental responsibility at its core. From solar infrastructure to water management systems, every element reflects our commitment to creating a sustainable community for generations to come.</p></div></div>
+      <div style={{ display: "flex", flexDirection: "row", gap: "6vw", alignItems: "center", maxWidth: "100%", overflow: "hidden", paddingTop: window.innerWidth > 768 ? "20px" : "0px" }}><div style={{ flex: 1, minWidth: 0 }}><span className="section-kicker">THE FUTURE</span><h2 style={{ fontFamily: "var(--serif)", fontSize: "clamp(34px, 4.5vw, 64px)", fontWeight: 300, lineHeight: 1.15, marginBottom: "20px", color: "#1a3a52" }}>Sustainable Living on<br /><em>Lahore's Ravi Riverfront</em></h2><p style={{ fontSize: "14px", lineHeight: 1.75, color: "#6b645c", maxWidth: "430px" }}>Royal Swiss City is designed with environmental responsibility at its core. From solar infrastructure to water management systems, every element reflects our commitment to creating a sustainable community for generations to come.</p></div></div>
 
       {/* Sustainability Icons */}
       <div className="sustainability-icons-grid">
@@ -526,7 +524,7 @@ export default function Home() {
       <div style={{ maxWidth: "100%", margin: "0 auto", paddingLeft: window.innerWidth <= 768 ? "4vw" : "8vw", paddingRight: window.innerWidth <= 768 ? "4vw" : "8vw" }}>
         <div style={{ textAlign: "center", marginBottom: "40px" }}>
           <span style={{ fontSize: "12px", letterSpacing: "0.15em", textTransform: "uppercase", color: "#b2996a", margin: "0 0 12px 0", fontWeight: 500, display: "block" }}>THE OPPORTUNITY</span>
-          <h2 style={{ fontSize: "clamp(32px, 5vw, 56px)", fontFamily: "var(--serif)", fontWeight: 300, color: "#1a3a52", margin: "0", lineHeight: 1.2 }}>YOUR PLACE IN<br />WHAT COMES NEXT</h2>
+          <h2 style={{ fontSize: "clamp(30px, 4.5vw, 52px)", fontFamily: "var(--serif)", fontWeight: 300, color: "#1a3a52", margin: "0", lineHeight: 1.2 }}>Featured Residential &<br />Commercial Plot Sizes</h2>
         </div>
         {/* Mobile: 1 Residential + 1 Commercial */}
         <div style={{ display: window.innerWidth > 768 ? "none" : "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "12px", marginBottom: "60px" }} className="mobile-plot-options">
@@ -711,6 +709,8 @@ export default function Home() {
           {footerLinks.filter((_, i) => i % 2 === 0).map(item => {
             let learnMoreLink = "";
             if (item === "The City") learnMoreLink = "/the-city";
+            else if (item === "Payment Plan") learnMoreLink = "/payment-plan";
+            else if (item === "Location") learnMoreLink = "/location";
             else if (item === "Developer") learnMoreLink = "/developer";
             else if (item === "FAQ") learnMoreLink = "/faq";
             else if (item === "Partner") learnMoreLink = "/#partner";
@@ -740,6 +740,8 @@ export default function Home() {
           {footerLinks.filter((_, i) => i % 2 === 1).map(item => {
             let learnMoreLink = "";
             if (item === "The City") learnMoreLink = "/the-city";
+            else if (item === "Payment Plan") learnMoreLink = "/payment-plan";
+            else if (item === "Location") learnMoreLink = "/location";
             else if (item === "Developer") learnMoreLink = "/developer";
             else if (item === "FAQ") learnMoreLink = "/faq";
             else if (item === "Partner") learnMoreLink = "/#partner";
@@ -766,7 +768,17 @@ export default function Home() {
           })}
         </div>
       </div>
-      <div className="footer-socials"><a href="https://instagram.com/royalswisscity" target="_blank" rel="noopener noreferrer" title="Instagram"><Instagram size={24} /></a><a href="https://facebook.com/royalswisscity" target="_blank" rel="noopener noreferrer" title="Facebook"><Facebook size={24} /></a><a href="https://tiktok.com/@royalswisscity" target="_blank" rel="noopener noreferrer" title="TikTok"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.68v13.67a2.4 2.4 0 0 1-2.4 2.4 2.4 2.4 0 0 1-2.4-2.4 2.4 2.4 0 0 1 2.4-2.4c.34 0 .67.05.98.15V9.41a5.81 5.81 0 0 0-.98-.08 6.04 6.04 0 0 0-6.04 6.04 6.04 6.04 0 0 0 6.04 6.04 6.04 6.04 0 0 0 6.04-6.04v-3.1a7.7 7.7 0 0 0 3.77 1.01V9.81a4.77 4.77 0 0 1-.77-.06z" /></svg></a><a href="https://linkedin.com/company/royalswisscity" target="_blank" rel="noopener noreferrer" title="LinkedIn"><Linkedin size={24} /></a><a href="https://youtube.com/@royalswisscity" target="_blank" rel="noopener noreferrer" title="YouTube"><Youtube size={24} /></a><a href="https://x.com/royalswisscity" target="_blank" rel="noopener noreferrer" title="X"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.637l-5.1-6.694-5.867 6.694h-3.306l7.733-8.835L2.25 2.25h6.814l4.882 6.45L18.244 2.25zM17.083 18.386h1.83L6.959 4.155H5.049l12.034 14.231z" /></svg></a></div><div className="footer-contact"><b>Where life happens.</b><span>© 2026 ROYAL SWISS CITY · PRIVACY POLICY · <a href="/sitemap.html" style={{ color: "inherit", textDecoration: "none" }}>SITEMAP</a></span></div></footer>
+      <nav aria-label="Footer Quick Links" style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "16px 24px", padding: "20px 20px 8px 20px", borderTop: "1px solid rgba(255,255,255,0.12)", maxWidth: "1000px", margin: "16px auto 0 auto" }}>
+        <a href="/" style={{ color: "rgba(255,255,255,0.85)", fontSize: "11px", letterSpacing: "1px", textTransform: "uppercase" }}>Home</a>
+        <a href="/the-city" style={{ color: "rgba(255,255,255,0.85)", fontSize: "11px", letterSpacing: "1px", textTransform: "uppercase" }}>The City</a>
+        <a href="/payment-plan" style={{ color: "#b2996a", fontSize: "11px", letterSpacing: "1px", textTransform: "uppercase", fontWeight: 600 }}>Payment Plan</a>
+        <a href="/location" style={{ color: "#b2996a", fontSize: "11px", letterSpacing: "1px", textTransform: "uppercase", fontWeight: 600 }}>Location</a>
+        <a href="/developer" style={{ color: "rgba(255,255,255,0.85)", fontSize: "11px", letterSpacing: "1px", textTransform: "uppercase" }}>Developer</a>
+        <a href="/enquire" style={{ color: "rgba(255,255,255,0.85)", fontSize: "11px", letterSpacing: "1px", textTransform: "uppercase" }}>Enquire</a>
+        <a href="/faq" style={{ color: "rgba(255,255,255,0.85)", fontSize: "11px", letterSpacing: "1px", textTransform: "uppercase" }}>FAQ</a>
+        <a href="/sitemap.xml" style={{ color: "rgba(255,255,255,0.85)", fontSize: "11px", letterSpacing: "1px", textTransform: "uppercase" }}>Sitemap</a>
+      </nav>
+      <div className="footer-socials"><a href="https://instagram.com/royalswisscity" target="_blank" rel="noopener noreferrer" title="Instagram"><Instagram size={24} /></a><a href="https://facebook.com/royalswisscity" target="_blank" rel="noopener noreferrer" title="Facebook"><Facebook size={24} /></a><a href="https://tiktok.com/@royalswisscity" target="_blank" rel="noopener noreferrer" title="TikTok"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.68v13.67a2.4 2.4 0 0 1-2.4 2.4 2.4 2.4 0 0 1-2.4-2.4 2.4 2.4 0 0 1 2.4-2.4c.34 0 .67.05.98.15V9.41a5.81 5.81 0 0 0-.98-.08 6.04 6.04 0 0 0-6.04 6.04 6.04 6.04 0 0 0 6.04 6.04 6.04 6.04 0 0 0 6.04-6.04v-3.1a7.7 7.7 0 0 0 3.77 1.01V9.81a4.77 4.77 0 0 1-.77-.06z" /></svg></a><a href="https://linkedin.com/company/royalswisscity" target="_blank" rel="noopener noreferrer" title="LinkedIn"><Linkedin size={24} /></a><a href="https://youtube.com/@royalswisscity" target="_blank" rel="noopener noreferrer" title="YouTube"><Youtube size={24} /></a><a href="https://x.com/royalswisscity" target="_blank" rel="noopener noreferrer" title="X"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.637l-5.1-6.694-5.867 6.694h-3.306l7.733-8.835L2.25 2.25h6.814l4.882 6.45L18.244 2.25zM17.083 18.386h1.83L6.959 4.155H5.049l12.034 14.231z" /></svg></a></div><div className="footer-contact"><b>Where life happens.</b><span>© 2026 ROYAL SWISS CITY · HRL CONSTRUCTION PVT LIMITED · <a href="/sitemap.html" style={{ color: "inherit", textDecoration: "none" }}>SITEMAP</a></span></div></footer>
 
     <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
       <div className="mobile-menu__top">
@@ -782,6 +794,8 @@ export default function Home() {
           let href = "";
           if (item === "HOME") href = "/";
           else if (item === "THE CITY") href = "/the-city";
+          else if (item === "PAYMENT PLAN") href = "/payment-plan";
+          else if (item === "LOCATION") href = "/location";
           else if (item === "DEVELOPER") href = "/developer";
           else if (item === "ENQUIRE") href = "/enquire";
           else if (item === "FAQ") href = "/faq";

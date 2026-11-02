@@ -6,8 +6,8 @@ import { SEOHead } from "@/components/SEOHead";
 import { SEO_CONFIG } from "@/config/seo";
 
 const img = { logo: "/logo.webp?v=2", heroDesktop: "/dev-hero-desktop.webp", heroMobile: "/hero-dev-mobile.webp", chairman: "/chairman.webp", ceo: "/ceo.webp", md: "/md.png" };
-const nav = ["HOME", "THE CITY", "DEVELOPER", "FAQ", "PARTNERS/DEALERS", "ENQUIRE"];
-const navMobile = ["HOME", "THE CITY", "DEVELOPER", "FAQ", "PARTNERS/DEALERS", "ENQUIRE"];
+const nav = ["HOME", "THE CITY", "PAYMENT PLAN", "LOCATION", "DEVELOPER", "ENQUIRE"];
+const navMobile = ["HOME", "THE CITY", "PAYMENT PLAN", "LOCATION", "DEVELOPER", "ENQUIRE"];
 
 const projectsByCategory = {
   buildings: [
@@ -33,6 +33,11 @@ const projectsByCategory = {
   aviation: [
     { name: "Multan International Airport", location: "Multan, Pakistan", description: "Complete MEP services including external and internal electrification systems, fire-alarm and fire-fighting systems, HVAC system, scanning and security systems, elevators and escalators, 2,000 kVA standby generator system, and passenger boarding and docking systems.", image: "/multan-international-airport-card.webp", category: "aviation" },
   ],
+  industrial: [
+    { name: "Fatima Fertilizer Complex", location: "Sadiqabad, Pakistan", description: "Major industrial EPC project executing heavy civil foundations, chemical processing structures, sub-stations, and high-capacity industrial utility infrastructure.", image: "/infrastructure.jpg", category: "industrial" },
+    { name: "Balloki 1223 MW Combined Cycle Power Plant", location: "Balloki, Punjab", description: "Turnkey EPC civil works and balance of plant for one of Pakistan's largest high-efficiency RLNG-based combined cycle gas turbine power generation plants.", image: "/green-energy.webp", category: "industrial" },
+    { name: "Pak-Arab Refinery (PARCO) Pumping Stations", location: "Pakistan", description: "Industrial civil, electrical and mechanical installations across national strategic petrochemical pipeline networks.", image: "/convention-centre-islamabad.webp", category: "industrial" },
+  ],
 };
 
 function Logo() { return <img className="brand-logo" src={img.logo} alt="Royal Swiss City" width={120} height={40} /> }
@@ -45,6 +50,12 @@ function Anchor({ item }: { item: string }) {
   }
   if (item === "THE CITY") {
     return <a href="/the-city">{item}</a>;
+  }
+  if (item === "PAYMENT PLAN") {
+    return <a href="/payment-plan">{item}</a>;
+  }
+  if (item === "LOCATION") {
+    return <a href="/location">{item}</a>;
   }
   if (item === "FAQ") {
     return <a href="/faq">{item}</a>;
@@ -99,27 +110,13 @@ export default function Developer() {
   const heroProgress = Math.min(scrollY / Math.max(vh, 800), 1);
 
   return <main className="walkthrough-page developer-page" style={{ "--hero-progress": heroProgress } as React.CSSProperties}>
-    {/* Main H1 - Primary page topic for SEO */}
-    <h1 style={{ position: "absolute", left: "-9999px", top: "-9999px", width: "1px", height: "1px", overflow: "hidden" }}>
-      Habib Rafiq Construction Pvt Ltd - 60 Years of Real Estate Excellence & Construction Leadership in Pakistan
-    </h1>
-    
     <SEOHead
       title={SEO_CONFIG.pages.developer.title}
       description={SEO_CONFIG.pages.developer.description}
       keywords={SEO_CONFIG.pages.developer.keywords}
-      canonical={SEO_CONFIG.pages.developer.canonical}
-      ogImage="https://royalswisscity.com/dev-hero-desktop.png"
-      language="en"
-      structuredData={{
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Habib Rafiq Construction Pvt Ltd - Royal Swiss City Developer",
-        "description": SEO_CONFIG.pages.developer.description,
-        "url": "https://royalswisscity.com/developer",
-        "founder": "Shahid Rafiq",
-        "ceo": "Sohaib Hassan"
-      }}
+      canonical="https://royalswisscity.com/developer"
+      ogImage="https://royalswisscity.com/images/og-share.jpg"
+      structuredData={SEO_CONFIG.schema.developer}
     />
     
     {/* Breadcrumb Navigation */}
@@ -133,11 +130,14 @@ export default function Developer() {
     </header>
 
     <section id="home" className="walk-hero reveal-section">
-      <img src={isMobileView ? img.heroMobile : img.heroDesktop} alt={"Habib Rafiq Construction - 60 Years of Excellence"} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }} loading="eager" />
-      <img src="/HRL LOGO.jpeg" alt="HRL CONSTRUCTION PVT LIMITED Logo" style={{ position: "absolute", top: "60px", left: "50%", transform: "translateX(-50%)", zIndex: 10, maxWidth: "120px", height: "auto" }} loading="eager" />
+      <img src={isMobileView ? img.heroMobile : img.heroDesktop} alt={"Built by HRL Construction Pvt. Limited (Habib Rafiq)"} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }} loading="eager" />
+      <img src="/HRL LOGO.jpeg" alt="HRL Construction Pvt Limited Logo" style={{ position: "absolute", top: "60px", left: "50%", transform: "translateX(-50%)", zIndex: 10, maxWidth: "120px", height: "auto" }} loading="eager" />
       <div className="hero-copy" style={{ color: "#1a3a52", position: "absolute", zIndex: 5 }}>
-        <h2 style={{ color: "#1a3a52", fontVariant: "small-caps", letterSpacing: "0.05em", textShadow: "0 2px 4px rgba(0,0,0,0.1)", fontSize: isMobileView ? "24px" : "inherit" }}>HABIB RAFIQ<br />CONSTRUCTION<br />PVT LTD</h2>
-        <p style={{ color: "#1a3a52", fontSize: isMobileView ? "14px" : "22px" }}>ENGINEERING THE NATION SINCE 1962</p>
+        <h1 style={{ color: "#1a3a52", fontVariant: "small-caps", letterSpacing: "0.05em", textShadow: "0 2px 4px rgba(0,0,0,0.1)", fontSize: isMobileView ? "24px" : "clamp(32px, 3.8vw, 50px)", lineHeight: 1.15, margin: "0 0 10px 0" }}>
+          Built by HRL Construction Pvt. Limited<br />
+          <span style={{ fontSize: "0.75em", fontWeight: 400 }}>(Habib Rafiq)</span>
+        </h1>
+        <p style={{ color: "#1a3a52", fontSize: isMobileView ? "14px" : "22px", letterSpacing: "0.15em", textTransform: "uppercase" }}>ENGINEERING THE NATION SINCE 1962</p>
       </div>
     </section>
 
@@ -145,9 +145,9 @@ export default function Developer() {
         {/* Section Header */}
         <div className="legacy-section-header">
           <div className="header-title">
-            <h2>LEADERSHIP & LEGACY</h2>
+            <h2>Leadership: Two Generations of Vision & Governance</h2>
           </div>
-          <p className="header-subtitle">ENGINEERING EXCELLENCE. BUILDING FUTURES. | 60+ Years of Innovation & Integrity</p>
+          <p className="header-subtitle">EXECUTIVE STEWARDSHIP & OWNERSHIP | 60+ Years of Innovation & Integrity</p>
           <div className="header-divider">
             <span></span>
             <svg width="8" height="8" viewBox="0 0 8 8" fill="currentColor">
@@ -163,14 +163,14 @@ export default function Developer() {
             {/* Chairman Card */}
             <article id="chairman-message" className="legacy-card legacy-card--chairman reveal-item">
               <div className="legacy-card__image-wrapper">
-                <img src={img.chairman} alt="Shahid Rafiq - Chairman Habib Rafiq Construction, 60 Years Engineering Leadership" loading="eager" />
+                <img src={img.chairman} alt="Shahid Rafiq - Chairman HRL Construction Pvt Limited, Royal Swiss City Developer" loading="eager" />
                 <div className="legacy-card__image-label">
                   <span>YEARS OF TRUST, QUALITY & EXCELLENCE</span>
                 </div>
               </div>
               <div className="legacy-card__divider"></div>
               <div className="legacy-card__content">
-                <small>CHAIRMAN</small>
+                <small>CHAIRMAN & MASTER DEVELOPER</small>
                 <h3 style={{ textTransform: "uppercase" }}>SHAHID RAFIQ</h3>
                 <div className="legacy-card__decoration">
                   <span></span>
@@ -181,11 +181,13 @@ export default function Developer() {
                 </div>
                 <div className="legacy-card__quote-section">
                   <div className="legacy-card__quote-mark">"</div>
-                  <p className="legacy-quote">Building on this legacy, we now bring the same expertise to modern housing.</p>
+                  <p className="legacy-quote">Building on this legacy, we now bring national-scale engineering expertise to modern riverfront housing.</p>
                 </div>
-                <p style={{ fontSize: "12px", lineHeight: "1.6", color: "#666", margin: "0 0 16px 0" }}>For over six decades, Habib Rafiq Construction (Pvt) Ltd has transformed vision into reality through innovation, quality, and dedication across national landmarks.</p>
+                <p style={{ fontSize: "12px", lineHeight: "1.6", color: "#666", margin: "0 0 16px 0" }}>
+                  Shahid Rafiq is Chairman of HRL Construction Pvt Limited (Habib Rafiq Group) and lead developer behind Royal Swiss City Lahore. With over four decades steering Pakistan's most prominent civil infrastructure developments, his governance ensures landmark execution and long-term asset value.
+                </p>
                 <div className="legacy-card__signature">
-                  <p>CHAIRMAN, HABIB RAFIQ CONSTRUCTION (PVT.) LTD.</p>
+                  <p>CHAIRMAN, HRL CONSTRUCTION PVT LIMITED</p>
                 </div>
                 <div className="legacy-card__watermark">HRL CONSTRUCTION PVT LIMITED</div>
               </div>
@@ -194,7 +196,7 @@ export default function Developer() {
             {/* CEO Card */}
             <article id="ceo-message" className="legacy-card legacy-card--ceo reveal-item">
               <div className="legacy-card__image-wrapper">
-                <img src={img.ceo} alt="Sohaib Hassan - CEO Habib Rafiq Construction, Leading Next Generation Development" loading="eager" />
+                <img src={img.ceo} alt="Sohaib Hassan - CEO HRL Construction Pvt Limited, Royal Swiss City Developer" loading="eager" />
                 <div className="legacy-card__image-label">
                   <span>A VISION FOR TODAY. A PROMISE FOR TOMORROW.</span>
                 </div>
@@ -212,11 +214,13 @@ export default function Developer() {
                 </div>
                 <div className="legacy-card__quote-section">
                   <div className="legacy-card__quote-mark">"</div>
-                  <p className="legacy-quote">We are creating spaces where future generations can thrive.</p>
+                  <p className="legacy-quote">We are creating smart, sustainable communities where future generations can live, thrive, and prosper.</p>
                 </div>
-                <p style={{ fontSize: "12px", lineHeight: "1.6", color: "#666", margin: "0 0 16px 0" }}>It is a privilege to carry forward the legacy of Habib Rafiq Construction, developing sustainable communities that enhance lifestyles and create lasting value.</p>
+                <p style={{ fontSize: "12px", lineHeight: "1.6", color: "#666", margin: "0 0 16px 0" }}>
+                  Sohaib Hassan serves as Chief Executive Officer of HRL Construction Pvt Limited. Spearheading the master planning and execution of Royal Swiss City Lahore, he drives solar integration, riverfront connectivity, and state-of-the-art urban engineering.
+                </p>
                 <div className="legacy-card__signature">
-                  <p>CHIEF EXECUTIVE OFFICER</p>
+                  <p>CHIEF EXECUTIVE OFFICER, HRL CONSTRUCTION PVT LIMITED</p>
                 </div>
                 <div className="legacy-card__watermark">HRL CONSTRUCTION PVT LIMITED</div>
               </div>
@@ -230,53 +234,62 @@ export default function Developer() {
             {/* Chairman Card Mobile */}
             <div style={{ textAlign: "center" }}>
               <div style={{ width: "100%", borderRadius: "8px", overflow: "hidden", marginBottom: "10px", height: "160px" }}>
-                <img src={img.chairman} alt="Shahid Rafiq - Chairman Habib Rafiq Construction, 60 Years Engineering Leadership" style={{ width: "100%", height: "100%", objectFit: "cover" }} loading="lazy" />
+                <img src={img.chairman} alt="Shahid Rafiq - Chairman HRL Construction Pvt Limited, Royal Swiss City Developer" style={{ width: "100%", height: "100%", objectFit: "cover" }} loading="lazy" />
               </div>
               <h4 style={{ fontSize: "13px", fontWeight: 400, color: "#b2996a", margin: "0 0 3px 0", fontFamily: "var(--serif)", letterSpacing: "0.05em", textTransform: "uppercase" }}>Shahid Rafiq</h4>
-              <p style={{ fontSize: "10px", color: "#b2996a", margin: "0", textTransform: "uppercase", letterSpacing: "0.08em", fontFamily: "var(--serif)", fontWeight: 300 }}>Chairman</p>
+              <p style={{ fontSize: "10px", color: "#b2996a", margin: "0 0 4px 0", textTransform: "uppercase", letterSpacing: "0.08em", fontFamily: "var(--serif)", fontWeight: 300 }}>Chairman, HRL Construction</p>
+              <p style={{ fontSize: "9px", color: "#777", lineHeight: 1.4, margin: 0 }}>40+ years leading national mega-infrastructure & urban development</p>
             </div>
 
             {/* CEO Card Mobile */}
             <div style={{ textAlign: "center" }}>
               <div style={{ width: "100%", borderRadius: "8px", overflow: "hidden", marginBottom: "10px", height: "160px" }}>
-                <img src={img.ceo} alt="Sohaib Hassan - CEO Habib Rafiq Construction, Leading Next Generation Development" style={{ width: "100%", height: "100%", objectFit: "cover" }} loading="lazy" />
+                <img src={img.ceo} alt="Sohaib Hassan - CEO HRL Construction Pvt Limited, Royal Swiss City Developer" style={{ width: "100%", height: "100%", objectFit: "cover" }} loading="lazy" />
               </div>
               <h4 style={{ fontSize: "13px", fontWeight: 400, color: "#b2996a", margin: "0 0 3px 0", fontFamily: "var(--serif)", letterSpacing: "0.05em", textTransform: "uppercase" }}>Sohaib Hassan</h4>
-              <p style={{ fontSize: "10px", color: "#b2996a", margin: "0", textTransform: "uppercase", letterSpacing: "0.08em", fontFamily: "var(--serif)", fontWeight: 300 }}>Chief Executive Officer</p>
+              <p style={{ fontSize: "10px", color: "#b2996a", margin: "0 0 4px 0", textTransform: "uppercase", letterSpacing: "0.08em", fontFamily: "var(--serif)", fontWeight: 300 }}>CEO, HRL Construction</p>
+              <p style={{ fontSize: "9px", color: "#777", lineHeight: 1.4, margin: 0 }}>Spearheading Royal Swiss City's master planning & smart riverfront engineering</p>
             </div>
           </div>
         )}
       </section>
 
-    <section className="impact-timeline-section reveal-section" style={{ backgroundImage: !isMobileView ? "url('/six_impact.webp')" : "url('/six_impact_mobile.webp')", backgroundSize: isMobileView ? "cover" : "contain", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundColor: "#2C3F5E", color: "#ffffff", padding: isMobileView ? "0" : "40px 20px", minHeight: !isMobileView ? "300px" : "80vh", height: !isMobileView ? "300px" : "auto", width: isMobileView ? "100vw" : "auto", marginLeft: isMobileView ? "calc(-50vw + 50%)" : "0" }}>
-      
-      {/* Timeline content will go here */}
-      <div style={{ maxWidth: "100%", margin: "0 auto" }}>
-        {/* Timeline items will be added here */}
+    <section className="impact-timeline-section reveal-section" style={{ backgroundImage: !isMobileView ? "url('/six_impact.webp')" : "url('/six_impact_mobile.webp')", backgroundSize: isMobileView ? "cover" : "contain", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundColor: "#2C3F5E", color: "#ffffff", padding: isMobileView ? "30px 20px" : "50px 30px", minHeight: !isMobileView ? "320px" : "80vh", height: "auto", width: isMobileView ? "100vw" : "auto", marginLeft: isMobileView ? "calc(-50vw + 50%)" : "0" }}>
+      <div style={{ maxWidth: "1200px", margin: "0 auto", textAlign: "center" }}>
+        <h2 style={{ fontSize: isMobileView ? "22px" : "clamp(26px, 3.2vw, 38px)", fontFamily: "var(--serif)", letterSpacing: "0.05em", color: "#ffffff", margin: "0 0 10px 0", fontWeight: 300 }}>
+          Six Decades of Engineering & Mega-Project Excellence
+        </h2>
+        <p style={{ color: "rgba(255,255,255,0.85)", fontSize: isMobileView ? "12px" : "15px", maxWidth: "800px", margin: "0 auto", lineHeight: 1.6 }}>
+          Since 1962, HRL Construction Pvt Limited (Habib Rafiq) has pioneered Pakistan's critical transport, power, aviation, and master-planned urban communities.
+        </p>
       </div>
     </section>
 
     {/* Desktop Version */}
     {!isMobileView && (
-      <section className="sectors-expertise-section reveal-section" style={{ padding: "0px 40px 80px 40px", background: "#f4f4f4" }}>
-        <div style={{ textAlign: "center", marginBottom: "20px" }}>
+      <section className="sectors-expertise-section reveal-section" style={{ padding: "30px 40px 80px 40px", background: "#f4f4f4" }}>
+        <div style={{ textAlign: "center", marginBottom: "30px" }}>
           <span style={{ fontSize: "12px", letterSpacing: "0.23em", textTransform: "uppercase", color: "rgba(150, 148, 148, 0.797)", margin: "0 0 4px 0", fontWeight: 600, display: "block" }}>OUR EXPERTISE</span>
-          <h2 style={{ fontSize: "clamp(40px, 5vw, 70px)", fontWeight: 300, letterSpacing: "0.08em", lineHeight: 1.15, margin: "0 0 12px 0", fontFamily: "var(--serif)", color: "#1a3a52" }}>BUILDING<br />ACROSS SECTORS</h2>
-          <p style={{ fontSize: "16px", lineHeight: 1.6, color: "#666", maxWidth: "600px", margin: "0 auto" }}>Our multidisciplinary expertise enables us to deliver complex projects of national and international significance, with a focus on quality, safety and sustainability.</p>
+          <h2 style={{ fontSize: "clamp(32px, 4vw, 54px)", fontWeight: 300, letterSpacing: "0.06em", lineHeight: 1.2, margin: "0 0 12px 0", fontFamily: "var(--serif)", color: "#1a3a52" }}>
+            Key National Infrastructure Portfolio
+          </h2>
+          <p style={{ fontSize: "16px", lineHeight: 1.6, color: "#666", maxWidth: "700px", margin: "0 auto" }}>
+            Our multidisciplinary expertise enables us to deliver complex projects of national and international significance, with an unwavering focus on engineering precision, quality, and sustainability.
+          </p>
         </div>
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(7, 1fr)", gap: "12px", maxWidth: "1400px", margin: "0 auto" }}>
           {[
             { name: "INFRASTRUCTURE", image: "/bahria-heights.webp", category: "infrastructure" },
             { name: "BUILDINGS", image: "/grand-jamia-mosque-bahria-town-lahore.webp", category: "buildings" },
-            { name: "INDUSTRIAL", image: "/infrastructure.jpg", category: "buildings" },
+            { name: "INDUSTRIAL", image: "/infrastructure.jpg", category: "industrial" },
             { name: "AVIATION", image: "/multan-international-airport-card.webp", category: "aviation" },
-            { name: "POWER & ENERGY", image: "/green-energy.webp", category: "buildings" },
-            { name: "OIL & GAS", image: "/convention-centre-islamabad.webp", category: "buildings" },
+            { name: "POWER & ENERGY", image: "/green-energy.webp", category: "industrial" },
+            { name: "OIL & GAS", image: "/convention-centre-islamabad.webp", category: "industrial" },
             { name: "ENVIRONMENTAL & WATER", image: "/kohat tunnel and access roads.webp", category: "infrastructure" },
           ].map((sector) => (
             <div key={sector.name} onClick={() => setActiveModal(sector.category)} style={{ position: "relative", height: "180px", borderRadius: "2px", overflow: "hidden", cursor: "pointer", transition: "all 0.3s ease" }} onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.transform = "scale(1.02)"; }} onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.transform = "scale(1)"; }}>
-              <img src={sector.image} alt={sector.name + " - Habib Rafiq Construction expertise"} style={{ width: "100%", height: "100%", objectFit: "cover" }} loading="lazy" />
+              <img src={sector.image} alt={sector.name + " - HRL Construction expertise"} style={{ width: "100%", height: "100%", objectFit: "cover" }} loading="lazy" />
               <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0.2))" }}></div>
               <div style={{ position: "absolute", bottom: "30px", right: "14px", color: "white", textAlign: "right" }}>
                 <p style={{ fontSize: "10px", letterSpacing: "1.5px", margin: "0", opacity: 0.85, textTransform: "uppercase", fontFamily: "var(--serif)", fontWeight: 400 }}></p>
@@ -291,23 +304,27 @@ export default function Developer() {
     {/* Mobile Version */}
     {isMobileView && (
       <section className="sectors-expertise-section reveal-section" style={{ padding: "40px 20px", background: "#f4f4f4" }}>
-        <div style={{ textAlign: "center", marginBottom: "40px" }}>
+        <div style={{ textAlign: "center", marginBottom: "30px" }}>
           <p style={{ fontSize: "10px", letterSpacing: "0.23em", textTransform: "uppercase", color: "rgba(150, 148, 148, 0.797)", margin: "0 0 16px 0", fontWeight: 600 }}>OUR EXPERTISE</p>
-          <h2 style={{ fontSize: "28px", fontWeight: 300, letterSpacing: "0.08em", lineHeight: 1.15, margin: "0 0 20px 0", fontFamily: "var(--serif)", color: "#1a3a52" }}>BUILDING<br />ACROSS SECTORS</h2>
-          <p style={{ fontSize: "13px", lineHeight: 1.6, color: "#666", maxWidth: "100%" }}>Our multidisciplinary expertise enables us to deliver complex projects of national and international significance, with a focus on quality, safety and sustainability.</p>
+          <h2 style={{ fontSize: "26px", fontWeight: 300, letterSpacing: "0.06em", lineHeight: 1.2, margin: "0 0 16px 0", fontFamily: "var(--serif)", color: "#1a3a52" }}>
+            Key National Infrastructure Portfolio
+          </h2>
+          <p style={{ fontSize: "13px", lineHeight: 1.6, color: "#666", maxWidth: "100%" }}>
+            Our multidisciplinary expertise enables us to deliver landmark projects of national and international significance.
+          </p>
         </div>
 
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px", maxWidth: "100%" }}>
           {[
             { name: "INFRASTRUCTURE", image: "/bahria-heights.webp", category: "infrastructure" },
             { name: "BUILDINGS", image: "/grand-jamia-mosque-bahria-town-lahore.webp", category: "buildings" },
-            { name: "INDUSTRIAL", image: "/infrastructure.jpg", category: "buildings" },
+            { name: "INDUSTRIAL", image: "/infrastructure.jpg", category: "industrial" },
             { name: "AVIATION", image: "/multan-international-airport-card.webp", category: "aviation" },
-            { name: "POWER & ENERGY", image: "/green-energy.webp", category: "buildings" },
-            { name: "OIL & GAS", image: "/convention-centre-islamabad.webp", category: "buildings" },
+            { name: "POWER & ENERGY", image: "/green-energy.webp", category: "industrial" },
+            { name: "OIL & GAS", image: "/convention-centre-islamabad.webp", category: "industrial" },
           ].map((sector) => (
             <div key={sector.name} onClick={() => setActiveModal(sector.category)} style={{ position: "relative", height: "140px", borderRadius: "6px", overflow: "hidden", cursor: "pointer", transition: "all 0.3s ease" }}>
-              <img src={sector.image} alt={sector.name + " - Habib Rafiq Construction expertise"} style={{ width: "100%", height: "100%", objectFit: "cover" }} loading="lazy" />
+              <img src={sector.image} alt={sector.name + " - HRL Construction expertise"} style={{ width: "100%", height: "100%", objectFit: "cover" }} loading="lazy" />
               <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.2))" }}></div>
               <div style={{ position: "absolute", bottom: "12px", left: "12px", right: "12px", color: "white" }}>
                 <p style={{ fontSize: "11px", fontWeight: 500, margin: "0", textTransform: "uppercase", letterSpacing: "0.5px", fontFamily: "var(--serif)", lineHeight: 1.2 }}>{sector.name}</p>
@@ -342,12 +359,12 @@ export default function Developer() {
       <div className="footer-accordions">
         <div className="footer-accordion-col">
           {[
-            { title: "ABOUT HRL CONSTRUCTION PVT LIMITED", description: "Habib Rafiq Construction (Pvt) Ltd has been at the forefront of engineering and construction in Pakistan for over 60 years. Our expertise spans infrastructure, buildings, industrial, aviation, power & energy, oil & gas, and environmental projects.", link: "" },
-            { title: "OUR EXPERTISE", description: "We have successfully delivered complex projects including motorways, airports, high-rise buildings, housing schemes, and infrastructure across national and international scale. Our portfolio demonstrates excellence in engineering, quality, and sustainability.", link: "" },
-            { title: "ROYAL SWISS CITY", description: "Royal Swiss City represents our evolution into premium residential development. Combining decades of engineering expertise with modern planning, we've created a master-planned community with world-class infrastructure and amenities.", link: "/the-city" },
-            { title: "SUSTAINABILITY", description: "We are committed to sustainable development. Royal Swiss City features solar infrastructure, comprehensive water management, and environmental conservation as core principles.", link: "" },
-            { title: "PARTNERSHIP", description: "We welcome strategic partnerships in real estate development and infrastructure projects. Our track record and expertise make us a trusted partner for large-scale initiatives.", link: "" },
-            { title: "CONTACT", description: "For inquiries about our projects, partnerships, or development services, please reach out to us at 042-111-777-588 or royalswisscity@gmail.com.", link: "" }
+            { title: "ABOUT HRL CONSTRUCTION PVT LIMITED", description: "HRL Construction Pvt Limited (Habib Rafiq) has been at the forefront of engineering and construction in Pakistan for over 60 years. Our expertise spans infrastructure, buildings, industrial, aviation, power & energy, oil & gas, and environmental projects.", link: "/developer" },
+            { title: "PAYMENT PLANS & BOOKING", description: "Explore official installment schedules for 3.5, 5, 10 Marla and 1, 2 Kanal residential plots as well as prime riverfront commercial plots with flexible 3 to 4-year payment plans.", link: "/payment-plan" },
+            { title: "ROYAL SWISS CITY MASTER PLAN", description: "Royal Swiss City represents our evolution into premium residential development. Combining decades of engineering expertise with modern planning, we've created a master-planned community with world-class infrastructure and amenities.", link: "/the-city" },
+            { title: "LOCATION & CONNECTIVITY", description: "Conveniently situated on the Ravi Riverfront with direct interchange access to Lahore Ring Road, M-2 Motorway, and rapid connection to Allama Iqbal International Airport.", link: "/location" },
+            { title: "PARTNERSHIP & DEALERS", description: "We welcome strategic partnerships in real estate development and infrastructure projects. Our track record and expertise make us a trusted partner for large-scale initiatives.", link: "/#partner" },
+            { title: "SALES & SITE ENQUIRIES", description: "For inquiries about residential & commercial plots, installment schedules, or guided site tours, please contact our official sales desk at 042-111-777-588 or royalswisscity@gmail.com.", link: "/enquire" }
           ].filter((_, i) => i % 2 === 0).map(item => (
             <div className={openFooterItem === item.title ? "open" : ""} key={item.title}>
               <button onClick={() => setOpenFooterItem(openFooterItem === item.title ? null : item.title)}>
@@ -367,12 +384,12 @@ export default function Developer() {
         </div>
         <div className="footer-accordion-col">
           {[
-            { title: "ABOUT HRL CONSTRUCTION PVT LIMITED", description: "Habib Rafiq Construction (Pvt) Ltd has been at the forefront of engineering and construction in Pakistan for over 60 years. Our expertise spans infrastructure, buildings, industrial, aviation, power & energy, oil & gas, and environmental projects.", link: "" },
-            { title: "OUR EXPERTISE", description: "We have successfully delivered complex projects including motorways, airports, high-rise buildings, housing schemes, and infrastructure across national and international scale. Our portfolio demonstrates excellence in engineering, quality, and sustainability.", link: "" },
-            { title: "ROYAL SWISS CITY", description: "Royal Swiss City represents our evolution into premium residential development. Combining decades of engineering expertise with modern planning, we've created a master-planned community with world-class infrastructure and amenities.", link: "/the-city" },
-            { title: "SUSTAINABILITY", description: "We are committed to sustainable development. Royal Swiss City features solar infrastructure, comprehensive water management, and environmental conservation as core principles.", link: "" },
-            { title: "PARTNERSHIP", description: "We welcome strategic partnerships in real estate development and infrastructure projects. Our track record and expertise make us a trusted partner for large-scale initiatives.", link: "" },
-            { title: "CONTACT", description: "For inquiries about our projects, partnerships, or development services, please reach out to us at 042-111-777-588 or royalswisscity@gmail.com.", link: "" }
+            { title: "ABOUT HRL CONSTRUCTION PVT LIMITED", description: "HRL Construction Pvt Limited (Habib Rafiq) has been at the forefront of engineering and construction in Pakistan for over 60 years. Our expertise spans infrastructure, buildings, industrial, aviation, power & energy, oil & gas, and environmental projects.", link: "/developer" },
+            { title: "PAYMENT PLANS & BOOKING", description: "Explore official installment schedules for 3.5, 5, 10 Marla and 1, 2 Kanal residential plots as well as prime riverfront commercial plots with flexible 3 to 4-year payment plans.", link: "/payment-plan" },
+            { title: "ROYAL SWISS CITY MASTER PLAN", description: "Royal Swiss City represents our evolution into premium residential development. Combining decades of engineering expertise with modern planning, we've created a master-planned community with world-class infrastructure and amenities.", link: "/the-city" },
+            { title: "LOCATION & CONNECTIVITY", description: "Conveniently situated on the Ravi Riverfront with direct interchange access to Lahore Ring Road, M-2 Motorway, and rapid connection to Allama Iqbal International Airport.", link: "/location" },
+            { title: "PARTNERSHIP & DEALERS", description: "We welcome strategic partnerships in real estate development and infrastructure projects. Our track record and expertise make us a trusted partner for large-scale initiatives.", link: "/#partner" },
+            { title: "SALES & SITE ENQUIRIES", description: "For inquiries about residential & commercial plots, installment schedules, or guided site tours, please contact our official sales desk at 042-111-777-588 or royalswisscity@gmail.com.", link: "/enquire" }
           ].filter((_, i) => i % 2 === 1).map(item => (
             <div className={openFooterItem === item.title ? "open" : ""} key={item.title}>
               <button onClick={() => setOpenFooterItem(openFooterItem === item.title ? null : item.title)}>
@@ -399,7 +416,7 @@ export default function Developer() {
         <a href="https://youtube.com/@royalswisscity" target="_blank" rel="noopener noreferrer" title="YouTube"><Youtube size={24} /></a>
         <a href="https://x.com/royalswisscity" target="_blank" rel="noopener noreferrer" title="X"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.637l-5.1-6.694-5.867 6.694h-3.306l7.733-8.835L2.25 2.25h6.814l4.882 6.45L18.244 2.25zM17.083 18.386h1.83L6.959 4.155H5.049l12.034 14.231z" /></svg></a>
       </div>
-      <div className="footer-contact"><b>Engineering the Nation Since 1962</b><span>© 2026 HABIB RAFIQ CONSTRUCTION PVT LTD · PRIVACY POLICY · <a href="/sitemap.html" style={{ color: "inherit", textDecoration: "none" }}>SITEMAP</a></span></div>
+      <div className="footer-contact"><b>Engineering the Nation Since 1962</b><span>© 2026 HRL CONSTRUCTION PVT LIMITED (HABIB RAFIQ) · PRIVACY POLICY · <a href="/sitemap.xml" style={{ color: "inherit", textDecoration: "none" }}>SITEMAP</a></span></div>
     </footer>
 
     <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
@@ -412,6 +429,8 @@ export default function Developer() {
           let href = "";
           if (item === "HOME") href = "/";
           else if (item === "THE CITY") href = "/the-city";
+          else if (item === "PAYMENT PLAN") href = "/payment-plan";
+          else if (item === "LOCATION") href = "/location";
           else if (item === "DEVELOPER") href = "/developer";
           else if (item === "ENQUIRE") href = "/enquire";
           else if (item === "FAQ") href = "/faq";
@@ -421,7 +440,7 @@ export default function Developer() {
         })}
       </div>
       <div className="mobile-menu__bottom">
-        <Logo /><span>HABIB RAFIQ CONSTRUCTION PVT LTD</span>
+        <Logo /><span>HRL CONSTRUCTION PVT LIMITED</span>
       </div>
     </div>
 
@@ -435,6 +454,7 @@ export default function Developer() {
             {activeModal === "housing" && "HOUSING"}
             {activeModal === "infrastructure" && "INFRASTRUCTURE"}
             {activeModal === "aviation" && "AVIATION"}
+            {activeModal === "industrial" && "INDUSTRIAL & ENERGY EPC"}
           </h2>
 
           <div style={{ display: "grid", gridTemplateColumns: isMobileView ? "1fr" : "repeat(auto-fit, minmax(250px, 1fr))", gap: isMobileView ? "16px" : "20px" }}>

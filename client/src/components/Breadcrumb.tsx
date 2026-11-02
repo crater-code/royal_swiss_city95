@@ -19,6 +19,8 @@ export function Breadcrumb() {
   const pathMap: Record<string, string> = {
     "/": "Home",
     "/the-city": "The City",
+    "/payment-plan": "Payment Plan",
+    "/location": "Location",
     "/developer": "Developer",
     "/enquire": "Enquire",
     "/faq": "FAQ",

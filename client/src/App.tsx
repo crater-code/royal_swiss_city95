@@ -1,26 +1,35 @@
-// Royal Swiss City 75 cinematic luxury editorial experience with a dark, image-first stage and restrained transitions.
+// Royal Swiss City luxury editorial experience
 import { useLocation } from "wouter";
 import Home from "./pages/Home";
 import Developer from "./pages/Developer";
 import Enquire from "./pages/Enquire";
 import TheCity from "./pages/TheCity";
 import FAQ from "./pages/FAQ";
+import PaymentPlan from "./pages/PaymentPlan";
+import Location from "./pages/Location";
 import FloatingContacts from "./components/FloatingContacts";
 
 export default function App() {
   const [location] = useLocation();
 
+  // Normalize path to handle trailing slashes consistently (e.g. /payment-plan/ -> /payment-plan)
+  const normalizedPath = (location.replace(/\/+$/, "") || "/").toLowerCase();
+
   let page;
 
-  if (location === "/developer") {
+  if (normalizedPath === "/developer") {
     page = <Developer />;
-  } else if (location === "/enquire") {
-    page = <Enquire />;
-  } else if (location === "/the-city") {
+  } else if (normalizedPath === "/payment-plan") {
+    page = <PaymentPlan />;
+  } else if (normalizedPath === "/location") {
+    page = <Location />;
+  } else if (normalizedPath === "/the-city") {
     page = <TheCity />;
-  } else if (location === "/faq") {
+  } else if (normalizedPath === "/enquire") {
+    page = <Enquire />;
+  } else if (normalizedPath === "/faq") {
     page = <FAQ />;
-  } else if (location === "/projects") {
+  } else if (normalizedPath === "/projects") {
     page = <Developer />;
   } else {
     page = <Home />;

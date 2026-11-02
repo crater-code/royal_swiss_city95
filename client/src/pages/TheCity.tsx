@@ -1,20 +1,23 @@
 import { useEffect, useState } from "react";
 import { Menu, X, ChevronDown, Instagram, Facebook, Linkedin, Youtube } from "lucide-react";
 import { animateFooter } from "@/utils/sectionAnimations";
+import { Breadcrumb } from "@/components/Breadcrumb";
+import { SEOHead } from "@/components/SEOHead";
+import { SEO_CONFIG } from "@/config/seo";
 
 const img = { logo: "/logo.webp?v=2" };
-const nav = ["HOME", "THE CITY", "DEVELOPER", "FAQ", "PARTNERS/DEALERS", "ENQUIRE"];
-const navMobile = ["HOME", "THE CITY", "DEVELOPER", "FAQ", "PARTNERS/DEALERS", "ENQUIRE"];
-const footerLinks = ["Residential Plots", "Commercial Plots", "The City", "Developer", "Location", "FAQ", "Partner", "Enquire"];
+const nav = ["HOME", "THE CITY", "PAYMENT PLAN", "LOCATION", "DEVELOPER", "ENQUIRE"];
+const navMobile = ["HOME", "THE CITY", "PAYMENT PLAN", "LOCATION", "DEVELOPER", "ENQUIRE"];
+const footerLinks = ["Residential Plots", "Commercial Plots", "Payment Plan", "Location", "The City", "Developer", "FAQ", "Enquire"];
 const footerDescriptions = {
   "Residential Plots": "Discover a range of residential plot sizes to suit your needs. Choose from MARLA 3.5, MARLA 5, MARLA 10, KANAL 1, and KANAL 2 options designed for modern living.",
   "Commercial Plots": "Explore commercial plot opportunities perfect for your business. Available in MARLA 2, MARLA 4, and MARLA 8 to accommodate various commercial ventures.",
-  "The City": "Discover a considered way to experience the city at Royal Swiss City.",
-  "Developer": "Discover a considered way to experience developer at Royal Swiss City.",
-  "Location": "Discover a considered way to experience location at Royal Swiss City.",
-  "FAQ": "Discover a considered way to experience faq at Royal Swiss City.",
-  "Partner": "Discover a considered way to experience partner at Royal Swiss City.",
-  "Enquire": "Discover a considered way to experience enquire at Royal Swiss City."
+  "Payment Plan": "Official 3 to 4 year quarterly installment schedules for residential and commercial plots engineered by HRL Construction Pvt Limited.",
+  "Location": "Prime location on Ravi Riverfront, Lahore with direct connectivity to Lahore Ring Road, M-2 Motorway, and City Center.",
+  "The City": "Discover sustainable master-planned community living with solar power, green canals, and world-class amenities at Royal Swiss City.",
+  "Developer": "Built by HRL Construction Pvt Limited (Habib Rafiq) with over 60 years of national infrastructure leadership.",
+  "FAQ": "Frequently asked questions regarding plot bookings, balloting, installment plans, and project possession.",
+  "Enquire": "Contact our official sales and site visit advisory team at 042-111-777-588."
 };
 
 function Logo() { return <img className="brand-logo" src={img.logo} alt="Royal Swiss City" loading="lazy" /> }
@@ -25,14 +28,20 @@ function Anchor({ item }: { item: string }) {
   if (item === "HOME") {
     return <a href="/">{item}</a>
   }
+  if (item === "THE CITY") {
+    return <a href="/the-city">{item}</a>
+  }
+  if (item === "PAYMENT PLAN") {
+    return <a href="/payment-plan">{item}</a>
+  }
+  if (item === "LOCATION") {
+    return <a href="/location">{item}</a>
+  }
   if (item === "ENQUIRE") {
     return <a href="/enquire">{item}</a>
   }
   if (item === "FAQ") {
     return <a href="/faq">{item}</a>
-  }
-  if (item === "THE CITY") {
-    return <a href="/the-city">{item}</a>
   }
   if (item === "PARTNERS/DEALERS" || item === "PARTNER" || item === "DEALER") {
     return <a href="/#partner">{item}</a>
@@ -84,10 +93,17 @@ export default function TheCity() {
 
   return (
     <main className="walkthrough-page the-city-page" style={{ "--hero-progress": heroProgress } as React.CSSProperties}>
-      {/* Main H1 - Primary page topic for SEO */}
-      <h1 style={{ position: "absolute", left: "-9999px", top: "-9999px", width: "1px", height: "1px", overflow: "hidden" }}>
-        The City - Royal Swiss City Lahore - Premium Community Living with Nature, Infrastructure & Amenities
-      </h1>
+      <SEOHead
+        title={SEO_CONFIG.pages.theCity.title}
+        description={SEO_CONFIG.pages.theCity.description}
+        keywords={SEO_CONFIG.pages.theCity.keywords}
+        canonical="https://royalswisscity.com/the-city"
+        ogImage="https://royalswisscity.com/images/og-share.jpg"
+        structuredData={SEO_CONFIG.schema.theCity}
+      />
+
+      {/* Breadcrumb Navigation */}
+      <Breadcrumb />
       
       {/* HEADER / NAVBAR */}
       <header className={`walk-header ${scrolled ? "is-scrolled" : ""}`}>
@@ -107,7 +123,7 @@ export default function TheCity() {
 
       {/* CONTENT SECTIONS */}
       <div style={{ width: "100vw", height: "100vh", marginLeft: "calc(-50vw + 50%)", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", position: "relative" }}>
-        <img src={isMobile ? "/the-city-1-mobile.webp" : "/the city 1.webp"} alt="The City" style={{ width: "100%", height: "100%", objectFit: "cover" }} loading="lazy" />
+        <img src={isMobile ? "/the-city-1-mobile.webp" : "/the city 1.webp"} alt="The City: Lahore's Sustainable Riverfront Community" style={{ width: "100%", height: "100%", objectFit: "cover" }} loading="lazy" />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(13, 27, 42, 0.8), rgba(13, 27, 42, 0))" }}></div>
         {isMobile && (
           <div style={{ position: "absolute", top: "40px", left: "50%", transform: "translateX(-50%)", zIndex: 10 }}>
@@ -116,7 +132,9 @@ export default function TheCity() {
         )}
         <div style={{ position: "absolute", left: isMobile ? "50%" : "60px", transform: isMobile ? "translateX(-50%)" : "none", bottom: isMobile ? "40px" : "auto", top: isMobile ? "auto" : "36%", color: "white", zIndex: 10, textAlign: isMobile ? "center" : "left", width: isMobile ? "90%" : "auto" }}>
           <span className="the-city-hero-kicker" style={{ fontSize: isMobile ? "1.05rem" : "1.25rem", fontWeight: isMobile ? 500 : 600, margin: "0 0 16px 0", letterSpacing: "0.14em", color: "#b2996a", display: "block", textTransform: "uppercase" }}>ROYAL SWISS CITY LAHORE</span>
-          <h2 className="the-city-hero-title" style={{ fontSize: isMobile ? "clamp(2.8rem, 8vw, 3.4rem)" : "clamp(4.2rem, 5.5vw, 5rem)", fontWeight: 700, margin: "0", letterSpacing: "-0.04em", lineHeight: 1.08 }}>A City Immersed<br /><span style={{ color: "#b2996a" }}>In Nature</span></h2>
+          <h1 className="the-city-hero-title" style={{ fontSize: isMobile ? "clamp(2.4rem, 6.5vw, 3.2rem)" : "clamp(3.6rem, 5vw, 4.8rem)", fontWeight: 700, margin: "0", letterSpacing: "-0.03em", lineHeight: 1.1 }}>
+            The City: Lahore's Sustainable<br /><span style={{ color: "#b2996a" }}>Riverfront Community</span>
+          </h1>
         </div>
         <div style={{ position: "absolute", right: "60px", top: "45%", transform: "translateY(-50%)", color: "white", zIndex: 10, textAlign: "right" }}>
         </div>
@@ -152,8 +170,10 @@ export default function TheCity() {
           {/* Section Header with Left Title and Right Body Text */}
           <div style={{ display: "flex", gap: isMobile ? "16px" : "60px", marginBottom: isMobile ? "30px" : "60px", alignItems: isMobile ? "flex-start" : "flex-end", flexDirection: isMobile ? "column" : "row" }}>
             <div style={{ flex: 1, minWidth: "0" }}>
-              <span style={{ fontSize: "12px", letterSpacing: "0.23em", textTransform: "uppercase", color: "#b2996a", margin: "0 0 16px 0", fontWeight: 600, display: "block" }}>WORLD CLASS AMENITIES</span>
-              <h2 style={{ fontSize: isMobile ? "24px" : "clamp(24px, 3vw, 36px)", fontWeight: 300, letterSpacing: "0.08em", lineHeight: 1.15, margin: "0", fontFamily: "var(--serif)", color: "#1a3a52" }}>EVERYTHING YOU NEED.<br />WITHIN YOUR COMMUNITY.</h2>
+              <span style={{ fontSize: "12px", letterSpacing: "0.23em", textTransform: "uppercase", color: "#b2996a", margin: "0 0 16px 0", fontWeight: 600, display: "block" }}>LIFESTYLE & SECURITY</span>
+              <h2 style={{ fontSize: isMobile ? "24px" : "clamp(24px, 3vw, 36px)", fontWeight: 300, letterSpacing: "0.06em", lineHeight: 1.2, margin: "0", fontFamily: "var(--serif)", color: "#1a3a52" }}>
+                World-Class Community Amenities & Security Systems
+              </h2>
             </div>
             <div style={{ flex: 1, minWidth: "0", display: "flex", alignItems: isMobile ? "flex-start" : "flex-end", paddingBottom: isMobile ? "0px" : "20px" }}>
               <p style={{ fontSize: isMobile ? "13px" : "16px", lineHeight: 1.8, color: "#666", margin: "0", fontFamily: "var(--serif)", fontWeight: 300 }}>FROM RECREATION TO RELAXATION ROYAL SWISS CITY OFFERS A COMPLETE EXPERIENCE</p>
@@ -209,9 +229,13 @@ export default function TheCity() {
         <div style={{ maxWidth: "1400px", margin: "0 auto", display: "flex", gap: isMobile ? "30px" : "60px", alignItems: "flex-start", flexDirection: isMobile ? "column" : "row" }}>
           {/* Left Side - Text */}
           <div style={{ flex: 1, minWidth: "0" }}>
-            <span style={{ fontSize: "12px", letterSpacing: "0.23em", textTransform: "uppercase", color: "#b2996a", margin: "0 0 16px 0", fontWeight: 600, display: "block" }}>MODERN INFRASTRUCTURE</span>
-            <h2 style={{ fontSize: isMobile ? "28px" : "clamp(32px, 4vw, 56px)", fontWeight: 300, letterSpacing: "0.08em", lineHeight: 1.15, margin: "0 0 20px 0", fontFamily: "var(--serif)", color: "#1a3a52" }}>Designed for<br />Generations</h2>
-            <p style={{ fontSize: "16px", lineHeight: 1.8, color: "#666", margin: "0", fontFamily: "var(--serif)", fontWeight: 300, display: window.innerWidth <= 768 ? "none" : "block" }}>Wide 40-feet roads, landscaped boulevards, organised blocks and a grand entrance create a community that is planned for today and ready for tomorrow.</p>
+            <span style={{ fontSize: "12px", letterSpacing: "0.23em", textTransform: "uppercase", color: "#b2996a", margin: "0 0 16px 0", fontWeight: 600, display: "block" }}>STRATEGIC URBAN ZONING</span>
+            <h2 style={{ fontSize: isMobile ? "28px" : "clamp(32px, 4vw, 56px)", fontWeight: 300, letterSpacing: "0.06em", lineHeight: 1.2, margin: "0 0 20px 0", fontFamily: "var(--serif)", color: "#1a3a52" }}>
+              Commercial & Civic Zones
+            </h2>
+            <p style={{ fontSize: "16px", lineHeight: 1.8, color: "#666", margin: "0", fontFamily: "var(--serif)", fontWeight: 300, display: window.innerWidth <= 768 ? "none" : "block" }}>
+              Strategically planned 2, 4, and 8 Marla commercial boulevard plots, civic plazas, health centers, and educational zones integrated with wide 40-feet internal roads and landscaped boulevards.
+            </p>
           </div>
 
           {/* Right Side - Infrastructure Grid */}
@@ -249,9 +273,11 @@ export default function TheCity() {
         <img src={window.innerWidth <= 768 ? "/green_canal_mobile.webp" : "/green_canal_landscape.webp"} alt="Green Landscape" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", zIndex: 1 }} loading="lazy" />
         
         {/* Text Overlay - Left Side */}
-        <div style={{ position: "absolute", left: isMobile ? "20px" : "60px", right: isMobile ? "20px" : "auto", top: window.innerWidth <= 768 ? "15%" : "20%", transform: "translateY(-50%)", color: "white", zIndex: 10, maxWidth: isMobile ? "calc(100% - 40px)" : "500px" }}>
+        <div style={{ position: "absolute", left: isMobile ? "20px" : "60px", right: isMobile ? "20px" : "auto", top: window.innerWidth <= 768 ? "15%" : "20%", transform: "translateY(-50%)", color: "white", zIndex: 10, maxWidth: isMobile ? "calc(100% - 40px)" : "600px" }}>
           <span style={{ fontSize: window.innerWidth <= 768 ? "12px" : "9px", letterSpacing: "0.23em", textTransform: "uppercase", color: "#b2996a", margin: "0 0 12px 0", fontWeight: 600, display: "block" }}>SUSTAINABILITY BUILT IN</span>
-          <h2 style={{ fontSize: window.innerWidth <= 768 ? "clamp(28px, 3.5vw, 48px)" : "clamp(20px, 2.5vw, 32px)", fontWeight: 300, letterSpacing: "0.08em", lineHeight: 1.15, margin: "0", fontFamily: "var(--serif)", color: "#1a3a52" }}>A Cleaner, Greener Future</h2>
+          <h2 style={{ fontSize: window.innerWidth <= 768 ? "clamp(26px, 3.5vw, 42px)" : "clamp(22px, 2.5vw, 34px)", fontWeight: 300, letterSpacing: "0.06em", lineHeight: 1.2, margin: "0", fontFamily: "var(--serif)", color: "#1a3a52" }}>
+            Eco-Friendly Infrastructure & Solar Integration
+          </h2>
         </div>
       </section>
 
@@ -273,6 +299,8 @@ export default function TheCity() {
             {footerLinks.filter((_, i) => i % 2 === 0).map(item => {
               let learnMoreLink = "";
               if (item === "The City") learnMoreLink = "/the-city";
+              else if (item === "Payment Plan") learnMoreLink = "/payment-plan";
+              else if (item === "Location") learnMoreLink = "/location";
               else if (item === "Developer") learnMoreLink = "/developer";
               else if (item === "FAQ") learnMoreLink = "/faq";
               else if (item === "Partner") learnMoreLink = "/#partner";
@@ -325,6 +353,8 @@ export default function TheCity() {
             {footerLinks.filter((_, i) => i % 2 === 1).map(item => {
               let learnMoreLink = "";
               if (item === "The City") learnMoreLink = "/the-city";
+              else if (item === "Payment Plan") learnMoreLink = "/payment-plan";
+              else if (item === "Location") learnMoreLink = "/location";
               else if (item === "Developer") learnMoreLink = "/developer";
               else if (item === "FAQ") learnMoreLink = "/faq";
               else if (item === "Partner") learnMoreLink = "/#partner";
@@ -400,7 +430,7 @@ export default function TheCity() {
         </div>
         <div className="footer-contact">
           <b>Where life happens.</b>
-          <span>© 2026 ROYAL SWISS CITY · PRIVACY POLICY · <a href="/sitemap.html" style={{ color: "inherit", textDecoration: "none" }}>SITEMAP</a></span>
+          <span>© 2026 ROYAL SWISS CITY · HRL CONSTRUCTION PVT LIMITED · PRIVACY POLICY · <a href="/sitemap.xml" style={{ color: "inherit", textDecoration: "none" }}>SITEMAP</a></span>
         </div>
       </footer>
 
@@ -419,6 +449,8 @@ export default function TheCity() {
             let href = "";
             if (item === "HOME") href = "/";
             else if (item === "THE CITY") href = "/the-city";
+            else if (item === "PAYMENT PLAN") href = "/payment-plan";
+            else if (item === "LOCATION") href = "/location";
             else if (item === "DEVELOPER") href = "/developer";
             else if (item === "ENQUIRE") href = "/enquire";
             else if (item === "FAQ") href = "/faq";

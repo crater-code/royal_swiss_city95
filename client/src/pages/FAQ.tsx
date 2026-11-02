@@ -33,15 +33,16 @@ const img = {
   heroMobile: "/mobile_city_aerial.jpg"
 };
 
-const nav = ["HOME", "THE CITY", "DEVELOPER", "FAQ", "PARTNERS/DEALERS", "ENQUIRE"];
-const navMobile = ["HOME", "THE CITY", "DEVELOPER", "FAQ", "PARTNERS/DEALERS", "ENQUIRE"];
-const footerLinks = ["Residential Plots", "Commercial Plots", "The City", "Developer", "Location", "FAQ", "Partner", "Enquire"];
+const nav = ["HOME", "THE CITY", "PAYMENT PLAN", "LOCATION", "DEVELOPER", "ENQUIRE"];
+const navMobile = ["HOME", "THE CITY", "PAYMENT PLAN", "LOCATION", "DEVELOPER", "ENQUIRE"];
+const footerLinks = ["Residential Plots", "Commercial Plots", "Payment Plan", "Location", "The City", "Developer", "FAQ", "Enquire"];
 const footerDescriptions = {
   "Residential Plots": "Discover a range of residential plot sizes to suit your needs. Choose from MARLA 3.5, MARLA 5, MARLA 10, KANAL 1, and KANAL 2 options designed for modern living.",
   "Commercial Plots": "Explore commercial plot opportunities perfect for your business. Available in MARLA 2, MARLA 4, and MARLA 8 to accommodate various commercial ventures.",
+  "Payment Plan": "Official 3 to 4 year quarterly installment schedules for residential and commercial plots engineered by HRL Construction Pvt Limited.",
+  "Location": "Prime location on Ravi Riverfront, Lahore with direct connectivity to Lahore Ring Road, M-2 Motorway, and City Center.",
   "The City": "Discover a considered way to experience the city at Royal Swiss City.",
   "Developer": "Discover a considered way to experience developer at Royal Swiss City.",
-  "Location": "Discover a considered way to experience location at Royal Swiss City.",
   "FAQ": "Discover a considered way to experience faq at Royal Swiss City.",
   "Partner": "Discover a considered way to experience partner at Royal Swiss City.",
   "Enquire": "Discover a considered way to experience enquire at Royal Swiss City."
@@ -54,9 +55,11 @@ function Logo() {
 function Anchor({ item }: { item: string }) {
   if (item === "DEVELOPER") return <a href="/developer">{item}</a>;
   if (item === "HOME") return <a href="/">{item}</a>;
+  if (item === "THE CITY") return <a href="/the-city">{item}</a>;
+  if (item === "PAYMENT PLAN") return <a href="/payment-plan">{item}</a>;
+  if (item === "LOCATION") return <a href="/location">{item}</a>;
   if (item === "ENQUIRE") return <a href="/enquire">{item}</a>;
   if (item === "FAQ") return <a href="/faq">{item}</a>;
-  if (item === "THE CITY") return <a href="/the-city">{item}</a>;
   if (item === "PARTNERS/DEALERS" || item === "PARTNER" || item === "DEALER") return <a href="/#partner">{item}</a>;
   return <a href={`/#${item.toLowerCase().replaceAll(" ", "-")}`}>{item}</a>;
 }
@@ -407,13 +410,12 @@ export default function FAQ() {
 
       {/* Structured SEO Head */}
       <SEOHead
-        title="FAQ & Buyer Knowledge Base - Royal Swiss City Lahore | Habib Rafiq"
-        description="Find verified answers to common questions about Royal Swiss City Lahore. Explore residential & commercial plot sizes, flexible payment installment plans, legal approvals, NOC status, and HRL CONSTRUCTION PVT LIMITED development milestones."
-        keywords="Royal Swiss City FAQ, frequently asked questions, royal swiss city plots, lahore gated community, property investment lahore, habib rafiq legacy, plot prices lahore"
+        title={SEO_CONFIG.pages.faq.title}
+        description={SEO_CONFIG.pages.faq.description}
+        keywords={SEO_CONFIG.pages.faq.keywords}
         canonical="https://royalswisscity.com/faq"
-        ogImage="https://royalswisscity.com/desktop_city_aerial.webp"
-        ogDescription="Explore the official knowledge base and FAQs for Royal Swiss City Lahore - 60+ years of Habib Rafiq engineering legacy."
-        language="en"
+        ogImage="https://royalswisscity.com/images/og-share.jpg"
+        structuredData={SEO_CONFIG.schema.faq}
       />
 
       <Breadcrumb />
@@ -449,6 +451,8 @@ export default function FAQ() {
             let href = "";
             if (item === "HOME") href = "/";
             else if (item === "THE CITY") href = "/the-city";
+            else if (item === "PAYMENT PLAN") href = "/payment-plan";
+            else if (item === "LOCATION") href = "/location";
             else if (item === "DEVELOPER") href = "/developer";
             else if (item === "ENQUIRE") href = "/enquire";
             else if (item === "FAQ") href = "/faq";
@@ -1132,6 +1136,8 @@ export default function FAQ() {
             {footerLinks.filter((_, i) => i % 2 === 0).map((item) => {
               let learnMoreLink = "";
               if (item === "The City") learnMoreLink = "/the-city";
+              else if (item === "Payment Plan") learnMoreLink = "/payment-plan";
+              else if (item === "Location") learnMoreLink = "/location";
               else if (item === "Developer") learnMoreLink = "/developer";
               else if (item === "FAQ") learnMoreLink = "/faq";
               else if (item === "Partner") learnMoreLink = "/#partner";
@@ -1176,6 +1182,8 @@ export default function FAQ() {
             {footerLinks.filter((_, i) => i % 2 === 1).map((item) => {
               let learnMoreLink = "";
               if (item === "The City") learnMoreLink = "/the-city";
+              else if (item === "Payment Plan") learnMoreLink = "/payment-plan";
+              else if (item === "Location") learnMoreLink = "/location";
               else if (item === "Developer") learnMoreLink = "/developer";
               else if (item === "FAQ") learnMoreLink = "/faq";
               else if (item === "Partner") learnMoreLink = "/#partner";
@@ -1229,7 +1237,7 @@ export default function FAQ() {
 
         <div className="footer-contact">
           <b>Where life happens.</b>
-          <span>© 2026 ROYAL SWISS CITY · PRIVACY POLICY · <a href="/sitemap.html" style={{ color: "inherit", textDecoration: "none" }}>SITEMAP</a></span>
+          <span>© 2026 ROYAL SWISS CITY · HRL CONSTRUCTION PVT LIMITED · PRIVACY POLICY · <a href="/sitemap.xml" style={{ color: "inherit", textDecoration: "none" }}>SITEMAP</a></span>
         </div>
       </footer>
     </main>
