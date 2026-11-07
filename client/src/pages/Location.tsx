@@ -8,7 +8,6 @@ import {
   Plane, 
   Building2, 
   ArrowRight, 
-  MessageCircle, 
   ShieldCheck, 
   Maximize2,
   Calendar,
@@ -733,29 +732,6 @@ export default function Location() {
               >
                 Schedule My Visit Now
               </button>
-              <a
-                href="https://wa.me/923004647979?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20guided%20site%20tour%20for%20Royal%20Swiss%20City"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "8px",
-                  padding: "14px 28px",
-                  background: "rgba(255, 255, 255, 0.1)",
-                  color: "#ffffff",
-                  borderRadius: "999px",
-                  fontSize: "12px",
-                  fontWeight: 600,
-                  letterSpacing: "1px",
-                  textTransform: "uppercase",
-                  textDecoration: "none",
-                  border: "1px solid rgba(255, 255, 255, 0.2)",
-                }}
-              >
-                <MessageCircle size={16} />
-                WhatsApp Site Concierge
-              </a>
             </div>
           </div>
         </div>
@@ -855,7 +831,7 @@ export default function Location() {
 
                   <div>
                     <label style={{ display: "block", fontSize: "12px", fontWeight: 600, color: "#333", marginBottom: "4px" }}>
-                      WhatsApp / Mobile Phone *
+                      Mobile / Phone Number *
                     </label>
                     <input
                       type="tel"

@@ -1,19 +1,10 @@
-import { MessageCircle, Phone, Mail } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 import { useState } from "react";
 
 export default function FloatingContacts() {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const contacts = [
-    {
-      id: "whatsapp",
-      icon: MessageCircle,
-      label: "WhatsApp",
-      href: "https://wa.me/923004647979",
-      bgColor: "bg-green-600",
-      hoverColor: "hover:bg-green-700",
-      external: true,
-    },
     {
       id: "call",
       icon: Phone,

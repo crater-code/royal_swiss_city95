@@ -156,7 +156,7 @@ export default function Enquire() {
           message: "",
         });
       } else {
-        const errorMsg = result?.message || "There was an issue submitting your enquiry. Please try again or reach us directly via WhatsApp / phone.";
+        const errorMsg = result?.message || "There was an issue submitting your enquiry. Please try again or reach us directly via phone or email.";
         setSubmitStatus("error");
         setStatusMessage(errorMsg);
       }
@@ -443,7 +443,7 @@ export default function Enquire() {
 
                 <div>
                   <label style={{ display: "block", fontSize: "11px", letterSpacing: "1px", textTransform: "uppercase", color: "#1a3a52", fontWeight: 600, marginBottom: "6px" }}>
-                    Phone / WhatsApp *
+                    Phone Number *
                   </label>
                   <input
                     type="tel"

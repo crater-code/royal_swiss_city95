@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { 
   FileText, 
-  MessageCircle, 
   Download, 
   CheckCircle, 
   CreditCard, 
@@ -318,42 +317,6 @@ export default function PaymentPlan() {
               <Download size={16} />
               Download Official Payment Plan PDF
             </button>
-
-            <a
-              href="https://wa.me/923004647979?text=Hello%20HRL%20Sales%2C%20I%20am%20inquiring%20about%20the%20Royal%20Swiss%20City%20Payment%20Plan"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "10px",
-                padding: "14px 28px",
-                backgroundColor: "rgba(255, 255, 255, 0.12)",
-                color: "#ffffff",
-                borderRadius: "999px",
-                fontSize: "12px",
-                letterSpacing: "1.5px",
-                textTransform: "uppercase",
-                fontWeight: 600,
-                border: "1px solid rgba(255, 255, 255, 0.28)",
-                textDecoration: "none",
-                backdropFilter: "blur(10px)",
-                transition: "all 0.3s ease",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "translateY(-2px)";
-                e.currentTarget.style.borderColor = "#25D366";
-                e.currentTarget.style.color = "#25D366";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "translateY(0)";
-                e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.28)";
-                e.currentTarget.style.color = "#ffffff";
-              }}
-            >
-              <MessageCircle size={16} />
-              Inquire via WhatsApp
-            </a>
           </div>
         </div>
       </section>
@@ -903,25 +866,6 @@ export default function PaymentPlan() {
               >
                 Book Guided Consultation
               </a>
-              <a
-                href="https://wa.me/923004647979?text=Hello%20HRL%20Sales%2C%20I%20would%20like%20to%20request%20the%20Royal%20Swiss%20City%20Payment%20Plan%20PDF"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  padding: "12px 28px",
-                  background: "rgba(255, 255, 255, 0.1)",
-                  color: "#ffffff",
-                  borderRadius: "999px",
-                  fontSize: "12px",
-                  fontWeight: 600,
-                  letterSpacing: "1px",
-                  textTransform: "uppercase",
-                  textDecoration: "none",
-                  border: "1px solid rgba(255, 255, 255, 0.2)",
-                }}
-              >
-                Chat on WhatsApp
-              </a>
             </div>
           </div>
         </div>
@@ -1021,7 +965,7 @@ export default function PaymentPlan() {
 
                   <div>
                     <label style={{ display: "block", fontSize: "12px", fontWeight: 600, color: "#333", marginBottom: "4px" }}>
-                      WhatsApp / Mobile Phone *
+                      Mobile / Phone Number *
                     </label>
                     <input
                       type="tel"

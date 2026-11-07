@@ -8,7 +8,6 @@ import {
   HelpCircle, 
   Phone, 
   Mail, 
-  MessageSquare, 
   ArrowRight, 
   CheckCircle2, 
   ShieldCheck, 
@@ -1031,32 +1030,6 @@ export default function FAQ() {
                   alignItems: "center" 
                 }}
               >
-                <a 
-                  href="https://wa.me/923004647979" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  style={{ 
-                    background: "#25D366", 
-                    color: "#ffffff", 
-                    padding: "13px 28px", 
-                    borderRadius: "999px", 
-                    fontSize: "11px", 
-                    letterSpacing: "1.5px", 
-                    textTransform: "uppercase", 
-                    textDecoration: "none", 
-                    fontWeight: 600, 
-                    display: "inline-flex", 
-                    alignItems: "center", 
-                    gap: "8px", 
-                    transition: "all 0.3s ease",
-                    boxShadow: "0 4px 16px rgba(37, 211, 102, 0.3)" 
-                  }}
-                  onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-2px)"; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.transform = "translateY(0)"; }}
-                >
-                  <MessageSquare size={16} /> WhatsApp Concierge
-                </a>
-
                 <a 
                   href="tel:+9242111777588" 
                   style={{ 
