@@ -254,16 +254,7 @@ export default function Developer() {
         )}
       </section>
 
-    <section className="impact-timeline-section reveal-section" style={{ backgroundImage: !isMobileView ? "url('/six_impact.webp')" : "url('/six_impact_mobile.webp')", backgroundSize: isMobileView ? "cover" : "contain", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundColor: "#2C3F5E", color: "#ffffff", padding: isMobileView ? "30px 20px" : "50px 30px", minHeight: !isMobileView ? "320px" : "80vh", height: "auto", width: isMobileView ? "100vw" : "auto", marginLeft: isMobileView ? "calc(-50vw + 50%)" : "0" }}>
-      <div style={{ maxWidth: "1200px", margin: "0 auto", textAlign: "center" }}>
-        <h2 style={{ fontSize: isMobileView ? "22px" : "clamp(26px, 3.2vw, 38px)", fontFamily: "var(--serif)", letterSpacing: "0.05em", color: "#ffffff", margin: "0 0 10px 0", fontWeight: 300 }}>
-          Six Decades of Engineering & Mega-Project Excellence
-        </h2>
-        <p style={{ color: "rgba(255,255,255,0.85)", fontSize: isMobileView ? "12px" : "15px", maxWidth: "800px", margin: "0 auto", lineHeight: 1.6 }}>
-          Since 1962, HRL Construction Pvt Limited (Habib Rafiq) has pioneered Pakistan's critical transport, power, aviation, and master-planned urban communities.
-        </p>
-      </div>
-    </section>
+    <section className="impact-timeline-section reveal-section" style={{ backgroundImage: !isMobileView ? "url('/six_impact.webp')" : "url('/six_impact_mobile.webp')", backgroundSize: isMobileView ? "cover" : "contain", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundColor: "#2C3F5E", minHeight: !isMobileView ? "320px" : "80vh", height: "auto", width: isMobileView ? "100vw" : "auto", marginLeft: isMobileView ? "calc(-50vw + 50%)" : "0" }} />
 
     {/* Desktop Version */}
     {!isMobileView && (
