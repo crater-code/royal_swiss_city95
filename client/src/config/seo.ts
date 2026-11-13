@@ -143,7 +143,7 @@ export const SEO_CONFIG = {
     developer: {
       title: "Developer & Builder | HRL Construction (Habib Rafiq) - Royal Swiss City",
       description: "Royal Swiss City is engineered and built by HRL Construction Pvt Limited (Habib Rafiq). Over 60 years of national infrastructure leadership, engineering, and trust.",
-      keywords: "HRL Construction Pvt Limited, Habib Rafiq, Shahid Rafiq, Sohaib Hassan, Royal Swiss City developer, builder, EPC contractor Pakistan",
+      keywords: "HRL Construction Pvt Limited, Habib Rafiq, Shahid Rafiq, Sohaib Shahid Rafiq, Royal Swiss City developer, builder, EPC contractor Pakistan",
       canonical: "https://royalswisscity.com/developer",
     },
 
@@ -212,7 +212,7 @@ export const SEO_CONFIG = {
       "employee": [
         {
           "@type": "Person",
-          "name": "Sohaib Hassan",
+          "name": "Sohaib Shahid Rafiq",
           "jobTitle": "Chief Executive Officer"
         }
       ]

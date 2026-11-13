@@ -196,7 +196,7 @@ export default function Developer() {
             {/* CEO Card */}
             <article id="ceo-message" className="legacy-card legacy-card--ceo reveal-item">
               <div className="legacy-card__image-wrapper">
-                <img src={img.ceo} alt="Sohaib Hassan - CEO HRL Construction Pvt Limited, Royal Swiss City Developer" loading="eager" />
+                <img src={img.ceo} alt="Sohaib Shahid Rafiq - CEO HRL Construction Pvt Limited, Royal Swiss City Developer" loading="eager" />
                 <div className="legacy-card__image-label">
                   <span>A VISION FOR TODAY. A PROMISE FOR TOMORROW.</span>
                 </div>
@@ -204,7 +204,7 @@ export default function Developer() {
               <div className="legacy-card__divider"></div>
               <div className="legacy-card__content">
                 <small>CHIEF EXECUTIVE OFFICER</small>
-                <h3 style={{ textTransform: "uppercase" }}>SOHAIB HASSAN</h3>
+                <h3 style={{ textTransform: "uppercase" }}>SOHAIB SHAHID RAFIQ</h3>
                 <div className="legacy-card__decoration">
                   <span></span>
                   <svg width="6" height="6" viewBox="0 0 6 6" fill="currentColor">
@@ -217,7 +217,7 @@ export default function Developer() {
                   <p className="legacy-quote">We are creating smart, sustainable communities where future generations can live, thrive, and prosper.</p>
                 </div>
                 <p style={{ fontSize: "12px", lineHeight: "1.6", color: "#666", margin: "0 0 16px 0" }}>
-                  Sohaib Hassan serves as Chief Executive Officer of HRL Construction Pvt Limited. Spearheading the master planning and execution of Royal Swiss City Lahore, he drives solar integration, riverfront connectivity, and state-of-the-art urban engineering.
+                  Sohaib Shahid Rafiq serves as Chief Executive Officer of HRL Construction Pvt Limited. Spearheading the master planning and execution of Royal Swiss City Lahore, he drives solar integration, riverfront connectivity, and state-of-the-art urban engineering.
                 </p>
                 <div className="legacy-card__signature">
                   <p>CHIEF EXECUTIVE OFFICER, HRL CONSTRUCTION PVT LIMITED</p>
@@ -244,9 +244,9 @@ export default function Developer() {
             {/* CEO Card Mobile */}
             <div style={{ textAlign: "center" }}>
               <div style={{ width: "100%", borderRadius: "8px", overflow: "hidden", marginBottom: "10px", height: "160px" }}>
-                <img src={img.ceo} alt="Sohaib Hassan - CEO HRL Construction Pvt Limited, Royal Swiss City Developer" style={{ width: "100%", height: "100%", objectFit: "cover" }} loading="lazy" />
+                <img src={img.ceo} alt="Sohaib Shahid Rafiq - CEO HRL Construction Pvt Limited, Royal Swiss City Developer" style={{ width: "100%", height: "100%", objectFit: "cover" }} loading="lazy" />
               </div>
-              <h4 style={{ fontSize: "13px", fontWeight: 400, color: "#b2996a", margin: "0 0 3px 0", fontFamily: "var(--serif)", letterSpacing: "0.05em", textTransform: "uppercase" }}>Sohaib Hassan</h4>
+              <h4 style={{ fontSize: "13px", fontWeight: 400, color: "#b2996a", margin: "0 0 3px 0", fontFamily: "var(--serif)", letterSpacing: "0.05em", textTransform: "uppercase" }}>Sohaib Shahid Rafiq</h4>
               <p style={{ fontSize: "10px", color: "#b2996a", margin: "0 0 4px 0", textTransform: "uppercase", letterSpacing: "0.08em", fontFamily: "var(--serif)", fontWeight: 300 }}>CEO, HRL Construction</p>
               <p style={{ fontSize: "9px", color: "#777", lineHeight: 1.4, margin: 0 }}>Spearheading Royal Swiss City's master planning & smart riverfront engineering</p>
             </div>

@@ -421,7 +421,7 @@ export default function Home() {
           {/* CEO Card */}
           <article className="legacy-card legacy-card--ceo reveal-item">
             <div className="legacy-card__image-wrapper">
-              <img src={img.ceo} alt="Sohaib Hassan - CEO Royal Swiss City, Leading Premium Development" />
+              <img src={img.ceo} alt="Sohaib Shahid Rafiq - CEO Royal Swiss City, Leading Premium Development" />
               <div className="legacy-card__image-label">
                 <span>A VISION FOR TODAY. A PROMISE FOR TOMORROW.</span>
               </div>
@@ -429,7 +429,7 @@ export default function Home() {
             <div className="legacy-card__divider"></div>
             <div className="legacy-card__content">
               <small>CHIEF EXECUTIVE OFFICER</small>
-              <h3 style={{ textTransform: "uppercase" }}>SOHAIB HASSAN</h3>
+              <h3 style={{ textTransform: "uppercase" }}>SOHAIB SHAHID RAFIQ</h3>
               <div className="legacy-card__decoration">
                 <span></span>
                 <svg width="6" height="6" viewBox="0 0 6 6" fill="currentColor">
@@ -466,9 +466,9 @@ export default function Home() {
           {/* CEO Card Mobile */}
           <div style={{ textAlign: "center" }}>
             <div style={{ width: "100%", borderRadius: "8px", overflow: "hidden", marginBottom: "10px", height: "160px" }}>
-              <img src={img.ceo} alt="Sohaib Hassan - CEO Royal Swiss City, Leading Premium Development" style={{ width: "100%", height: "100%", objectFit: "cover" }} loading="lazy" />
+              <img src={img.ceo} alt="Sohaib Shahid Rafiq - CEO Royal Swiss City, Leading Premium Development" style={{ width: "100%", height: "100%", objectFit: "cover" }} loading="lazy" />
             </div>
-            <h4 style={{ fontSize: "13px", fontWeight: 400, color: "#b2996a", margin: "0 0 3px 0", fontFamily: "var(--serif)", letterSpacing: "0.05em", textTransform: "uppercase" }}>Sohaib Hassan</h4>
+            <h4 style={{ fontSize: "13px", fontWeight: 400, color: "#b2996a", margin: "0 0 3px 0", fontFamily: "var(--serif)", letterSpacing: "0.05em", textTransform: "uppercase" }}>Sohaib Shahid Rafiq</h4>
             <p style={{ fontSize: "10px", color: "#b2996a", margin: "0", textTransform: "uppercase", letterSpacing: "0.08em", fontFamily: "var(--serif)", fontWeight: 300 }}>Chief Executive Officer</p>
           </div>
         </div>

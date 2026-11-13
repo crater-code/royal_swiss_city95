@@ -121,7 +121,7 @@ const comprehensiveFAQs: FAQItem[] = [
     highlights: [
       "Over 6 decades (since 1962) of continuous engineering and infrastructure leadership in Pakistan.",
       "Pioneers behind landmark national projects in energy, aviation, high-rise construction, and mega-societies.",
-      "Led by Chairman Shahid Rafiq and CEO Sohaib Hassan."
+      "Led by Chairman Shahid Rafiq and CEO Sohaib Shahid Rafiq."
     ],
     details: "Habib Rafiq Construction (Pvt.) Ltd. is Pakistan's most trusted name in infrastructure and mega-development. With an unblemished 60+ year track record, HRL CONSTRUCTION PVT LIMITED has executed complex EPC contracts across power, oil & gas, aviation, motorways, and luxury housing schemes that define modern Pakistan."
   },
