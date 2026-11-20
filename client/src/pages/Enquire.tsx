@@ -30,7 +30,7 @@ const img = {
 };
 
 function Logo() { 
-  return <img className="brand-logo" src={img.logo} alt="Royal Swiss City - Luxury Gated Community" width={120} height={40} loading="eager" />;
+  return <img className="brand-logo" src={img.logo} alt="Royal Swiss City - Luxury Gated Community" width={90} height={90} loading="eager" />;
 }
 
 function Anchor({ item }: { item: string }) {
