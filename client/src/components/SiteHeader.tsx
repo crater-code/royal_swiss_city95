@@ -56,8 +56,8 @@ export function SiteHeader({ scrolled = false, forceScrolled = false }: SiteHead
             src="/logo.webp?v=2"
             alt="Royal Swiss City Lahore - HRL Construction Pvt Limited"
             loading="eager"
-            width={90}
-            height={90}
+            width={80}
+            height={80}
           />
         </a>
 

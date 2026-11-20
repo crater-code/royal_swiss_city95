@@ -20,7 +20,7 @@ const footerDescriptions = {
   "Enquire": "Contact our official sales and site visit advisory team at 042-111-777-588."
 };
 
-function Logo() { return <img className="brand-logo" src={img.logo} alt="Royal Swiss City" loading="lazy" /> }
+function Logo() { return <img className="brand-logo" src={img.logo} alt="Royal Swiss City" width={80} height={80} loading="lazy" /> }
 function Anchor({ item }: { item: string }) {
   if (item === "DEVELOPER") {
     return <a href="/developer">{item}</a>
@@ -125,11 +125,6 @@ export default function TheCity() {
       <div style={{ width: "100vw", height: "100vh", marginLeft: "calc(-50vw + 50%)", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", position: "relative" }}>
         <img src={isMobile ? "/the-city-1-mobile.webp" : "/the city 1.webp"} alt="The City: Lahore's Sustainable Riverfront Community" style={{ width: "100%", height: "100%", objectFit: "cover" }} loading="lazy" />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(13, 27, 42, 0.8), rgba(13, 27, 42, 0))" }}></div>
-        {isMobile && (
-          <div style={{ position: "absolute", top: "40px", left: "50%", transform: "translateX(-50%)", zIndex: 10 }}>
-            <img className="brand-logo" src={img.logo} alt="Royal Swiss City" style={{ height: "60px", width: "auto" }} loading="lazy" />
-          </div>
-        )}
         <div style={{ position: "absolute", left: isMobile ? "50%" : "60px", transform: isMobile ? "translateX(-50%)" : "none", bottom: isMobile ? "40px" : "auto", top: isMobile ? "auto" : "36%", color: "white", zIndex: 10, textAlign: isMobile ? "center" : "left", width: isMobile ? "90%" : "auto" }}>
           <span className="the-city-hero-kicker" style={{ fontSize: isMobile ? "1.05rem" : "1.25rem", fontWeight: isMobile ? 500 : 600, margin: "0 0 16px 0", letterSpacing: "0.14em", color: "#b2996a", display: "block", textTransform: "uppercase" }}>ROYAL SWISS CITY LAHORE</span>
           <h1 className="the-city-hero-title" style={{ fontSize: isMobile ? "clamp(2.4rem, 6.5vw, 3.2rem)" : "clamp(3.6rem, 5vw, 4.8rem)", fontWeight: 700, margin: "0", letterSpacing: "-0.03em", lineHeight: 1.1 }}>
