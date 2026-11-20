@@ -33,7 +33,7 @@ $db_user = "royalswi_royalswi";
 $db_pass = ';zfC]EvT5KrWdtxi';
 
 // Notification recipient
-$admin_email = "admin@royalswisscity.com";
+$admin_email = "info@royalswisscity.com";
 
 // =============================================================================
 // PARSE INPUT DATA

@@ -731,7 +731,7 @@ export default function Enquire() {
                 </div>
                 <div>
                   <span style={{ fontSize: "10px", letterSpacing: "1.5px", textTransform: "uppercase", color: "#8B6F47", fontWeight: 600, display: "block", marginBottom: "2px" }}>EMAIL INQUIRIES</span>
-                  <a href="mailto:admin@royalswisscity.com" style={{ fontSize: "15px", fontWeight: 500, color: "#1a3a52", textDecoration: "none" }}>admin@royalswisscity.com</a>
+                  <a href="mailto:info@royalswisscity.com" style={{ fontSize: "15px", fontWeight: 500, color: "#1a3a52", textDecoration: "none" }}>info@royalswisscity.com</a>
                 </div>
               </div>
 
