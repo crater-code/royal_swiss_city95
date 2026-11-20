@@ -48,7 +48,7 @@ const footerDescriptions = {
 };
 
 function Logo() { 
-  return <img className="brand-logo" src={img.logo} alt="Royal Swiss City - Luxury Gated Community" width={80} height={80} loading="eager" />;
+  return <img className="brand-logo" src={img.logo} alt="Royal Swiss City - Luxury Gated Community" width={125} height={125} loading="eager" />;
 }
 
 function Anchor({ item }: { item: string }) {
