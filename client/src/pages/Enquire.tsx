@@ -742,7 +742,7 @@ export default function Enquire() {
                 </div>
                 <div>
                   <span style={{ fontSize: "10px", letterSpacing: "1.5px", textTransform: "uppercase", color: "#8B6F47", fontWeight: 600, display: "block", marginBottom: "2px" }}>CORPORATE OFFICE</span>
-                  <p style={{ fontSize: "14px", color: "#1a3a52", margin: 0, lineHeight: 1.5 }}>123-C Commercial Broadway, DHA Phase 5, Lahore, Pakistan</p>
+                  <p style={{ fontSize: "14px", color: "#1a3a52", margin: 0, lineHeight: 1.5 }}>213-C Commercial Broadway, DHA Phase 5, Lahore, Pakistan</p>
                 </div>
               </div>
 
