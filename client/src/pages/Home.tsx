@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import { ChevronDown, ChevronRight, Menu, X, ArrowDown, Instagram, Facebook, Linkedin, Youtube, Leaf, Droplets, Recycle, Users } from "lucide-react";
 import { HeroCapsuleAnimation } from "@/components/HeroCapsuleAnimation";
-import { ShowcaseCarousel } from "@/components/ShowcaseCarousel";
 import { Breadcrumb } from "@/components/Breadcrumb";
-import { animateLegacySection, animateFooter, animateShowcaseSection } from "@/utils/sectionAnimations";
+import { animateLegacySection, animateFooter } from "@/utils/sectionAnimations";
 import { SEOHead } from "@/components/SEOHead";
 import { SEO_CONFIG } from "@/config/seo";
 
@@ -119,11 +118,9 @@ export default function Home() {
   useEffect(() => {
     const legacyElement = document.querySelector(".legacy-section");
     const footerElement = document.querySelector(".walk-footer.reveal-section");
-    const showcaseElement = document.querySelector(".showcase-section");
 
     if (legacyElement) animateLegacySection(legacyElement);
     if (footerElement) animateFooter(footerElement);
-    if (showcaseElement) animateShowcaseSection(showcaseElement);
   }, []);
   const vh = typeof window !== "undefined" ? window.innerHeight : 800; const heroProgress = Math.min(scrollY / Math.max(vh, 800), 1);
   return <main className="walkthrough-page home-page" style={{ "--hero-progress": heroProgress } as React.CSSProperties}>
@@ -150,237 +147,23 @@ export default function Home() {
     </h1>
     
     <HeroCapsuleAnimation />
-    {!isMobile && (
-      <section 
-        id="location" 
-        className="showcase-section showcase-section-desktop reveal-section" 
-        style={{ 
-          backgroundImage: "url('/hrl_own_building.webp?v=2')", 
-          backgroundSize: "cover", 
-          backgroundRepeat: "no-repeat", 
-          backgroundPosition: "center", 
-          position: "relative", 
-          overflow: "hidden", 
-          minHeight: "clamp(480px, 68vh, 580px)", 
-          display: "flex", 
-          alignItems: "center",
-          padding: "24px 0",
-          boxSizing: "border-box"
-        }}
-      >
-        {/* Soft white gradient on the left behind text, transparent in the middle and right */}
-        <div 
-          style={{ 
-            position: "absolute", 
-            inset: 0, 
-            background: "linear-gradient(to right, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.88) 16%, rgba(255, 255, 255, 0.3) 28%, rgba(255, 255, 255, 0) 44%)", 
-            pointerEvents: "none", 
-            zIndex: 1 
-          }} 
-        />
-
-        {/* Content container - Flush to left and right edges */}
-        <div style={{ position: "relative", zIndex: 2, display: "flex", width: "100%", maxWidth: "none", margin: "0", padding: "0 0 0 40px", justifyContent: "space-between", alignItems: "center" }}>
-
-          {/* LEFT COLUMN - Exact Legacy Lockup flush to the left edge */}
-          <div className="legacy-lockup" style={{ flex: "0 1 auto", display: "flex", flexDirection: "column", alignItems: "flex-start", textAlign: "left", padding: "0" }}>
-            <div className="legacy-number-wrapper" style={{ justifyContent: "flex-start" }}>
-              <span className="legacy-num-60">60</span>
-              <span className="legacy-plus-sign">+</span>
-            </div>
-            <span className="legacy-label-years" style={{ textAlign: "left", padding: "0", fontSize: "14px", fontWeight: 400, margin: "8px 0 0 0", display: "block" }}>YEARS OF LEGACY</span>
-            <p className="legacy-label-legacy" style={{ textAlign: "left", fontSize: "32px", fontWeight: 700, margin: "4px 0" }}>HABIB RAFIQ</p>
-            <div className="legacy-divider-line" />
-            <p className="legacy-tagline" style={{ textAlign: "left" }}>ROYAL SWISS CITY - SHAPING COMMUNITIES, BUILDING BETTER TOMORROW</p>
-            {/* Hidden SEO text */}
-            <div style={{ display: "none", fontSize: "0", height: "0", overflow: "hidden" }}>
-              <p>Royal Swiss City Lahore - best gated community in lahore with 60 years habib rafiq legacy. Premium luxury housing pakistan. Smart city eco friendly green living investment opportunity.</p>
-            </div>
-          </div>
-
-          {/* RIGHT COLUMN - 3 compact stacked cards positioned 14px from right border */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "10px", width: "clamp(195px, 14vw, 235px)", minWidth: "190px", marginLeft: "auto", marginRight: "14px" }}>
-            {/* Card 1 */}
-            <div style={{ position: "relative", height: "clamp(120px, 8.5vw, 145px)", borderRadius: "6px", overflow: "hidden", cursor: "pointer", transition: "all 0.3s ease", boxShadow: "0 6px 18px rgba(0,0,0,0.25)" }} onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.transform = "scale(1.025)"; }} onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.transform = "scale(1)"; }}>
-              <img src="/bahria-icon-tower-karachi.webp" alt="Bahria Icon Tower Karachi - Habib Rafiq iconic developments - best projects in pakistan" width={235} height={145} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-              <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.1))" }}></div>
-              <div style={{ position: "absolute", bottom: "10px", right: "14px", color: "white", textAlign: "right" }}>
-                <p style={{ fontSize: "8.5px", letterSpacing: "1.5px", margin: "0", opacity: 0.85, textTransform: "uppercase", fontFamily: "var(--serif)", fontWeight: 400 }}>ICONIC</p>
-                <p style={{ fontSize: "11.5px", fontWeight: 600, margin: "2px 0 0 0", textTransform: "uppercase", letterSpacing: "0.8px", fontFamily: "var(--serif)" }}>DEVELOPMENTS</p>
-              </div>
-            </div>
-
-            {/* Card 2 */}
-            <div style={{ position: "relative", height: "clamp(120px, 8.5vw, 145px)", borderRadius: "6px", overflow: "hidden", cursor: "pointer", transition: "all 0.3s ease", boxShadow: "0 6px 18px rgba(0,0,0,0.25)" }} onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.transform = "scale(1.025)"; }} onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.transform = "scale(1)"; }}>
-              <img src="/grand-jamia-mosque-bahria-town-lahore.webp" alt="Grand Jamia Mosque Bahria Town Lahore - Habib Rafiq communities - lasting developments pakistan" width={235} height={145} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-              <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.1))" }}></div>
-              <div style={{ position: "absolute", bottom: "10px", right: "14px", color: "white", textAlign: "right" }}>
-                <p style={{ fontSize: "8.5px", letterSpacing: "1.5px", margin: "0", opacity: 0.85, textTransform: "uppercase", fontFamily: "var(--serif)", fontWeight: 400 }}>LASTING</p>
-                <p style={{ fontSize: "11.5px", fontWeight: 600, margin: "2px 0 0 0", textTransform: "uppercase", letterSpacing: "0.8px", fontFamily: "var(--serif)" }}>COMMUNITIES</p>
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div style={{ position: "relative", height: "clamp(120px, 8.5vw, 145px)", borderRadius: "6px", overflow: "hidden", cursor: "pointer", transition: "all 0.3s ease", boxShadow: "0 6px 18px rgba(0,0,0,0.25)" }} onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.transform = "scale(1.025)"; }} onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.transform = "scale(1)"; }}>
-              <img src="/101-tower-lahore.webp" alt="101 Tower Lahore - Premium residential commercial development - best housing projects lahore" width={235} height={145} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-              <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.1))" }}></div>
-              <div style={{ position: "absolute", bottom: "10px", right: "14px", color: "white", textAlign: "right" }}>
-                <p style={{ fontSize: "8.5px", letterSpacing: "1.5px", margin: "0", opacity: 0.85, textTransform: "uppercase", fontFamily: "var(--serif)", fontWeight: 400 }}>A STRONGER</p>
-                <p style={{ fontSize: "11.5px", fontWeight: 600, margin: "2px 0 0 0", textTransform: "uppercase", letterSpacing: "0.8px", fontFamily: "var(--serif)" }}>PAKISTAN</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    )}
-
-    {isMobile && (
-      <>
-        <section 
-          id="location-mobile" 
-          className="showcase-section showcase-section-mobile reveal-section" 
-          style={{ 
-            backgroundImage: "url('/hrl_own_building.webp?v=2')", 
-            backgroundSize: "cover", 
-            backgroundPosition: "47% center", 
-            backgroundRepeat: "no-repeat", 
-            minHeight: "260px", 
-            position: "relative", 
-            display: "flex", 
-            flexDirection: "column", 
-            alignItems: "flex-start", 
-            justifyContent: "center", 
-            padding: "20px 20px", 
-            boxSizing: "border-box" 
-          }}
-        >
-          {/* Subtle soft gradient on left for text legibility */}
-          <div 
-            style={{ 
-              position: "absolute", 
-              inset: 0, 
-              background: "linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.95) 25%, rgba(255, 255, 255, 0.7) 40%, rgba(255, 255, 255, 0.2) 55%, rgba(255, 255, 255, 0) 68%)", 
-              pointerEvents: "none", 
-              zIndex: 1 
-            }} 
-          />
-          <div 
-            className="legacy-lockup" 
-            style={{ 
-              position: "relative", 
-              zIndex: 2, 
-              display: "flex", 
-              flexDirection: "column", 
-              alignItems: "flex-start", 
-              textAlign: "left", 
-              padding: "0", 
-              margin: "0" 
-            }}
-          >
-            <div className="legacy-number-wrapper" style={{ display: "flex", alignItems: "flex-start", justifyContent: "flex-start", lineHeight: 0.82 }}>
-              <span className="legacy-num-60" style={{ fontSize: "46px", lineHeight: "0.82" }}>60</span>
-              <span className="legacy-plus-sign" style={{ fontSize: "18px", marginTop: "2px", marginLeft: "2px" }}>+</span>
-            </div>
-            <p className="legacy-label-years" style={{ fontSize: "9px", marginTop: "7px", marginBottom: "1px", textAlign: "left", padding: "0", letterSpacing: "0.2em", color: "#8B6F47", fontWeight: 600, fontFamily: "var(--serif)" }}>YEARS OF</p>
-            <span className="legacy-label-legacy" style={{ fontSize: "23px", textAlign: "left", display: "block", color: "#1a3a52", fontWeight: 700, fontFamily: "var(--serif)", letterSpacing: "0.04em", lineHeight: 1, margin: 0 }}>LEGACY</span>
-          </div>
-        </section>
-
-        <section style={{ backgroundColor: "#faf7f0", position: "relative", display: "flex", flexDirection: "column" }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "30px 20px 0px 10px", position: "relative", zIndex: 1 }}>
-            <p style={{ fontSize: "14px", letterSpacing: "0.15em", textTransform: "uppercase", color: "#8B6F47", margin: "0", fontWeight: 600, fontFamily: "var(--serif)" }}>OUR PROJECTS</p>
-            <a href="/developer" style={{ fontSize: "12px", letterSpacing: "0.1em", textTransform: "uppercase", color: "#0B1E2B", textDecoration: "none", fontWeight: 700, fontFamily: "var(--serif)", display: "flex", alignItems: "center", gap: "6px" }}>View All →</a>
-          </div>
-          <div style={{ position: "relative", zIndex: 1, flex: 1, width: "100vw", marginLeft: "calc(-50vw + 50%)", padding: "5px 0" }}>
-            <div style={{ position: "relative", width: "100%", height: "100%" }}>
-              <ShowcaseCarousel cards={communityCards} />
-              {/* Navigation buttons - positioned on top */}
-              <button
-                onClick={() => document.dispatchEvent(new CustomEvent("carousel-prev"))}
-                style={{
-                  position: "absolute",
-                  left: "12px",
-                  top: "50%",
-                  transform: "translateY(-50%)",
-                  background: "rgba(0, 0, 0, 0.2)",
-                  border: "none",
-                  borderRadius: "4px",
-                  padding: "8px",
-                  cursor: "pointer",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  color: "white",
-                  zIndex: 20,
-                  transition: "all 0.2s ease",
-                }}
-                onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLElement).style.background = "rgba(0, 0, 0, 0.4)";
-                }}
-                onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.background = "rgba(0, 0, 0, 0.2)";
-                }}
-                aria-label="Previous card"
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
-              </button>
-              <button
-                onClick={() => document.dispatchEvent(new CustomEvent("carousel-next"))}
-                style={{
-                  position: "absolute",
-                  right: "12px",
-                  top: "50%",
-                  transform: "translateY(-50%)",
-                  background: "rgba(0, 0, 0, 0.2)",
-                  border: "none",
-                  borderRadius: "4px",
-                  padding: "8px",
-                  cursor: "pointer",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  color: "white",
-                  zIndex: 20,
-                  transition: "all 0.2s ease",
-                }}
-                onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLElement).style.background = "rgba(0, 0, 0, 0.4)";
-                }}
-                onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.background = "rgba(0, 0, 0, 0.2)";
-                }}
-                aria-label="Next card"
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </button>
-            </div>
-          </div>
-        </section>
-      </>
-    )}
 
     <section className="legacy-quotes-section reveal-section">
       {/* Section Header */}
       <div className="legacy-section-header">
-        <div className="header-title">
-          <h2>Master Planned Community by HRL Construction Pvt Limited</h2>
-          <span style={{ fontSize: "18px", fontWeight: 400, color: "#b2996a", letterSpacing: "0.1em", marginTop: "10px", display: "block" }}></span>
-        </div>
-        <p className="header-subtitle">SIX DECADES OF ENGINEERING & INFRASTRUCTURE EXCELLENCE | Two Generations of Vision & Governance</p>
-        <div className="header-divider">
-          <span></span>
-          <svg width="8" height="8" viewBox="0 0 8 8" fill="currentColor">
-            <circle cx="4" cy="4" r="4" />
-          </svg>
-          <span></span>
+        <div className="legacy-lockup legacy-lockup--centered">
+          <div className="legacy-number-wrapper">
+            <span className="legacy-num-60">60</span>
+            <span className="legacy-plus-sign">+</span>
+          </div>
+          <span className="legacy-label-years">YEARS OF LEGACY</span>
+          <h2 className="legacy-label-legacy">HABIB RAFIQ</h2>
+          <div className="legacy-divider-line" />
+          <p className="legacy-tagline">ROYAL SWISS CITY - SHAPING COMMUNITIES, BUILDING BETTER TOMORROW</p>
         </div>
         {/* Hidden SEO content */}
         <div style={{ display: "none", fontSize: "0", overflow: "hidden" }}>
-          <p>Royal Swiss City represents the best society in lahore. Our gated community in lahore features world-class amenities. As the best place to live in lahore, Royal Swiss City offers luxury housing in lahore. This residential area in pakistan is developed by habib rafiq, delivering premium residential plots in lahore. The best gated community in lahore pakistan with commercial plots in lahore for investment properties in lahore.</p>
+          <p>Master Planned Community by HRL Construction Pvt Limited. SIX DECADES OF ENGINEERING & INFRASTRUCTURE EXCELLENCE | Two Generations of Vision & Governance. Royal Swiss City represents the best society in lahore. Our gated community in lahore features world-class amenities. As the best place to live in lahore, Royal Swiss City offers luxury housing in lahore. This residential area in pakistan is developed by habib rafiq, delivering premium residential plots in lahore. The best gated community in lahore pakistan with commercial plots in lahore for investment properties in lahore.</p>
         </div>
       </div>
 

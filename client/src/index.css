@@ -3560,6 +3560,36 @@ p,
     text-align: left !important;
 }
 
+.legacy-lockup--centered {
+    align-items: center !important;
+    text-align: center !important;
+    margin: 0 auto 32px auto !important;
+}
+
+.legacy-lockup--centered .legacy-number-wrapper {
+    justify-content: center !important;
+    display: flex !important;
+    align-items: flex-start !important;
+}
+
+.legacy-lockup--centered .legacy-label-years {
+    text-align: center !important;
+}
+
+.legacy-lockup--centered .legacy-label-legacy {
+    text-align: center !important;
+}
+
+.legacy-lockup--centered .legacy-divider-line {
+    margin: 14px auto 12px auto !important;
+}
+
+.legacy-lockup--centered .legacy-tagline {
+    text-align: center !important;
+    white-space: normal !important;
+    max-width: 90vw;
+}
+
 .showcase-section-mobile {
     display: none;
 }
