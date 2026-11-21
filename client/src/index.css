@@ -89,7 +89,9 @@ a {
 .the-city-page .walk-header,
 .faq-page .walk-header,
 .developer-page .walk-header,
-.enquire-page .walk-header {
+.enquire-page .walk-header,
+.payment-plan-page .walk-header,
+.location-page .walk-header {
     opacity: 0;
     pointer-events: none;
     transition: opacity .45s ease;
@@ -99,7 +101,9 @@ a {
 .the-city-page .walk-header.is-scrolled,
 .faq-page .walk-header.is-scrolled,
 .developer-page .walk-header.is-scrolled,
-.enquire-page .walk-header.is-scrolled {
+.enquire-page .walk-header.is-scrolled,
+.payment-plan-page .walk-header.is-scrolled,
+.location-page .walk-header.is-scrolled {
     opacity: 1;
     pointer-events: auto;
 }

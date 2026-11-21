@@ -24,9 +24,25 @@ export default function PaymentPlan() {
   const [downloadModalOpen, setDownloadModalOpen] = useState(false);
   const [downloadSuccess, setDownloadSuccess] = useState(false);
   const [leadForm, setLeadForm] = useState({ name: "", phone: "", email: "", plotInterest: "3.5 Marla Residential (PKR 1,850,000)" });
+  const [scrolled, setScrolled] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    let f = 0;
+    const fn = () => {
+      cancelAnimationFrame(f);
+      f = requestAnimationFrame(() => {
+        setScrollY(window.scrollY);
+        setScrolled(window.scrollY > 28);
+      });
+    };
+    fn();
+    window.addEventListener("scroll", fn, { passive: true });
+    return () => {
+      cancelAnimationFrame(f);
+      window.removeEventListener("scroll", fn);
+    };
   }, []);
 
   const residentialPlots = [
@@ -124,8 +140,11 @@ export default function PaymentPlan() {
     }, 600);
   };
 
+  const vh = typeof window !== "undefined" ? window.innerHeight : 800;
+  const heroProgress = Math.min(scrollY / Math.max(vh, 800), 1);
+
   return (
-    <main className="walkthrough-page payment-plan-page">
+    <main className="walkthrough-page payment-plan-page" style={{ "--hero-progress": heroProgress } as React.CSSProperties}>
       {/* Self-referencing Canonical & Standardized Global Technical SEO */}
       <SEOHead
         title={SEO_CONFIG.pages.paymentPlan.title}
@@ -139,7 +158,7 @@ export default function PaymentPlan() {
       />
 
       <Breadcrumb />
-      <SiteHeader forceScrolled={true} />
+      <SiteHeader scrolled={scrolled} />
 
       {/* Hero Section */}
       <section

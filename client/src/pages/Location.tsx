@@ -25,9 +25,25 @@ export default function Location() {
   const [siteTourModalOpen, setSiteTourModalOpen] = useState(false);
   const [tourSuccess, setTourSuccess] = useState(false);
   const [tourForm, setTourForm] = useState({ name: "", phone: "", date: "", guests: "2 People" });
+  const [scrolled, setScrolled] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    let f = 0;
+    const fn = () => {
+      cancelAnimationFrame(f);
+      f = requestAnimationFrame(() => {
+        setScrollY(window.scrollY);
+        setScrolled(window.scrollY > 28);
+      });
+    };
+    fn();
+    window.addEventListener("scroll", fn, { passive: true });
+    return () => {
+      cancelAnimationFrame(f);
+      window.removeEventListener("scroll", fn);
+    };
   }, []);
 
   const connectivityCards = [
@@ -99,8 +115,11 @@ export default function Location() {
     setTourSuccess(true);
   };
 
+  const vh = typeof window !== "undefined" ? window.innerHeight : 800;
+  const heroProgress = Math.min(scrollY / Math.max(vh, 800), 1);
+
   return (
-    <main className="walkthrough-page location-page">
+    <main className="walkthrough-page location-page" style={{ "--hero-progress": heroProgress } as React.CSSProperties}>
       {/* Self-referencing Canonical & Standardized Global Technical SEO */}
       <SEOHead
         title={SEO_CONFIG.pages.location.title}
@@ -114,7 +133,7 @@ export default function Location() {
       />
 
       <Breadcrumb />
-      <SiteHeader forceScrolled={true} />
+      <SiteHeader scrolled={scrolled} />
 
       {/* Hero Section */}
       <section
