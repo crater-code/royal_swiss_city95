@@ -189,9 +189,9 @@ export default function Home() {
             <span className="legacy-plus-sign">+</span>
           </div>
           <span className="legacy-label-years">YEARS OF LEGACY</span>
-          <h2 className="legacy-label-legacy">HABIB RAFIQ</h2>
+          <h2 className="legacy-label-legacy" style={{ color: "#ffffff" }}>HABIB RAFIQ</h2>
           <div className="legacy-divider-line" />
-          <p className="legacy-tagline">ROYAL SWISS CITY - SHAPING COMMUNITIES, BUILDING BETTER TOMORROW</p>
+          <p className="legacy-tagline" style={{ color: "#ffffff" }}>ROYAL SWISS CITY - SHAPING COMMUNITIES, BUILDING BETTER TOMORROW</p>
         </div>
         {/* Hidden SEO content */}
         <div style={{ display: "none", fontSize: "0", overflow: "hidden" }}>
