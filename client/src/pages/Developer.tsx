@@ -355,7 +355,7 @@ export default function Developer() {
             { title: "ROYAL SWISS CITY MASTER PLAN", description: "Royal Swiss City represents our evolution into premium residential development. Combining decades of engineering expertise with modern planning, we've created a master-planned community with world-class infrastructure and amenities.", link: "/the-city" },
             { title: "LOCATION & CONNECTIVITY", description: "Conveniently situated on the Ravi Riverfront with direct interchange access to Lahore Ring Road, M-2 Motorway, and rapid connection to Allama Iqbal International Airport.", link: "/location" },
             { title: "PARTNERSHIP & DEALERS", description: "We welcome strategic partnerships in real estate development and infrastructure projects. Our track record and expertise make us a trusted partner for large-scale initiatives.", link: "/#partner" },
-            { title: "SALES & SITE ENQUIRIES", description: "For inquiries about residential plots, installment schedules, or guided site tours, please contact our official sales desk at 042-111-777-588 or royalswisscity@gmail.com.", link: "/enquire" }
+            { title: "SALES & SITE ENQUIRIES", description: "For inquiries about residential plots, installment schedules, or guided site tours, please contact our official sales desk at 042-111-777-588 or info@royalswisscity.com.", link: "/enquire" }
           ].filter((_, i) => i % 2 === 0).map(item => (
             <div className={openFooterItem === item.title ? "open" : ""} key={item.title}>
               <button onClick={() => setOpenFooterItem(openFooterItem === item.title ? null : item.title)}>
@@ -380,7 +380,7 @@ export default function Developer() {
             { title: "ROYAL SWISS CITY MASTER PLAN", description: "Royal Swiss City represents our evolution into premium residential development. Combining decades of engineering expertise with modern planning, we've created a master-planned community with world-class infrastructure and amenities.", link: "/the-city" },
             { title: "LOCATION & CONNECTIVITY", description: "Conveniently situated on the Ravi Riverfront with direct interchange access to Lahore Ring Road, M-2 Motorway, and rapid connection to Allama Iqbal International Airport.", link: "/location" },
             { title: "PARTNERSHIP & DEALERS", description: "We welcome strategic partnerships in real estate development and infrastructure projects. Our track record and expertise make us a trusted partner for large-scale initiatives.", link: "/#partner" },
-            { title: "SALES & SITE ENQUIRIES", description: "For inquiries about residential plots, installment schedules, or guided site tours, please contact our official sales desk at 042-111-777-588 or royalswisscity@gmail.com.", link: "/enquire" }
+            { title: "SALES & SITE ENQUIRIES", description: "For inquiries about residential plots, installment schedules, or guided site tours, please contact our official sales desk at 042-111-777-588 or info@royalswisscity.com.", link: "/enquire" }
           ].filter((_, i) => i % 2 === 1).map(item => (
             <div className={openFooterItem === item.title ? "open" : ""} key={item.title}>
               <button onClick={() => setOpenFooterItem(openFooterItem === item.title ? null : item.title)}>
