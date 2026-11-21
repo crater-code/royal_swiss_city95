@@ -4313,6 +4313,30 @@ p,
     transform: scale(1.22) !important;
 }
 
+.partner-tile-logo-wrap img[src*="propt"] {
+    max-width: 90% !important;
+    max-height: 90% !important;
+    width: auto !important;
+    transform: scale(1.08) !important;
+    transform-origin: center center !important;
+}
+
+.partner-tile:hover .partner-tile-logo-wrap img[src*="propt"] {
+    transform: scale(1.14) !important;
+}
+
+.partner-tile-logo-wrap img[src*="azan"] {
+    max-width: 92% !important;
+    max-height: 92% !important;
+    width: auto !important;
+    transform: scale(1.06) !important;
+    transform-origin: center center !important;
+}
+
+.partner-tile:hover .partner-tile-logo-wrap img[src*="azan"] {
+    transform: scale(1.12) !important;
+}
+
 /* Call to action below carousel */
 .partner-cta-wrap {
     text-align: center !important;

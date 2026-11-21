@@ -78,32 +78,58 @@ function Anchor({ item }: { item: string }) {
 }
 const dealersData = [
   {
-    name: "NATIONAL MARKETING REAL ESTATE & BUILDERS",
-    type: "Authorized Sales Partner",
-    location: "Lahore, Pakistan",
-    description: "Authorized sales and marketing partner for Royal Swiss City, providing specialized real estate consultation, investment portfolio management, and premier residential and commercial opportunities.",
-    logo: "/NATIONAL MARKETING REAL ESTATE & BUILDERS.jpg?v=4"
-  },
-  {
-    name: "REHMAN PROPERTIES & MARKETING",
-    type: "Authorized Sales Partner",
-    location: "Lahore, Pakistan",
-    description: "Trusted real estate and marketing experts delivering bespoke property guidance, reliable plot bookings, and strategic investor support across Royal Swiss City.",
-    logo: "/REHMAN PROPERTIES & MARKETING.jpg?v=4"
-  },
-  {
     name: "WALL.PK",
+    phone: "03041111096",
+    displayPhone: "0304 1111096",
     type: "Authorized Sales Partner",
     location: "Lahore, Pakistan",
     description: "Leading digital real estate network and authorized sales partner offering innovative marketing, transparent property advisory, and high-yield investment options at Royal Swiss City.",
-    logo: "/WALL.PK.jpg?v=4"
+    logo: "/WALL.PK.jpg?v=5"
+  },
+  {
+    name: "REHMAN PROPERTIES & MARKETING",
+    phone: "03209432689",
+    displayPhone: "0320 9432689",
+    type: "Authorized Sales Partner",
+    location: "Lahore, Pakistan",
+    description: "Trusted real estate and marketing experts delivering bespoke property guidance, reliable plot bookings, and strategic investor support across Royal Swiss City.",
+    logo: "/REHMAN PROPERTIES & MARKETING.jpg?v=5"
   },
   {
     name: "BURHAN REAL ESTATE",
+    phone: "03218857005",
+    displayPhone: "0321 8857005",
     type: "Authorized Sales Partner",
     location: "Lahore, Pakistan",
     description: "Distinguished property consultants committed to excellence, assisting clients and investors with premier residential and commercial plots at Royal Swiss City.",
-    logo: "/BURHAN REAL ESTATE.jpg?v=4"
+    logo: "/BURHAN REAL ESTATE.jpg?v=5"
+  },
+  {
+    name: "NATIONAL MARKETING REAL ESTATE & BUILDERS",
+    phone: "03314006262",
+    displayPhone: "0331 4006262",
+    type: "Authorized Sales Partner",
+    location: "Lahore, Pakistan",
+    description: "Authorized sales and marketing partner for Royal Swiss City, providing specialized real estate consultation, investment portfolio management, and premier residential and commercial opportunities.",
+    logo: "/NATIONAL MARKETING REAL ESTATE & BUILDERS.jpg?v=5"
+  },
+  {
+    name: "PROPT.COM",
+    phone: "03228777722",
+    displayPhone: "0322 8777722",
+    type: "Authorized Sales Partner",
+    location: "Lahore, Pakistan",
+    description: "Premier real estate portal and authorized marketing partner connecting visionary buyers and institutional investors with exclusive opportunities at Royal Swiss City.",
+    logo: "/propt-com.jpg?v=1"
+  },
+  {
+    name: "AZAN MARKETING & BUILDERS",
+    phone: "03219447122",
+    displayPhone: "0321 9447122",
+    type: "Authorized Sales Partner",
+    location: "Lahore, Pakistan",
+    description: "Dynamic property consultancy and development advisory delivering trusted real estate brokerage, transparent plot reservations, and tailored client solutions for Royal Swiss City.",
+    logo: "/azan-marketing-builders.jpg?v=1"
   }
 ];
 
@@ -607,14 +633,26 @@ export default function Home() {
             <p className="modal-type">{selectedDealer.type}</p>
             <p className="modal-location">{selectedDealer.location}</p>
             <p className="modal-description">{selectedDealer.description}</p>
-            <div style={{ marginTop: "24px", display: "flex", gap: "12px", flexDirection: "column", alignItems: "center" }}>
-              <a href="tel:+9242111777588" style={{ display: "inline-flex", alignItems: "center", gap: "8px", color: "#8f6f32", fontSize: "13px", textDecoration: "none", fontWeight: 600, transition: "all 0.3s ease" }} onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.opacity = "0.75"; }} onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.opacity = "1"; }}>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
-                042 111 777 588
-              </a>
-              <a href="mailto:royalswisscity@gmail.com" style={{ display: "inline-flex", alignItems: "center", gap: "8px", color: "#8f6f32", fontSize: "13px", textDecoration: "none", fontWeight: 600, transition: "all 0.3s ease" }} onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.opacity = "0.75"; }} onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.opacity = "1"; }}>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
-                royalswisscity@gmail.com
+            <div style={{ marginTop: "24px", display: "flex", gap: "10px", flexDirection: "column", alignItems: "center", width: "100%" }}>
+              {selectedDealer.phone && (
+                <a 
+                  href={`tel:${selectedDealer.phone.startsWith("+92") ? selectedDealer.phone : "+92" + selectedDealer.phone.replace(/^0/, "")}`} 
+                  style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "8px", color: "#ffffff", background: "#b2996a", padding: "10px 22px", borderRadius: "999px", fontSize: "13px", textDecoration: "none", fontWeight: 700, letterSpacing: "0.5px", transition: "all 0.3s ease", width: "100%", maxWidth: "260px" }} 
+                  onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.opacity = "0.85"; (e.currentTarget as HTMLElement).style.transform = "translateY(-1px)"; }} 
+                  onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.opacity = "1"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; }}
+                >
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+                  Call {selectedDealer.displayPhone || selectedDealer.phone}
+                </a>
+              )}
+              <a 
+                href="mailto:info@royalswisscity.com" 
+                style={{ display: "inline-flex", alignItems: "center", gap: "8px", color: "#1a3a52", fontSize: "12px", textDecoration: "none", fontWeight: 600, transition: "all 0.3s ease", marginTop: "4px" }} 
+                onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.opacity = "0.75"; }} 
+                onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.opacity = "1"; }}
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
+                info@royalswisscity.com
               </a>
             </div>
           </div>
