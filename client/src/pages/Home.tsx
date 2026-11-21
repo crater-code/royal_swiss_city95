@@ -633,27 +633,18 @@ export default function Home() {
             <p className="modal-type">{selectedDealer.type}</p>
             <p className="modal-location">{selectedDealer.location}</p>
             <p className="modal-description">{selectedDealer.description}</p>
-            <div style={{ marginTop: "24px", display: "flex", gap: "10px", flexDirection: "column", alignItems: "center", width: "100%" }}>
+            <div style={{ marginTop: "24px", display: "flex", justifyContent: "center", width: "100%" }}>
               {selectedDealer.phone && (
                 <a 
                   href={`tel:${selectedDealer.phone.startsWith("+92") ? selectedDealer.phone : "+92" + selectedDealer.phone.replace(/^0/, "")}`} 
-                  style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "8px", color: "#ffffff", background: "#b2996a", padding: "10px 22px", borderRadius: "999px", fontSize: "13px", textDecoration: "none", fontWeight: 700, letterSpacing: "0.5px", transition: "all 0.3s ease", width: "100%", maxWidth: "260px" }} 
-                  onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.opacity = "0.85"; (e.currentTarget as HTMLElement).style.transform = "translateY(-1px)"; }} 
+                  style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "8px", color: "#ffffff", background: "#b2996a", padding: "12px 28px", borderRadius: "999px", fontSize: "14px", textDecoration: "none", fontWeight: 700, letterSpacing: "0.5px", transition: "all 0.3s ease", width: "100%", maxWidth: "260px", boxShadow: "0 4px 12px rgba(178, 153, 106, 0.25)" }} 
+                  onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.opacity = "0.88"; (e.currentTarget as HTMLElement).style.transform = "translateY(-1px)"; }} 
                   onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.opacity = "1"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; }}
                 >
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
                   Call {selectedDealer.displayPhone || selectedDealer.phone}
                 </a>
               )}
-              <a 
-                href="mailto:info@royalswisscity.com" 
-                style={{ display: "inline-flex", alignItems: "center", gap: "8px", color: "#1a3a52", fontSize: "12px", textDecoration: "none", fontWeight: 600, transition: "all 0.3s ease", marginTop: "4px" }} 
-                onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.opacity = "0.75"; }} 
-                onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.opacity = "1"; }}
-              >
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
-                info@royalswisscity.com
-              </a>
             </div>
           </div>
         </div>
