@@ -7,15 +7,9 @@ export function SiteFooter() {
   const footerAccordions = [
     {
       title: "Residential Plots",
-      desc: "Discover premium residential plot sizes: 3.5 Marla, 5 Marla, 10 Marla, 1 Kanal, and 2 Kanal on Lahore's Ravi Riverfront with flexible installment plans.",
+      desc: "Discover official 4-year installment residential plots in 3.5 Marla (PKR 1,850,000) and 5 Marla (PKR 2,500,000) on Lahore's Ravi Riverfront with flexible monthly plans.",
       link: "/payment-plan",
       cta: "VIEW PAYMENT PLAN →",
-    },
-    {
-      title: "Commercial Plots",
-      desc: "Prime commercial plots in 2 Marla, 4 Marla, and 8 Marla located along 120-ft main commercial boulevards designed for retail, offices, and high-yield investments.",
-      link: "/payment-plan",
-      cta: "VIEW COMMERCIAL PRICING →",
     },
     {
       title: "The City",
@@ -25,7 +19,7 @@ export function SiteFooter() {
     },
     {
       title: "Payment Plan",
-      desc: "Official Royal Swiss City installment schedules for 2026. Convenient 3 to 4 year quarterly installment plans with low initial down payment options.",
+      desc: "Official Royal Swiss City 4-year monthly installment schedules for 2026. Convenient booking from PKR 250,000 and monthly installments from PKR 25,000.",
       link: "/payment-plan",
       cta: "CHECK INSTALLMENT SCHEDULE →",
     },

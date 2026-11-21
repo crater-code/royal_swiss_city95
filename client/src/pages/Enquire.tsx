@@ -67,12 +67,11 @@ export default function Enquire() {
 
   const nav = ["HOME", "THE CITY", "PAYMENT PLAN", "LOCATION", "DEVELOPER", "ENQUIRE"];
   const navMobile = ["HOME", "THE CITY", "PAYMENT PLAN", "LOCATION", "DEVELOPER", "ENQUIRE"];
-  const footerLinks = ["Residential Plots", "Commercial Plots", "Payment Plan", "Location", "The City", "Developer", "FAQ", "Enquire"];
+  const footerLinks = ["Residential Plots", "Payment Plan", "Location", "The City", "Developer", "FAQ", "Enquire"];
   
   const footerDescriptions = {
-    "Residential Plots": "Discover a range of residential plot sizes to suit your needs. Choose from MARLA 3.5, MARLA 5, MARLA 10, KANAL 1, and KANAL 2 options designed for modern living.",
-    "Commercial Plots": "Explore commercial plot opportunities perfect for your business. Available in MARLA 2, MARLA 4, and MARLA 8 to accommodate various commercial ventures.",
-    "Payment Plan": "Official 3 to 4 year quarterly installment schedules for residential and commercial plots engineered by HRL Construction Pvt Limited.",
+    "Residential Plots": "Discover our official 4-year installment residential plots in MARLA 3.5 (PKR 1,850,000) and MARLA 5 (PKR 2,500,000) designed for modern riverfront living.",
+    "Payment Plan": "Official 4-year monthly installment schedule for residential plots engineered by HRL Construction Pvt Limited.",
     "Location": "Prime location on Ravi Riverfront, Lahore with direct connectivity to Lahore Ring Road, M-2 Motorway, and City Center.",
     "The City": "Discover a considered way to experience the city at Royal Swiss City.",
     "Developer": "Discover a considered way to experience developer at Royal Swiss City.",
@@ -528,8 +527,7 @@ export default function Enquire() {
                     onBlur={(e) => { e.target.style.borderColor = "rgba(26, 58, 82, 0.2)"; e.target.style.background = "#faf9f6"; e.target.style.boxShadow = "none"; }}
                   >
                     <option value="">Select Enquiry Category</option>
-                    <option value="residential">Residential Plots (3.5M, 5M, 10M, 1K, 2K)</option>
-                    <option value="commercial">Commercial Plots (2M, 4M, 8M)</option>
+                    <option value="residential">Residential Plots (3.5M & 5M)</option>
                     <option value="overseas">Overseas Pakistani Reservation</option>
                     <option value="dealer">Authorized Dealer / Partner Application</option>
                     <option value="other">General Inquiries / Site Visit</option>
@@ -564,15 +562,8 @@ export default function Enquire() {
                   onBlur={(e) => { e.target.style.borderColor = "rgba(26, 58, 82, 0.2)"; e.target.style.background = "#faf9f6"; e.target.style.boxShadow = "none"; }}
                 >
                   <option value="">Select Size / Category</option>
-                  <option value="3.5 Marla">3.5 Marla Residential (~787 sq ft)</option>
-                  <option value="5 Marla">5 Marla Residential (~1,125 sq ft)</option>
-                  <option value="10 Marla">10 Marla Residential (~2,250 sq ft)</option>
-                  <option value="1 Kanal">1 Kanal Residential (~4,500 sq ft)</option>
-                  <option value="2 Kanal">2 Kanal Residential Estate (~9,000 sq ft)</option>
-                  <option value="2 Marla Commercial">2 Marla Commercial</option>
-                  <option value="4 Marla Commercial">4 Marla Commercial Boulevard</option>
-                  <option value="8 Marla Commercial">8 Marla Commercial Center</option>
-                  <option value="Multiple / Bulk Portfolio">Multiple / Bulk Portfolio</option>
+                  <option value="3.5 Marla">3.5 Marla Residential - PKR 1,850,000 (~787 sq ft)</option>
+                  <option value="5 Marla">5 Marla Residential - PKR 2,500,000 (~1,125 sq ft)</option>
                 </select>
               </div>
 

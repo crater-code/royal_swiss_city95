@@ -351,11 +351,11 @@ export default function Developer() {
         <div className="footer-accordion-col">
           {[
             { title: "ABOUT HRL CONSTRUCTION PVT LIMITED", description: "HRL Construction Pvt Limited (Habib Rafiq) has been at the forefront of engineering and construction in Pakistan for over 60 years. Our expertise spans infrastructure, buildings, industrial, aviation, power & energy, oil & gas, and environmental projects.", link: "/developer" },
-            { title: "PAYMENT PLANS & BOOKING", description: "Explore official installment schedules for 3.5, 5, 10 Marla and 1, 2 Kanal residential plots as well as prime riverfront commercial plots with flexible 3 to 4-year payment plans.", link: "/payment-plan" },
+            { title: "PAYMENT PLANS & BOOKING", description: "Explore official 4-year installment schedules for 3.5 Marla (PKR 1,850,000) and 5 Marla (PKR 2,500,000) residential plots with convenient 48 monthly payments.", link: "/payment-plan" },
             { title: "ROYAL SWISS CITY MASTER PLAN", description: "Royal Swiss City represents our evolution into premium residential development. Combining decades of engineering expertise with modern planning, we've created a master-planned community with world-class infrastructure and amenities.", link: "/the-city" },
             { title: "LOCATION & CONNECTIVITY", description: "Conveniently situated on the Ravi Riverfront with direct interchange access to Lahore Ring Road, M-2 Motorway, and rapid connection to Allama Iqbal International Airport.", link: "/location" },
             { title: "PARTNERSHIP & DEALERS", description: "We welcome strategic partnerships in real estate development and infrastructure projects. Our track record and expertise make us a trusted partner for large-scale initiatives.", link: "/#partner" },
-            { title: "SALES & SITE ENQUIRIES", description: "For inquiries about residential & commercial plots, installment schedules, or guided site tours, please contact our official sales desk at 042-111-777-588 or royalswisscity@gmail.com.", link: "/enquire" }
+            { title: "SALES & SITE ENQUIRIES", description: "For inquiries about residential plots, installment schedules, or guided site tours, please contact our official sales desk at 042-111-777-588 or royalswisscity@gmail.com.", link: "/enquire" }
           ].filter((_, i) => i % 2 === 0).map(item => (
             <div className={openFooterItem === item.title ? "open" : ""} key={item.title}>
               <button onClick={() => setOpenFooterItem(openFooterItem === item.title ? null : item.title)}>
@@ -376,11 +376,11 @@ export default function Developer() {
         <div className="footer-accordion-col">
           {[
             { title: "ABOUT HRL CONSTRUCTION PVT LIMITED", description: "HRL Construction Pvt Limited (Habib Rafiq) has been at the forefront of engineering and construction in Pakistan for over 60 years. Our expertise spans infrastructure, buildings, industrial, aviation, power & energy, oil & gas, and environmental projects.", link: "/developer" },
-            { title: "PAYMENT PLANS & BOOKING", description: "Explore official installment schedules for 3.5, 5, 10 Marla and 1, 2 Kanal residential plots as well as prime riverfront commercial plots with flexible 3 to 4-year payment plans.", link: "/payment-plan" },
+            { title: "PAYMENT PLANS & BOOKING", description: "Explore official 4-year installment schedules for 3.5 Marla (PKR 1,850,000) and 5 Marla (PKR 2,500,000) residential plots with convenient 48 monthly payments.", link: "/payment-plan" },
             { title: "ROYAL SWISS CITY MASTER PLAN", description: "Royal Swiss City represents our evolution into premium residential development. Combining decades of engineering expertise with modern planning, we've created a master-planned community with world-class infrastructure and amenities.", link: "/the-city" },
             { title: "LOCATION & CONNECTIVITY", description: "Conveniently situated on the Ravi Riverfront with direct interchange access to Lahore Ring Road, M-2 Motorway, and rapid connection to Allama Iqbal International Airport.", link: "/location" },
             { title: "PARTNERSHIP & DEALERS", description: "We welcome strategic partnerships in real estate development and infrastructure projects. Our track record and expertise make us a trusted partner for large-scale initiatives.", link: "/#partner" },
-            { title: "SALES & SITE ENQUIRIES", description: "For inquiries about residential & commercial plots, installment schedules, or guided site tours, please contact our official sales desk at 042-111-777-588 or royalswisscity@gmail.com.", link: "/enquire" }
+            { title: "SALES & SITE ENQUIRIES", description: "For inquiries about residential plots, installment schedules, or guided site tours, please contact our official sales desk at 042-111-777-588 or royalswisscity@gmail.com.", link: "/enquire" }
           ].filter((_, i) => i % 2 === 1).map(item => (
             <div className={openFooterItem === item.title ? "open" : ""} key={item.title}>
               <button onClick={() => setOpenFooterItem(openFooterItem === item.title ? null : item.title)}>

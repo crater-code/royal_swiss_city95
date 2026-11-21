@@ -19,11 +19,10 @@ const SEO_KEYWORDS = {
 };
 const nav = ["HOME", "THE CITY", "PAYMENT PLAN", "LOCATION", "DEVELOPER", "ENQUIRE"];
 const navMobile = ["HOME", "THE CITY", "PAYMENT PLAN", "LOCATION", "DEVELOPER", "ENQUIRE"];
-const footerLinks = ["Residential Plots", "Commercial Plots", "Payment Plan", "Location", "The City", "Developer", "FAQ", "Partner", "Enquire"];
+const footerLinks = ["Residential Plots", "Payment Plan", "Location", "The City", "Developer", "FAQ", "Partner", "Enquire"];
 const footerDescriptions = {
-  "Residential Plots": "Discover a range of residential plot sizes to suit your needs. Choose from MARLA 3.5, MARLA 5, MARLA 10, KANAL 1, and KANAL 2 options designed for modern living.",
-  "Commercial Plots": "Explore commercial plot opportunities perfect for your business. Available in MARLA 2, MARLA 4, and MARLA 8 to accommodate various commercial ventures.",
-  "Payment Plan": "Official 2026 payment plans and flexible 3 to 4 year quarterly installment schedules for residential and commercial plots.",
+  "Residential Plots": "Discover our official 4-year installment residential plots in MARLA 3.5 (PKR 1,850,000) and MARLA 5 (PKR 2,500,000) designed for modern living.",
+  "Payment Plan": "Official 2026 payment plans and 4-year monthly installment schedules for 3.5 Marla and 5 Marla residential plots.",
   "Location": "Prime location on Lahore's Ravi Riverfront with direct connectivity to Lahore Ring Road, M-2 Motorway, and Allama Iqbal International Airport.",
   "The City": "Discover sustainable riverfront urban living at Royal Swiss City featuring solar infrastructure and world-class amenities.",
   "Developer": "Royal Swiss City is engineered and built by HRL Construction Pvt Limited (Habib Rafiq) with over 60 years of infrastructure leadership.",
@@ -104,7 +103,7 @@ const dealersData = [
     displayPhone: "0321 8857005",
     type: "Authorized Sales Partner",
     location: "Lahore, Pakistan",
-    description: "Distinguished property consultants committed to excellence, assisting clients and investors with premier residential and commercial plots at Royal Swiss City.",
+    description: "Distinguished property consultants committed to excellence, assisting clients and investors with premier residential plots at Royal Swiss City.",
     logo: "/BURHAN REAL ESTATE.jpg?v=5"
   },
   {
@@ -195,7 +194,7 @@ export default function Home() {
         </div>
         {/* Hidden SEO content */}
         <div style={{ display: "none", fontSize: "0", overflow: "hidden" }}>
-          <p>Master Planned Community by HRL Construction Pvt Limited. SIX DECADES OF ENGINEERING & INFRASTRUCTURE EXCELLENCE | Two Generations of Vision & Governance. Royal Swiss City represents the best society in lahore. Our gated community in lahore features world-class amenities. As the best place to live in lahore, Royal Swiss City offers luxury housing in lahore. This residential area in pakistan is developed by habib rafiq, delivering premium residential plots in lahore. The best gated community in lahore pakistan with commercial plots in lahore for investment properties in lahore.</p>
+          <p>Master Planned Community by HRL Construction Pvt Limited. SIX DECADES OF ENGINEERING & INFRASTRUCTURE EXCELLENCE | Two Generations of Vision & Governance. Royal Swiss City represents the best society in lahore. Our gated community in lahore features world-class amenities. As the best place to live in lahore, Royal Swiss City offers luxury housing in lahore. This residential area in pakistan is developed by habib rafiq, delivering premium residential plots in lahore (3.5 Marla & 5 Marla). The best gated community in lahore pakistan for investment properties in lahore.</p>
         </div>
       </div>
 
@@ -339,115 +338,40 @@ export default function Home() {
       <div style={{ maxWidth: "100%", margin: "0 auto", paddingLeft: window.innerWidth <= 768 ? "4vw" : "8vw", paddingRight: window.innerWidth <= 768 ? "4vw" : "8vw" }}>
         <div style={{ textAlign: "center", marginBottom: "40px" }}>
           <span style={{ fontSize: "12px", letterSpacing: "0.15em", textTransform: "uppercase", color: "#b2996a", margin: "0 0 12px 0", fontWeight: 500, display: "block" }}>THE OPPORTUNITY</span>
-          <h2 style={{ fontSize: "clamp(30px, 4.5vw, 52px)", fontFamily: "var(--serif)", fontWeight: 300, color: "#1a3a52", margin: "0", lineHeight: 1.2 }}>Featured Residential &<br />Commercial Plot Sizes</h2>
+          <h2 style={{ fontSize: "clamp(30px, 4.5vw, 52px)", fontFamily: "var(--serif)", fontWeight: 300, color: "#1a3a52", margin: "0", lineHeight: 1.2 }}>Available Residential Plot Sizes<br />& Official 4-Year Payment Plans</h2>
         </div>
-        {/* Mobile: 1 Residential + 1 Commercial */}
-        <div style={{ display: window.innerWidth > 768 ? "none" : "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "12px", marginBottom: "60px" }} className="mobile-plot-options">
-          {/* Residential Card */}
-          <div style={{ background: "#fff", borderRadius: "8px", border: "1px solid #e0d9d1", overflow: "hidden" }}>
-            <div style={{ height: "100px", overflow: "hidden", backgroundColor: "#f0f0f0" }}>
-              <img src="/residential_plots.webp" alt="Residential Plots in Royal Swiss City - MARLA 3.5 to KANAL 2 Options" width={300} height={100} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", maxWidth: "800px", margin: "0 auto 40px auto", gap: "20px" }}>
+          {/* Residential Card 1: 3.5 Marla */}
+          <div style={{ background: "#fff", borderRadius: "10px", border: "1px solid #e0d9d1", overflow: "hidden", boxShadow: "0 4px 16px rgba(0,0,0,0.04)" }}>
+            <div style={{ height: "150px", overflow: "hidden", backgroundColor: "#f0f0f0" }}>
+              <img src="/residential_plots.webp" alt="3.5 Marla Residential Plots - Royal Swiss City" width={400} height={150} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
             </div>
-            <div style={{ padding: "12px", textAlign: "center" }}>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a3a52" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 6px" }}>
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                <polyline points="9 22 9 12 15 12 15 22" />
-              </svg>
-              <span style={{ fontSize: "8px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#999", margin: "0 0 4px 0", display: "block" }}>RESIDENTIAL</span>
-              <h3 style={{ fontSize: "10px", fontWeight: 400, color: "#1a3a52", margin: "0" }}>MARLA 3.5</h3>
+            <div style={{ padding: "20px 18px", textAlign: "center" }}>
+              <span style={{ fontSize: "10px", letterSpacing: "1.5px", textTransform: "uppercase", color: "#b2996a", fontWeight: 700, margin: "0 0 6px 0", display: "block" }}>RESIDENTIAL • PRE-LAUNCH PRICE</span>
+              <h3 style={{ fontSize: "20px", fontWeight: 700, color: "#1a3a52", margin: "0 0 10px 0" }}>3.5 MARLA</h3>
+              <div style={{ fontSize: "22px", fontWeight: 800, color: "#0B1E2B", marginBottom: "6px" }}>PKR 1,850,000</div>
+              <div style={{ fontSize: "13px", color: "#666", marginBottom: "4px" }}>Down Payment: <strong style={{ color: "#1a3a52" }}>PKR 250,000</strong></div>
+              <div style={{ fontSize: "13px", color: "#b2996a", fontWeight: 700 }}>48 Monthly Installments: PKR 25,000 / mo</div>
             </div>
           </div>
 
-          {/* Commercial Card */}
-          <div style={{ background: "#fff", borderRadius: "8px", border: "1px solid #e0d9d1", overflow: "hidden" }}>
-            <div style={{ height: "100px", overflow: "hidden", backgroundColor: "#f0f0f0" }}>
-              <img src="/commerical_plots.webp" alt="Commercial Plots in Royal Swiss City - MARLA 2, 4, and 8 Sizes" width={300} height={100} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+          {/* Residential Card 2: 5 Marla */}
+          <div style={{ background: "#fff", borderRadius: "10px", border: "1px solid #e0d9d1", overflow: "hidden", boxShadow: "0 4px 16px rgba(0,0,0,0.04)" }}>
+            <div style={{ height: "150px", overflow: "hidden", backgroundColor: "#f0f0f0" }}>
+              <img src="/residential_plots.webp" alt="5 Marla Residential Plots - Royal Swiss City" width={400} height={150} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
             </div>
-            <div style={{ padding: "12px", textAlign: "center" }}>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a3a52" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 6px" }}>
-                <rect x="3" y="3" width="18" height="18" rx="1" />
-                <rect x="7" y="7" width="3" height="3" />
-                <rect x="13" y="7" width="3" height="3" />
-                <rect x="7" y="13" width="3" height="3" />
-                <rect x="13" y="13" width="3" height="3" />
-                <rect x="13" y="19" width="4" height="2" />
-              </svg>
-              <span style={{ fontSize: "8px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#999", margin: "0 0 4px 0", display: "block" }}>COMMERCIAL</span>
-              <h3 style={{ fontSize: "10px", fontWeight: 400, color: "#1a3a52", margin: "0" }}>MARLA 2</h3>
+            <div style={{ padding: "20px 18px", textAlign: "center" }}>
+              <span style={{ fontSize: "10px", letterSpacing: "1.5px", textTransform: "uppercase", color: "#b2996a", fontWeight: 700, margin: "0 0 6px 0", display: "block" }}>RESIDENTIAL • MOST POPULAR</span>
+              <h3 style={{ fontSize: "20px", fontWeight: 700, color: "#1a3a52", margin: "0 0 10px 0" }}>5 MARLA</h3>
+              <div style={{ fontSize: "22px", fontWeight: 800, color: "#0B1E2B", marginBottom: "6px" }}>PKR 2,500,000</div>
+              <div style={{ fontSize: "13px", color: "#666", marginBottom: "4px" }}>Down Payment: <strong style={{ color: "#1a3a52" }}>PKR 350,000</strong></div>
+              <div style={{ fontSize: "13px", color: "#b2996a", fontWeight: 700 }}>48 Monthly Installments: PKR 33,000 / mo</div>
             </div>
           </div>
         </div>
-
-        {/* Desktop: 2 Residential + 2 Commercial */}
-        <div style={{ display: window.innerWidth > 768 ? "grid" : "none", gridTemplateColumns: "repeat(4, 1fr)", gap: "16px", marginBottom: "40px" }} className="desktop-plot-options">
-          {/* Residential Card 1 */}
-          <div style={{ background: "#fff", borderRadius: "8px", border: "1px solid #e0d9d1", overflow: "hidden" }}>
-            <div style={{ height: "120px", overflow: "hidden", backgroundColor: "#f0f0f0" }}>
-              <img src="/residential_plots.webp" alt="Residential Plots in Royal Swiss City - MARLA 3.5 to KANAL 2 Options" width={300} height={100} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-            </div>
-            <div style={{ padding: "15px", textAlign: "center" }}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1a3a52" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 8px" }}>
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                <polyline points="9 22 9 12 15 12 15 22" />
-              </svg>
-              <p style={{ fontSize: "9px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#999", margin: "0 0 4px 0" }}>RESIDENTIAL</p>
-              <h3 style={{ fontSize: "12px", fontWeight: 400, color: "#1a3a52", margin: "0" }}>MARLA 3.5</h3>
-            </div>
-          </div>
-
-          {/* Residential Card 2 */}
-          <div style={{ background: "#fff", borderRadius: "8px", border: "1px solid #e0d9d1", overflow: "hidden" }}>
-            <div style={{ height: "120px", overflow: "hidden", backgroundColor: "#f0f0f0" }}>
-              <img src="/residential_plots.webp" alt="Residential Plots in Royal Swiss City - MARLA 3.5 to KANAL 2 Options" width={300} height={100} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-            </div>
-            <div style={{ padding: "15px", textAlign: "center" }}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1a3a52" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 8px" }}>
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                <polyline points="9 22 9 12 15 12 15 22" />
-              </svg>
-              <p style={{ fontSize: "9px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#999", margin: "0 0 4px 0" }}>RESIDENTIAL</p>
-              <h3 style={{ fontSize: "12px", fontWeight: 400, color: "#1a3a52", margin: "0" }}>MARLA 5</h3>
-            </div>
-          </div>
-
-          {/* Commercial Card 1 */}
-          <div id="commercial-plots" style={{ background: "#fff", borderRadius: "8px", border: "1px solid #e0d9d1", overflow: "hidden" }}>
-            <div style={{ height: "120px", overflow: "hidden", backgroundColor: "#f0f0f0" }}>
-              <img src="/commerical_plots.webp" alt="Commercial Plots in Royal Swiss City - MARLA 2, 4, and 8 Sizes" width={300} height={100} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-            </div>
-            <div style={{ padding: "15px", textAlign: "center" }}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1a3a52" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 8px" }}>
-                <rect x="3" y="3" width="18" height="18" rx="1" />
-                <rect x="7" y="7" width="3" height="3" />
-                <rect x="13" y="7" width="3" height="3" />
-                <rect x="7" y="13" width="3" height="3" />
-                <rect x="13" y="13" width="3" height="3" />
-                <rect x="13" y="19" width="4" height="2" />
-              </svg>
-              <p style={{ fontSize: "9px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#999", margin: "0 0 4px 0" }}>COMMERCIAL</p>
-              <h3 style={{ fontSize: "12px", fontWeight: 400, color: "#1a3a52", margin: "0" }}>MARLA 2</h3>
-            </div>
-          </div>
-
-          {/* Commercial Card 2 */}
-          <div style={{ background: "#fff", borderRadius: "8px", border: "1px solid #e0d9d1", overflow: "hidden" }}>
-            <div style={{ height: "120px", overflow: "hidden", backgroundColor: "#f0f0f0" }}>
-              <img src="/commerical_plots.webp" alt="Commercial Plots in Royal Swiss City - MARLA 2, 4, and 8 Sizes" width={300} height={100} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-            </div>
-            <div style={{ padding: "15px", textAlign: "center" }}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1a3a52" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 8px" }}>
-                <rect x="3" y="3" width="18" height="18" rx="1" />
-                <rect x="7" y="7" width="3" height="3" />
-                <rect x="13" y="7" width="3" height="3" />
-                <rect x="7" y="13" width="3" height="3" />
-                <rect x="13" y="13" width="3" height="3" />
-                <rect x="13" y="19" width="4" height="2" />
-              </svg>
-              <p style={{ fontSize: "9px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#999", margin: "0 0 4px 0" }}>COMMERCIAL</p>
-              <h3 style={{ fontSize: "12px", fontWeight: 400, color: "#1a3a52", margin: "0" }}>MARLA 4</h3>
-            </div>
-          </div>
-        </div><div style={{ textAlign: "center" }}><a href="/enquire" style={{ background: "#b2996a", color: "#111", border: "none", padding: "12px 28px", borderRadius: "999px", fontSize: "10px", letterSpacing: "2px", textTransform: "uppercase", textDecoration: "none", display: "inline-block", fontWeight: 500, transition: "all 0.3s ease" }} onMouseEnter={(e) => { (e.target as HTMLElement).style.opacity = "0.7"; (e.target as HTMLElement).style.transform = "translateY(-2px)"; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.opacity = "1"; (e.target as HTMLElement).style.transform = "translateY(0)"; }}>EXPLORE ALL OPTIONS</a></div>
+        <div style={{ textAlign: "center" }}>
+          <a href="/payment-plan" style={{ background: "#b2996a", color: "#111", border: "none", padding: "14px 32px", borderRadius: "999px", fontSize: "11px", letterSpacing: "2px", textTransform: "uppercase", textDecoration: "none", display: "inline-block", fontWeight: 600, transition: "all 0.3s ease", boxShadow: "0 6px 20px rgba(178,153,106,0.3)" }}>VIEW FULL PAYMENT PLAN →</a>
+        </div>
       </div>
     </section>
 
@@ -691,9 +615,9 @@ export default function Home() {
     {/* Hidden SEO Content */}
     <div style={{ position: "fixed", left: "-9999px", width: "1px", height: "1px", overflow: "hidden" }}>
       <h2>Why Royal Swiss City is the Best Society in Lahore</h2>
-      <p>Looking for the best society in lahore or the best place to live in lahore? Royal Swiss City is Pakistan's premier gated community in lahore offering world-class amenities. This residential area in pakistan combines luxury housing in lahore with premium residential plots in lahore. Whether you're seeking commercial plots in lahore for business or residential plots in lahore for family living, our best gated community in lahore provides everything needed.</p>
-      <h3>Premium Residential & Commercial Plots in Lahore</h3>
-      <p>Royal Swiss City offers residential plots in lahore starting from MARLA 3.5, MARLA 5, MARLA 10, KANAL 1, and KANAL 2. For businesses, we provide commercial plots in lahore in MARLA 2, MARLA 4, and MARLA 8 sizes. These investment properties in lahore are ideal for both end-users and investors looking for the best housing in lahore.</p>
+      <p>Looking for the best society in lahore or the best place to live in lahore? Royal Swiss City is Pakistan's premier gated community in lahore offering world-class amenities. This residential area in pakistan combines luxury housing in lahore with premium residential plots in lahore. Our best gated community in lahore provides everything needed.</p>
+      <h3>Premium Residential Plots in Lahore (3.5 & 5 Marla)</h3>
+      <p>Royal Swiss City offers residential plots in lahore in MARLA 3.5 (PKR 1,850,000) and MARLA 5 (PKR 2,500,000) on an official 4-year installment plan. These investment properties in lahore are ideal for both end-users and investors looking for the best housing in lahore.</p>
       <h3>Habib Rafiq: Building Pakistan's Best Communities</h3>
       <p>With over 60 years of experience, Habib Rafiq has created iconic projects across Pakistan. Royal Swiss City represents the best of this legacy - combining infrastructure expertise with modern residential planning. Our habib rafiq royal swiss city project brings best practices in gated communities to create the ultimate best place to live in lahore.</p>
       <h3>Sustainable Living in Lahore's Best Society</h3>

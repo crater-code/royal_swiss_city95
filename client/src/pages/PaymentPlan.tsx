@@ -23,7 +23,7 @@ export default function PaymentPlan() {
   const [activeFaq, setActiveFaq] = useState<number | null>(0);
   const [downloadModalOpen, setDownloadModalOpen] = useState(false);
   const [downloadSuccess, setDownloadSuccess] = useState(false);
-  const [leadForm, setLeadForm] = useState({ name: "", phone: "", email: "", plotInterest: "5 Marla Residential" });
+  const [leadForm, setLeadForm] = useState({ name: "", phone: "", email: "", plotInterest: "3.5 Marla Residential (PKR 1,850,000)" });
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -34,138 +34,80 @@ export default function PaymentPlan() {
       size: "3.5 Marla",
       dimension: "20' × 40'",
       category: "Residential",
-      badge: "Compact Luxury",
-      booking: "10% Down Payment",
-      confirmation: "10% (After 30 Days)",
-      installments: "14 Quarterly Installments",
-      possession: "15% on Balloting",
-      totalPrice: "Contact Sales Desk",
+      badge: "Pre-Launch Price",
+      totalPrice: "1,850,000",
+      downPayment: "250,000",
+      confirmation: "120,000",
+      allocation: "277,500",
+      monthlyInstallment: "25,000",
+      installmentsCount: "48 Monthly Installments",
     },
     {
       size: "5 Marla",
       dimension: "25' × 45'",
       category: "Residential",
       badge: "Most Popular",
-      booking: "10% Down Payment",
-      confirmation: "10% (After 30 Days)",
-      installments: "14 Quarterly Installments",
-      possession: "15% on Balloting",
-      totalPrice: "Contact Sales Desk",
-    },
-    {
-      size: "10 Marla",
-      dimension: "35' × 65'",
-      category: "Residential",
-      badge: "Executive Choice",
-      booking: "10% Down Payment",
-      confirmation: "10% (After 30 Days)",
-      installments: "14 Quarterly Installments",
-      possession: "15% on Balloting",
-      totalPrice: "Contact Sales Desk",
-    },
-    {
-      size: "1 Kanal",
-      dimension: "50' × 90'",
-      category: "Residential",
-      badge: "Luxury Estate",
-      booking: "10% Down Payment",
-      confirmation: "10% (After 30 Days)",
-      installments: "14 Quarterly Installments",
-      possession: "15% on Balloting",
-      totalPrice: "Contact Sales Desk",
-    },
-    {
-      size: "2 Kanal",
-      dimension: "75' × 120'",
-      category: "Residential",
-      badge: "Palatial Waterfront",
-      booking: "10% Down Payment",
-      confirmation: "10% (After 30 Days)",
-      installments: "14 Quarterly Installments",
-      possession: "15% on Balloting",
-      totalPrice: "Contact Sales Desk",
+      totalPrice: "2,500,000",
+      downPayment: "350,000",
+      confirmation: "150,000",
+      allocation: "375,000",
+      monthlyInstallment: "33,000",
+      installmentsCount: "48 Monthly Installments",
     },
   ];
 
-  const commercialPlots = [
-    {
-      size: "2 Marla",
-      dimension: "15' × 30'",
-      category: "Commercial",
-      badge: "Boutique Retail",
-      booking: "15% Down Payment",
-      confirmation: "10% (After 30 Days)",
-      installments: "12 Quarterly Installments",
-      possession: "15% on Balloting",
-      totalPrice: "Contact Sales Desk",
-    },
-    {
-      size: "4 Marla",
-      dimension: "25' × 36'",
-      category: "Commercial",
-      badge: "Prime Commercial Boulevard",
-      booking: "15% Down Payment",
-      confirmation: "10% (After 30 Days)",
-      installments: "12 Quarterly Installments",
-      possession: "15% on Balloting",
-      totalPrice: "Contact Sales Desk",
-    },
-    {
-      size: "8 Marla",
-      dimension: "30' × 60'",
-      category: "Commercial",
-      badge: "Corporate Plaza Hub",
-      booking: "15% Down Payment",
-      confirmation: "10% (After 30 Days)",
-      installments: "12 Quarterly Installments",
-      possession: "15% on Balloting",
-      totalPrice: "Contact Sales Desk",
-    },
+  const termsAndConditions = [
+    "10% Discount will be given on full payment.",
+    "Corner | Boulevard | Park Facing will be charged at 10% extra.",
+    "The above payment plan is cost of land only.",
+    "Development charges will be 300,000/- Per Marla.",
+    "These are pre-launch prices and are applicable for a limited time only.",
+    "The Management reserves the right to revise prices and payment plans without prior notice.",
   ];
 
   const bookingSteps = [
     {
       step: "01",
-      title: "Select Plot Category",
-      desc: "Choose between residential plots (3.5M, 5M, 10M, 1K, 2K) or strategic commercial locations (2M, 4M, 8M) tailored to your portfolio objectives.",
+      title: "Booking (Down Payment)",
+      desc: "Submit your booking application with CNIC/NICOP and initial down payment (PKR 250,000 for 3.5 Marla / PKR 350,000 for 5 Marla).",
     },
     {
       step: "02",
-      title: "Complete Application Form",
-      desc: "Fill in the official HRL Construction booking docket with verified CNIC/NICOP credentials, passport photographs, and designated nominee details.",
+      title: "Confirmation (After 45 Days)",
+      desc: "Process confirmation payment within 45 days (PKR 120,000 for 3.5 Marla / PKR 150,000 for 5 Marla).",
     },
     {
       step: "03",
-      title: "Submit Down Payment",
-      desc: "Process down payment via Pay Order or Bank Demand Draft drawn exclusively in favor of 'HRL Construction Pvt Limited' or through verified banking channels.",
+      title: "Allocation",
+      desc: "Receive your official allocation certificate (PKR 277,500 for 3.5 Marla / PKR 375,000 for 5 Marla) under HRL corporate governance.",
     },
     {
       step: "04",
-      title: "Allotment Letter & Schedule",
-      desc: "Receive your verified HRL Allotment Certificate along with your customized 3.5 to 4 year quarterly installment payment card and customer portal access.",
+      title: "48 Monthly Installments & Possession",
+      desc: "Complete the 4-year journey with 48 convenient monthly payments (PKR 25,000/mo for 3.5 Marla / PKR 33,000/mo for 5 Marla) leading to possession.",
     },
   ];
 
   const faqs = [
     {
-      q: "What plot sizes are available in Royal Swiss City Lahore?",
-      a: "Royal Swiss City Lahore offers residential plots in 3.5 Marla, 5 Marla, 10 Marla, 1 Kanal, and 2 Kanal, alongside commercial plots in 2 Marla, 4 Marla, and 8 Marla.",
+      q: "What plot sizes and prices are available in Royal Swiss City Lahore?",
+      a: "Royal Swiss City Lahore currently offers 3.5 Marla residential plots at PKR 1,850,000 (PKR 250,000 down payment, PKR 25,000/month) and 5 Marla residential plots at PKR 2,500,000 (PKR 350,000 down payment, PKR 33,000/month) on an official 4-year installment plan.",
     },
     {
-      q: "Are flexible installment plans available?",
-      a: "Yes, all residential and commercial plots are available on convenient 3 to 4 year quarterly installment schedules following an initial down payment.",
+      q: "What is the duration of the installment schedule?",
+      a: "The official payment plan is structured across 4 years with 48 convenient monthly installments following down payment, 45-day confirmation, and allocation.",
+    },
+    {
+      q: "Is there a discount on full payment?",
+      a: "Yes, an official 10% discount is granted on 100% full upfront payment.",
     },
     {
       q: "Who is the official developer and builder for Royal Swiss City Lahore?",
       a: "Royal Swiss City Lahore is exclusively developed and engineered by HRL Construction Pvt Limited (Habib Rafiq), bringing over six decades of mega infrastructure excellence.",
     },
     {
-      q: "What payment methods are accepted for installment dues?",
-      a: "Payments can be deposited directly via online banking transfer, designated bank branches across Pakistan, pay order, or demand draft favoring HRL Construction Pvt Limited.",
-    },
-    {
-      q: "Are there any hidden development charges?",
-      a: "All payment schedules are transparently structured by HRL Construction Pvt Limited. Development timeline milestone breakdowns are clearly stated in the official booking docket.",
+      q: "What are the development charges and extra location charges?",
+      a: "The payment plan is the cost of land only. Development charges are PKR 300,000/- per Marla. Corner, Boulevard, or Park-facing plots are charged at 10% extra.",
     },
   ];
 
@@ -173,10 +115,9 @@ export default function PaymentPlan() {
     e.preventDefault();
     setDownloadSuccess(true);
     setTimeout(() => {
-      // Simulate PDF download
       const link = document.createElement("a");
-      link.href = "/llms.txt";
-      link.download = "Royal_Swiss_City_Official_Payment_Plan_2026.pdf";
+      link.href = "/1,850,000 (1).pdf";
+      link.download = "Royal_Swiss_City_Official_4_Years_Payment_Plan.pdf";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -377,8 +318,8 @@ export default function PaymentPlan() {
           </a>
         </div>
 
-        {/* Section 1: Residential Plots */}
-        <section id="residential-plan" style={{ marginBottom: "80px" }}>
+        {/* Section 1: Residential Plots 4-Years Plan */}
+        <section id="residential-plan" style={{ marginBottom: "60px" }}>
           <div style={{ marginBottom: "28px" }}>
             <span
               style={{
@@ -391,7 +332,7 @@ export default function PaymentPlan() {
                 marginBottom: "6px",
               }}
             >
-              Luxury Living By The River
+              Official 4 Years Payment Plan
             </span>
             <h2
               style={{
@@ -403,10 +344,10 @@ export default function PaymentPlan() {
                 fontWeight: 600,
               }}
             >
-              Residential Plot Payment Plans (3.5M, 5M, 10M, 1K, 2K)
+              Residential Plots (3.5 Marla & 5 Marla)
             </h2>
             <p style={{ color: "#666", fontSize: "15px", marginTop: "8px", maxWidth: "800px" }}>
-              Tailored for growing families and discerning homeowners seeking an eco-planned sanctuary with 40-ft minimum wide boulevards and full solar integration.
+              Pre-launch booking prices on Lahore's Ravi Riverfront engineered by <strong>HRL Construction Pvt Limited</strong> with 48 convenient monthly installments.
             </p>
           </div>
 
@@ -423,7 +364,7 @@ export default function PaymentPlan() {
             <table
               style={{
                 width: "100%",
-                minWidth: "780px",
+                minWidth: "820px",
                 borderCollapse: "collapse",
                 textAlign: "left",
                 fontFamily: "var(--sans)",
@@ -432,11 +373,11 @@ export default function PaymentPlan() {
               <thead>
                 <tr style={{ background: "#0B1E2B", color: "#ffffff" }}>
                   <th style={{ padding: "18px 20px", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase", fontWeight: 700 }}>Plot Size</th>
-                  <th style={{ padding: "18px 20px", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase", fontWeight: 700 }}>Booking / Down Payment</th>
-                  <th style={{ padding: "18px 20px", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase", fontWeight: 700 }}>Confirmation</th>
-                  <th style={{ padding: "18px 20px", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase", fontWeight: 700 }}>Quarterly Installments</th>
-                  <th style={{ padding: "18px 20px", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase", fontWeight: 700 }}>Balloting / Possession</th>
-                  <th style={{ padding: "18px 20px", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase", fontWeight: 700, textAlign: "right" }}>Total Price</th>
+                  <th style={{ padding: "18px 20px", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase", fontWeight: 700 }}>Total Price</th>
+                  <th style={{ padding: "18px 20px", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase", fontWeight: 700 }}>Down Payment</th>
+                  <th style={{ padding: "18px 20px", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase", fontWeight: 700 }}>Confirmation (After 45 Days)</th>
+                  <th style={{ padding: "18px 20px", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase", fontWeight: 700 }}>Allocation</th>
+                  <th style={{ padding: "18px 20px", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase", fontWeight: 700, textAlign: "right" }}>48 Monthly Installment</th>
                 </tr>
               </thead>
               <tbody>
@@ -453,7 +394,7 @@ export default function PaymentPlan() {
                   >
                     <td style={{ padding: "18px 20px" }}>
                       <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                        <span style={{ fontSize: "17px", fontWeight: 700, color: "#0B1E2B" }}>{plot.size}</span>
+                        <span style={{ fontSize: "18px", fontWeight: 700, color: "#0B1E2B" }}>{plot.size}</span>
                         <span
                           style={{
                             fontSize: "10px",
@@ -469,27 +410,34 @@ export default function PaymentPlan() {
                       </div>
                       <span style={{ fontSize: "11px", color: "#888", display: "block", marginTop: "2px" }}>{plot.dimension}</span>
                     </td>
-                    <td style={{ padding: "18px 20px", fontSize: "14px", color: "#333", fontWeight: 500 }}>{plot.booking}</td>
-                    <td style={{ padding: "18px 20px", fontSize: "14px", color: "#333" }}>{plot.confirmation}</td>
-                    <td style={{ padding: "18px 20px", fontSize: "14px", color: "#333" }}>
-                      <span style={{ color: "#0B1E2B", fontWeight: 600 }}>{plot.installments}</span>
-                      <span style={{ display: "block", fontSize: "11px", color: "#777" }}>Over 3.5 Years</span>
+                    <td style={{ padding: "18px 20px" }}>
+                      <span style={{ fontSize: "16px", fontWeight: 700, color: "#1a3a52" }}>
+                        PKR {plot.totalPrice}
+                      </span>
                     </td>
-                    <td style={{ padding: "18px 20px", fontSize: "14px", color: "#333" }}>{plot.possession}</td>
+                    <td style={{ padding: "18px 20px", fontSize: "14px", color: "#333", fontWeight: 600 }}>
+                      PKR {plot.downPayment}
+                    </td>
+                    <td style={{ padding: "18px 20px", fontSize: "14px", color: "#333" }}>
+                      PKR {plot.confirmation}
+                    </td>
+                    <td style={{ padding: "18px 20px", fontSize: "14px", color: "#333" }}>
+                      PKR {plot.allocation}
+                    </td>
                     <td style={{ padding: "18px 20px", textAlign: "right" }}>
                       <span
                         style={{
                           display: "inline-block",
-                          padding: "6px 12px",
+                          padding: "6px 14px",
                           borderRadius: "6px",
                           background: "#0B1E2B",
                           color: "#c4b08a",
-                          fontSize: "11px",
+                          fontSize: "13px",
                           fontWeight: 700,
                           letterSpacing: "0.5px",
                         }}
                       >
-                        Contact Sales Desk
+                        PKR {plot.monthlyInstallment} / mo
                       </span>
                     </td>
                   </tr>
@@ -499,125 +447,106 @@ export default function PaymentPlan() {
           </div>
         </section>
 
-        {/* Section 2: Commercial Plots */}
-        <section id="commercial-plan" style={{ marginBottom: "80px" }}>
-          <div style={{ marginBottom: "28px" }}>
-            <span
-              style={{
-                fontSize: "11px",
-                letterSpacing: "2.5px",
-                textTransform: "uppercase",
-                color: "#b2996a",
-                fontWeight: 700,
-                display: "block",
-                marginBottom: "6px",
-              }}
-            >
-              High-Yield Commercial Opportunities
-            </span>
-            <h2
-              style={{
-                fontSize: "clamp(26px, 3.5vw, 36px)",
-                fontFamily: "var(--serif)",
-                color: "#0B1E2B",
-                margin: 0,
-                lineHeight: 1.2,
-                fontWeight: 600,
-              }}
-            >
-              Commercial Plot Payment Plans (2M, 4M, 8M)
-            </h2>
-            <p style={{ color: "#666", fontSize: "15px", marginTop: "8px", maxWidth: "800px" }}>
-              Position your business along prime 120-ft wide commercial avenues with unparalleled highway transit connectivity and maximum customer exposure.
-            </p>
-          </div>
-
-          {/* Responsive Commercial Table */}
+        {/* Section 2: Terms & Conditions & Investment Journey */}
+        <section style={{ marginBottom: "70px" }}>
           <div
             style={{
-              overflowX: "auto",
-              background: "#ffffff",
-              borderRadius: "12px",
-              border: "1px solid #e5e7eb",
-              boxShadow: "0 10px 30px rgba(0, 0, 0, 0.05)",
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+              gap: "24px",
             }}
           >
-            <table
+            {/* Terms & Conditions */}
+            <div
               style={{
-                width: "100%",
-                minWidth: "780px",
-                borderCollapse: "collapse",
-                textAlign: "left",
-                fontFamily: "var(--sans)",
+                background: "#ffffff",
+                padding: "30px 26px",
+                borderRadius: "12px",
+                border: "1px solid #e5e7eb",
+                boxShadow: "0 4px 16px rgba(0, 0, 0, 0.04)",
               }}
             >
-              <thead>
-                <tr style={{ background: "#1a3a52", color: "#ffffff" }}>
-                  <th style={{ padding: "18px 20px", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase", fontWeight: 700 }}>Plot Size</th>
-                  <th style={{ padding: "18px 20px", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase", fontWeight: 700 }}>Booking / Down Payment</th>
-                  <th style={{ padding: "18px 20px", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase", fontWeight: 700 }}>Confirmation</th>
-                  <th style={{ padding: "18px 20px", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase", fontWeight: 700 }}>Quarterly Installments</th>
-                  <th style={{ padding: "18px 20px", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase", fontWeight: 700 }}>Balloting / Possession</th>
-                  <th style={{ padding: "18px 20px", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase", fontWeight: 700, textAlign: "right" }}>Total Price</th>
-                </tr>
-              </thead>
-              <tbody>
-                {commercialPlots.map((plot, idx) => (
-                  <tr
-                    key={plot.size}
-                    style={{
-                      borderBottom: "1px solid #f0f0f0",
-                      backgroundColor: idx % 2 === 0 ? "#ffffff" : "#FAFAFA",
-                      transition: "background 0.2s ease",
-                    }}
-                    onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = "#F3EFE6"; }}
-                    onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = idx % 2 === 0 ? "#ffffff" : "#FAFAFA"; }}
-                  >
-                    <td style={{ padding: "18px 20px" }}>
-                      <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                        <span style={{ fontSize: "17px", fontWeight: 700, color: "#0B1E2B" }}>{plot.size}</span>
-                        <span
-                          style={{
-                            fontSize: "10px",
-                            padding: "3px 8px",
-                            borderRadius: "4px",
-                            background: "rgba(178, 153, 106, 0.2)",
-                            color: "#8c6e3b",
-                            fontWeight: 600,
-                          }}
-                        >
-                          {plot.badge}
-                        </span>
-                      </div>
-                      <span style={{ fontSize: "11px", color: "#888", display: "block", marginTop: "2px" }}>{plot.dimension}</span>
-                    </td>
-                    <td style={{ padding: "18px 20px", fontSize: "14px", color: "#333", fontWeight: 500 }}>{plot.booking}</td>
-                    <td style={{ padding: "18px 20px", fontSize: "14px", color: "#333" }}>{plot.confirmation}</td>
-                    <td style={{ padding: "18px 20px", fontSize: "14px", color: "#333" }}>
-                      <span style={{ color: "#0B1E2B", fontWeight: 600 }}>{plot.installments}</span>
-                      <span style={{ display: "block", fontSize: "11px", color: "#777" }}>3 Year Plan</span>
-                    </td>
-                    <td style={{ padding: "18px 20px", fontSize: "14px", color: "#333" }}>{plot.possession}</td>
-                    <td style={{ padding: "18px 20px", textAlign: "right" }}>
-                      <span
-                        style={{
-                          display: "inline-block",
-                          padding: "6px 12px",
-                          borderRadius: "6px",
-                          background: "#0B1E2B",
-                          color: "#c4b08a",
-                          fontSize: "11px",
-                          fontWeight: 700,
-                          letterSpacing: "0.5px",
-                        }}
-                      >
-                        Contact Sales Desk
-                      </span>
-                    </td>
-                  </tr>
+              <h3
+                style={{
+                  fontSize: "18px",
+                  fontWeight: 700,
+                  color: "#0B1E2B",
+                  margin: "0 0 16px 0",
+                  fontFamily: "var(--serif)",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "8px",
+                }}
+              >
+                <FileText size={18} color="#b2996a" />
+                Terms & Conditions
+              </h3>
+              <ul style={{ margin: 0, paddingLeft: "18px", color: "#555", fontSize: "14px", lineHeight: 1.8 }}>
+                {termsAndConditions.map((term, i) => (
+                  <li key={i} style={{ marginBottom: "8px" }}>{term}</li>
                 ))}
-              </tbody>
-            </table>
+              </ul>
+            </div>
+
+            {/* Investment Journey */}
+            <div
+              style={{
+                background: "#ffffff",
+                padding: "30px 26px",
+                borderRadius: "12px",
+                border: "1px solid #e5e7eb",
+                boxShadow: "0 4px 16px rgba(0, 0, 0, 0.04)",
+              }}
+            >
+              <h3
+                style={{
+                  fontSize: "18px",
+                  fontWeight: 700,
+                  color: "#0B1E2B",
+                  margin: "0 0 16px 0",
+                  fontFamily: "var(--serif)",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "8px",
+                }}
+              >
+                <CheckCircle size={18} color="#b2996a" />
+                Your Investment Journey
+              </h3>
+              <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+                {[
+                  { num: "01", label: "Booking", desc: "Initial down payment to reserve your plot" },
+                  { num: "02", label: "Confirmation", desc: "Confirmation dues payable after 45 days" },
+                  { num: "03", label: "Allocation", desc: "Official plot allocation certificate" },
+                  { num: "04", label: "48 Monthly Installments", desc: "Easy, structured monthly payments over 4 years" },
+                  { num: "05", label: "Possession", desc: "Handover and possession of your residential plot" },
+                ].map((item) => (
+                  <div key={item.num} style={{ display: "flex", alignItems: "flex-start", gap: "12px" }}>
+                    <span
+                      style={{
+                        display: "inline-flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        width: "28px",
+                        height: "28px",
+                        borderRadius: "50%",
+                        background: "rgba(178, 153, 106, 0.15)",
+                        color: "#8c6e3b",
+                        fontSize: "11px",
+                        fontWeight: 700,
+                        flexShrink: 0,
+                      }}
+                    >
+                      {item.num}
+                    </span>
+                    <div>
+                      <div style={{ fontSize: "14px", fontWeight: 700, color: "#0B1E2B" }}>{item.label}</div>
+                      <div style={{ fontSize: "12px", color: "#666" }}>{item.desc}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
@@ -999,14 +928,8 @@ export default function PaymentPlan() {
                         background: "#fff",
                       }}
                     >
-                      <option>3.5 Marla Residential</option>
-                      <option>5 Marla Residential</option>
-                      <option>10 Marla Residential</option>
-                      <option>1 Kanal Residential</option>
-                      <option>2 Kanal Residential</option>
-                      <option>2 Marla Commercial</option>
-                      <option>4 Marla Commercial</option>
-                      <option>8 Marla Commercial</option>
+                      <option>3.5 Marla Residential (PKR 1,850,000)</option>
+                      <option>5 Marla Residential (PKR 2,500,000)</option>
                     </select>
                   </div>
 

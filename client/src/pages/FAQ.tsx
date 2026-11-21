@@ -34,11 +34,10 @@ const img = {
 
 const nav = ["HOME", "THE CITY", "PAYMENT PLAN", "LOCATION", "DEVELOPER", "ENQUIRE"];
 const navMobile = ["HOME", "THE CITY", "PAYMENT PLAN", "LOCATION", "DEVELOPER", "ENQUIRE"];
-const footerLinks = ["Residential Plots", "Commercial Plots", "Payment Plan", "Location", "The City", "Developer", "FAQ", "Enquire"];
+const footerLinks = ["Residential Plots", "Payment Plan", "Location", "The City", "Developer", "FAQ", "Enquire"];
 const footerDescriptions = {
-  "Residential Plots": "Discover a range of residential plot sizes to suit your needs. Choose from MARLA 3.5, MARLA 5, MARLA 10, KANAL 1, and KANAL 2 options designed for modern living.",
-  "Commercial Plots": "Explore commercial plot opportunities perfect for your business. Available in MARLA 2, MARLA 4, and MARLA 8 to accommodate various commercial ventures.",
-  "Payment Plan": "Official 3 to 4 year quarterly installment schedules for residential and commercial plots engineered by HRL Construction Pvt Limited.",
+  "Residential Plots": "Discover our official 4-year installment residential plots in MARLA 3.5 (PKR 1,850,000) and MARLA 5 (PKR 2,500,000) designed for modern living.",
+  "Payment Plan": "Official 4-year monthly installment schedule for residential plots engineered by HRL Construction Pvt Limited.",
   "Location": "Prime location on Ravi Riverfront, Lahore with direct connectivity to Lahore Ring Road, M-2 Motorway, and City Center.",
   "The City": "Discover a considered way to experience the city at Royal Swiss City.",
   "Developer": "Discover a considered way to experience developer at Royal Swiss City.",
@@ -143,27 +142,27 @@ const comprehensiveFAQs: FAQItem[] = [
   {
     id: "plots-1",
     category: "Plots & Pricing",
-    question: "What residential plot sizes and configurations are available?",
-    summary: "A diverse portfolio of residential options tailored for contemporary families and visionary investors.",
+    question: "What residential plot sizes and prices are available?",
+    summary: "Official pre-launch residential plots available in 3.5 Marla and 5 Marla configurations on a 4-year plan.",
     highlights: [
-      "MARLA 3.5 (~787 sq ft): Optimized entry-point luxury living for young professionals and smart investors.",
-      "MARLA 5 (~1,125 sq ft): The ideal contemporary family home layout with maximum space efficiency.",
-      "MARLA 10 (~2,250 sq ft): Executive residence with ample space for dual living rooms, private lawn, and garage.",
-      "KANAL 1 (~4,500 sq ft) & KANAL 2 (~9,000 sq ft): Palatial estate plots for bespoke luxury villa architecture."
+      "MARLA 3.5 (~787 sq ft): Total price PKR 1,850,000 with PKR 250,000 down payment and PKR 25,000/month installment.",
+      "MARLA 5 (~1,125 sq ft): Total price PKR 2,500,000 with PKR 350,000 down payment and PKR 33,000/month installment."
     ],
     details: "All residential plots are fronted by wide boulevards (minimum 40 feet) with underground utility stubs pre-installed at the boundary line, ensuring seamless construction without road cuts."
   },
   {
     id: "plots-2",
     category: "Plots & Pricing",
-    question: "What commercial plot sizes are available along the primary boulevards?",
-    summary: "High-density commercial plots positioned for maximum footfall and sustained rental yield.",
+    question: "What is the payment plan and installment structure?",
+    summary: "An official 4-year installment plan structured with 48 convenient monthly payments.",
     highlights: [
-      "MARLA 2: Boutique commercial spaces ideal for retail outlets, cafés, and financial service branches.",
-      "MARLA 4: Mid-scale commercial buildings suitable for corporate offices, diagnostic clinics, and restaurants.",
-      "MARLA 8: Flagship multi-storey commercial complexes with dedicated basement parking allowances."
+      "Initial Down Payment upon booking (PKR 250,000 for 3.5 Marla / PKR 350,000 for 5 Marla).",
+      "Confirmation payment due after 45 days (PKR 120,000 for 3.5 Marla / PKR 150,000 for 5 Marla).",
+      "Official plot allocation (PKR 277,500 for 3.5 Marla / PKR 375,000 for 5 Marla).",
+      "48 monthly installments (PKR 25,000/mo for 3.5 Marla / PKR 33,000/mo for 5 Marla) leading to possession.",
+      "10% discount offered on 100% full upfront payment."
     ],
-    details: "Commercial districts in Royal Swiss City are strategically distributed along the 100-foot main thoroughfares, ensuring uninterrupted traffic circulation, ample parking, and unmatched business visibility."
+    details: "Development charges are PKR 300,000/- per Marla. Corner, Boulevard, or Park Facing plots incur a 10% premium. All payments are drawn strictly in favor of HRL Construction Pvt Limited."
   },
   {
     id: "plots-3",

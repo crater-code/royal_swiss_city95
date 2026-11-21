@@ -128,8 +128,8 @@ export const SEO_CONFIG = {
   pages: {
     home: {
       title: "Royal Swiss City Lahore | Official Portal | HRL Construction",
-      description: "Official website of Royal Swiss City Lahore by HRL Construction Pvt Limited. Explore luxury residential & commercial plots on Ravi Riverfront with flexible installment plans.",
-      keywords: "Royal Swiss City, Royal Swiss City Lahore, payment plan, location map, HRL Construction Pvt Limited, Habib Rafiq housing, residential plots Lahore, commercial plots Lahore, Ravi Riverfront",
+      description: "Official website of Royal Swiss City Lahore by HRL Construction Pvt Limited. Explore luxury residential plots (3.5 & 5 Marla) on Ravi Riverfront with an official 4-year installment plan.",
+      keywords: "Royal Swiss City, Royal Swiss City Lahore, payment plan, location map, HRL Construction Pvt Limited, Habib Rafiq housing, residential plots Lahore, 3.5 marla, 5 marla, Ravi Riverfront",
       canonical: "https://royalswisscity.com/",
     },
     
@@ -149,8 +149,8 @@ export const SEO_CONFIG = {
 
     paymentPlan: {
       title: "Royal Swiss City Lahore Payment Plan & Installment Schedule (2026)",
-      description: "View the official Royal Swiss City Lahore payment plans. Flexible down payments and quarterly installments for 3.5, 5, 10 Marla & Commercial plots.",
-      keywords: "Royal Swiss City payment plan, installment schedule 2026, plot prices lahore, 3.5 marla price, 5 marla installment, commercial plot payment plan, down payment",
+      description: "View the official Royal Swiss City Lahore payment plans. 4-year monthly installment schedules for 3.5 Marla (PKR 1,850,000) & 5 Marla (PKR 2,500,000) residential plots.",
+      keywords: "Royal Swiss City payment plan, installment schedule 2026, plot prices lahore, 3.5 marla price, 5 marla installment, 4 years payment plan, down payment",
       canonical: "https://royalswisscity.com/payment-plan",
     },
 
@@ -163,14 +163,14 @@ export const SEO_CONFIG = {
 
     enquire: {
       title: "Enquire About Royal Swiss City Lahore Plots | Payment Plans & Investment Info",
-      description: "Contact Royal Swiss City for residential & commercial plot inquiries. Get information about payment plans, plot prices (3.5 marla, 5 marla, 1 kanal), location details, investment opportunities. Luxury housing in Lahore - HRL Construction Pvt Limited premium development.",
-      keywords: "Royal Swiss City inquiry, plot prices, payment plan, contact Royal Swiss City, investment opportunity, booking information",
+      description: "Contact Royal Swiss City for 3.5 Marla (PKR 1,850,000) and 5 Marla (PKR 2,500,000) residential plot inquiries. Official 4-year payment plans by HRL Construction Pvt Limited.",
+      keywords: "Royal Swiss City inquiry, plot prices, payment plan, contact Royal Swiss City, 3.5 marla, 5 marla, booking information",
       canonical: "https://royalswisscity.com/enquire",
     },
 
     faq: {
       title: "FAQ & Buyer Knowledge Base - Royal Swiss City Lahore | HRL Construction",
-      description: "Find verified answers to common questions about Royal Swiss City Lahore. Explore residential & commercial plot sizes, flexible payment installment plans, legal approvals, NOC status, and HRL Construction Pvt Limited development milestones.",
+      description: "Find verified answers to common questions about Royal Swiss City Lahore. Explore 3.5 Marla and 5 Marla residential plots, 4-year payment plans, legal approvals, and HRL Construction Pvt Limited development milestones.",
       keywords: "Royal Swiss City FAQ, frequently asked questions, royal swiss city plots, lahore gated community, property investment lahore, HRL Construction Pvt Limited legacy, plot prices lahore",
       canonical: "https://royalswisscity.com/faq",
     },
@@ -227,7 +227,7 @@ export const SEO_CONFIG = {
           "name": "What plot sizes are available in Royal Swiss City Lahore?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Royal Swiss City Lahore offers residential plots in 3.5 Marla, 5 Marla, 10 Marla, 1 Kanal, and 2 Kanal, alongside commercial plots in 2 Marla, 4 Marla, and 8 Marla."
+            "text": "Royal Swiss City Lahore currently offers residential plots in 3.5 Marla (PKR 1,850,000) and 5 Marla (PKR 2,500,000) on an official 4-year installment plan."
           }
         },
         {
@@ -235,7 +235,7 @@ export const SEO_CONFIG = {
           "name": "Are flexible installment plans available?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, all residential and commercial plots are available on convenient 3 to 4 year quarterly installment schedules following an initial down payment."
+            "text": "Yes, all residential plots are available on a convenient 4-year schedule with 48 monthly installments following an initial down payment, 45-day confirmation, and allocation."
           }
         }
       ]
@@ -295,7 +295,7 @@ export const SEO_CONFIG = {
           "name": "What plot sizes are available in Royal Swiss City Lahore?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Royal Swiss City offers 3.5 Marla, 5 Marla, 10 Marla, 1 Kanal, and 2 Kanal residential plots, and 2 Marla, 4 Marla, and 8 Marla commercial plots."
+            "text": "Royal Swiss City offers 3.5 Marla (PKR 1,850,000) and 5 Marla (PKR 2,500,000) residential plots on an official 4-year installment plan."
           }
         },
         {

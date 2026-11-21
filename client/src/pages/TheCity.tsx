@@ -8,11 +8,10 @@ import { SEO_CONFIG } from "@/config/seo";
 const img = { logo: "/logo.webp?v=2" };
 const nav = ["HOME", "THE CITY", "PAYMENT PLAN", "LOCATION", "DEVELOPER", "ENQUIRE"];
 const navMobile = ["HOME", "THE CITY", "PAYMENT PLAN", "LOCATION", "DEVELOPER", "ENQUIRE"];
-const footerLinks = ["Residential Plots", "Commercial Plots", "Payment Plan", "Location", "The City", "Developer", "FAQ", "Enquire"];
+const footerLinks = ["Residential Plots", "Payment Plan", "Location", "The City", "Developer", "FAQ", "Enquire"];
 const footerDescriptions = {
-  "Residential Plots": "Discover a range of residential plot sizes to suit your needs. Choose from MARLA 3.5, MARLA 5, MARLA 10, KANAL 1, and KANAL 2 options designed for modern living.",
-  "Commercial Plots": "Explore commercial plot opportunities perfect for your business. Available in MARLA 2, MARLA 4, and MARLA 8 to accommodate various commercial ventures.",
-  "Payment Plan": "Official 3 to 4 year quarterly installment schedules for residential and commercial plots engineered by HRL Construction Pvt Limited.",
+  "Residential Plots": "Discover our official 4-year installment residential plots in MARLA 3.5 (PKR 1,850,000) and MARLA 5 (PKR 2,500,000) designed for modern living.",
+  "Payment Plan": "Official 4-year monthly installment schedule for residential plots engineered by HRL Construction Pvt Limited.",
   "Location": "Prime location on Ravi Riverfront, Lahore with direct connectivity to Lahore Ring Road, M-2 Motorway, and City Center.",
   "The City": "Discover sustainable master-planned community living with solar power, green canals, and world-class amenities at Royal Swiss City.",
   "Developer": "Built by HRL Construction Pvt Limited (Habib Rafiq) with over 60 years of national infrastructure leadership.",
@@ -229,7 +228,7 @@ export default function TheCity() {
               Commercial & Civic Zones
             </h2>
             <p style={{ fontSize: "16px", lineHeight: 1.8, color: "#666", margin: "0", fontFamily: "var(--serif)", fontWeight: 300, display: window.innerWidth <= 768 ? "none" : "block" }}>
-              Strategically planned 2, 4, and 8 Marla commercial boulevard plots, civic plazas, health centers, and educational zones integrated with wide 40-feet internal roads and landscaped boulevards.
+              Strategically planned civic plazas, health complexes, retail hubs, and educational institutions integrated with wide 40-feet internal roads and landscaped boulevards.
             </p>
           </div>
 
