@@ -6,12 +6,6 @@ export function SiteFooter() {
 
   const footerAccordions = [
     {
-      title: "Residential Plots",
-      desc: "Discover official 4-year installment residential plots in 3.5 Marla (PKR 1,850,000) and 5 Marla (PKR 2,500,000) on Lahore's Ravi Riverfront with flexible monthly plans.",
-      link: "/payment-plan",
-      cta: "VIEW PAYMENT PLAN →",
-    },
-    {
       title: "The City",
       desc: "Discover sustainable riverfront urban living at Royal Swiss City Lahore featuring solar infrastructure, 40-ft minimum roads, aquatic parks, and complete civic zoning.",
       link: "/the-city",

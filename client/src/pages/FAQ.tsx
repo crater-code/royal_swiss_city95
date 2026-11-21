@@ -34,9 +34,8 @@ const img = {
 
 const nav = ["HOME", "THE CITY", "PAYMENT PLAN", "LOCATION", "DEVELOPER", "ENQUIRE"];
 const navMobile = ["HOME", "THE CITY", "PAYMENT PLAN", "LOCATION", "DEVELOPER", "ENQUIRE"];
-const footerLinks = ["Residential Plots", "Payment Plan", "Location", "The City", "Developer", "FAQ", "Enquire"];
+const footerLinks = ["Payment Plan", "Location", "The City", "Developer", "FAQ", "Enquire"];
 const footerDescriptions = {
-  "Residential Plots": "Discover our official 4-year installment residential plots in MARLA 3.5 (PKR 1,850,000) and MARLA 5 (PKR 2,500,000) designed for modern living.",
   "Payment Plan": "Official 4-year monthly installment schedule for residential plots engineered by HRL Construction Pvt Limited.",
   "Location": "Prime location on Ravi Riverfront, Lahore with direct connectivity to Lahore Ring Road, M-2 Motorway, and City Center.",
   "The City": "Discover a considered way to experience the city at Royal Swiss City.",

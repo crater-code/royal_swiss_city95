@@ -19,9 +19,8 @@ const SEO_KEYWORDS = {
 };
 const nav = ["HOME", "THE CITY", "PAYMENT PLAN", "LOCATION", "DEVELOPER", "ENQUIRE"];
 const navMobile = ["HOME", "THE CITY", "PAYMENT PLAN", "LOCATION", "DEVELOPER", "ENQUIRE"];
-const footerLinks = ["Residential Plots", "Payment Plan", "Location", "The City", "Developer", "FAQ", "Partner", "Enquire"];
+const footerLinks = ["Payment Plan", "Location", "The City", "Developer", "FAQ", "Partner", "Enquire"];
 const footerDescriptions = {
-  "Residential Plots": "Discover our official 4-year installment residential plots in MARLA 3.5 (PKR 1,850,000) and MARLA 5 (PKR 2,500,000) designed for modern living.",
   "Payment Plan": "Official 2026 payment plans and 4-year monthly installment schedules for 3.5 Marla and 5 Marla residential plots.",
   "Location": "Prime location on Lahore's Ravi Riverfront with direct connectivity to Lahore Ring Road, M-2 Motorway, and Allama Iqbal International Airport.",
   "The City": "Discover sustainable riverfront urban living at Royal Swiss City featuring solar infrastructure and world-class amenities.",
