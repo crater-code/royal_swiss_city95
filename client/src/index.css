@@ -84,26 +84,24 @@ a {
     z-index: 20
 }
 
-/* Hide navbar initially on desktop until scrolled */
-@media(min-width:761px) {
-    .home-page .walk-header,
-    .the-city-page .walk-header,
-    .faq-page .walk-header,
-    .developer-page .walk-header,
-    .enquire-page .walk-header {
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity .45s ease;
-    }
-    
-    .home-page .walk-header.is-scrolled,
-    .the-city-page .walk-header.is-scrolled,
-    .faq-page .walk-header.is-scrolled,
-    .developer-page .walk-header.is-scrolled,
-    .enquire-page .walk-header.is-scrolled {
-        opacity: 1;
-        pointer-events: auto;
-    }
+/* Hide navbar initially until scrolled */
+.home-page .walk-header,
+.the-city-page .walk-header,
+.faq-page .walk-header,
+.developer-page .walk-header,
+.enquire-page .walk-header {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .45s ease;
+}
+
+.home-page .walk-header.is-scrolled,
+.the-city-page .walk-header.is-scrolled,
+.faq-page .walk-header.is-scrolled,
+.developer-page .walk-header.is-scrolled,
+.enquire-page .walk-header.is-scrolled {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .walk-header.is-scrolled {

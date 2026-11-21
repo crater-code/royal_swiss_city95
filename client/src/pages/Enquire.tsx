@@ -48,6 +48,7 @@ function Anchor({ item }: { item: string }) {
 export default function Enquire() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
   const [openFooter, setOpenFooter] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
@@ -94,10 +95,12 @@ export default function Enquire() {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     let f = 0;
     const fn = () => {
       cancelAnimationFrame(f);
       f = requestAnimationFrame(() => {
+        setScrollY(window.scrollY);
         setScrolled(window.scrollY > 28);
       });
     };
@@ -179,8 +182,11 @@ export default function Enquire() {
     }
   };
 
+  const vh = typeof window !== "undefined" ? window.innerHeight : 800;
+  const heroProgress = Math.min(scrollY / Math.max(vh, 800), 1);
+
   return (
-    <main className="walkthrough-page enquire-page">
+    <main className="walkthrough-page enquire-page" style={{ "--hero-progress": heroProgress } as React.CSSProperties}>
       {/* Main H1 - Primary page topic for SEO */}
       <h1 style={{ position: "absolute", left: "-9999px", top: "-9999px", width: "1px", height: "1px", overflow: "hidden" }}>
         Enquire About Royal Swiss City Plots - Contact Sales Team for Investment Opportunities in Lahore
