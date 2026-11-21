@@ -11,7 +11,7 @@
       "displayName": "Royal Swiss City Knowledge Base",
       "type": "application/agent-skills+md",
       "url": "https://royalswisscity.com/llms.txt",
-      "description": "Comprehensive knowledge base and discovery resource for Royal Swiss City Lahore, developed by Habib Rafiq (HRL). Contains verified details on residential and commercial plot sizes, pricing, installment payment plans, NOC approvals, and master plan amenities.",
+      "description": "Comprehensive knowledge base and discovery resource for Royal Swiss City Lahore, developed by HRL Construction Pvt Limited (Habib Rafiq). Contains verified details on 3.5 Marla and 5 Marla residential plot sizes, official 4-year installment pricing, down payments, and master plan amenities.",
       "capabilities": [
         "PlotSearch",
         "PaymentPlanInfo",
@@ -22,7 +22,7 @@
         "What are the residential plot sizes and payment plans at Royal Swiss City Lahore?",
         "Who is the developer of Royal Swiss City and what are their past projects?",
         "Where is Royal Swiss City located along the M-2 motorway?",
-        "How can I book a 5 marla or 10 marla plot in Royal Swiss City?"
+        "How can I book a 3.5 marla or 5 marla residential plot in Royal Swiss City?"
       ]
     },
     {
@@ -30,7 +30,7 @@
       "displayName": "Royal Swiss City Property Inquiry & Booking",
       "type": "application/agent-card+json",
       "url": "https://royalswisscity.com/enquire",
-      "description": "Direct inquiry and booking service for premium residential and commercial plots at Royal Swiss City Lahore.",
+      "description": "Direct inquiry and booking service for 3.5 Marla and 5 Marla residential plots at Royal Swiss City Lahore.",
       "capabilities": [
         "PropertyBooking",
         "InquirySubmission",
@@ -38,7 +38,7 @@
       ],
       "representativeQueries": [
         "Submit a plot inquiry for Royal Swiss City Lahore",
-        "Book a commercial plot at Royal Swiss City",
+        "Book a 3.5 or 5 Marla residential plot at Royal Swiss City",
         "Contact Royal Swiss City authorized sales partner"
       ]
     }

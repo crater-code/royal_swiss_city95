@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://royalswisscity.com/sitemap.xml
+Sitemap: https://royalswisscity.com/sitemap-urdu.xml
