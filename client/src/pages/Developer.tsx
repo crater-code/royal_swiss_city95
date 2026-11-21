@@ -40,7 +40,7 @@ const projectsByCategory = {
   ],
 };
 
-function Logo() { return <img className="brand-logo" src={img.logo} alt="Royal Swiss City" width={125} height={125} /> }
+function Logo() { return <img className="brand-logo" src={img.logo} alt="Royal Swiss City" width={132} height={132} /> }
 function Anchor({ item }: { item: string }) { 
   if (item === "DEVELOPER") {
     return <a href="/developer">{item}</a>;

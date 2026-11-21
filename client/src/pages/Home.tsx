@@ -49,7 +49,7 @@ const features = [
   "Sports & Recreation - Best Lifestyle in Lahore",
   "Water Management - Sustainable Living in Pakistan"
 ];
-function Logo() { return <img className="brand-logo" src={img.logo} alt="Royal Swiss City - Premium Gated Community Logo" width={125} height={125} loading="eager" /> }
+function Logo() { return <img className="brand-logo" src={img.logo} alt="Royal Swiss City - Premium Gated Community Logo" width={132} height={132} loading="eager" /> }
 function Anchor({ item }: { item: string }) {
   if (item === "DEVELOPER") {
     return <a href="/developer">{item}</a>

@@ -20,7 +20,7 @@ const footerDescriptions = {
   "Enquire": "Contact our official sales and site visit advisory team at 042-111-777-588."
 };
 
-function Logo() { return <img className="brand-logo" src={img.logo} alt="Royal Swiss City" width={125} height={125} loading="lazy" /> }
+function Logo() { return <img className="brand-logo" src={img.logo} alt="Royal Swiss City" width={132} height={132} loading="lazy" /> }
 function Anchor({ item }: { item: string }) {
   if (item === "DEVELOPER") {
     return <a href="/developer">{item}</a>
