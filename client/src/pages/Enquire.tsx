@@ -64,6 +64,7 @@ export default function Enquire() {
     enquiryType: "",
     plotSize: "",
     message: "",
+    website_url_trap: "",
   });
 
   const nav = ["HOME", "THE CITY", "PAYMENT PLAN", "LOCATION", "DEVELOPER", "ENQUIRE"];
@@ -155,6 +156,7 @@ export default function Enquire() {
           enquiryType: "",
           plotSize: "",
           message: "",
+          website_url_trap: "",
         });
       } else {
         const errorMsg = result?.message || "There was an issue submitting your enquiry. Please try again or reach us directly via phone or email.";
@@ -175,6 +177,7 @@ export default function Enquire() {
         enquiryType: "",
         plotSize: "",
         message: "",
+        website_url_trap: "",
       });
     } finally {
       setIsSubmitting(false);
@@ -353,6 +356,18 @@ export default function Enquire() {
             </div>
 
             <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+              
+              {/* Anti-Bot Honeypot */}
+              <div style={{ display: "none", position: "absolute", left: "-9999px" }} aria-hidden="true">
+                <input
+                  type="text"
+                  name="website_url_trap"
+                  value={formData.website_url_trap}
+                  onChange={handleInputChange}
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+              </div>
               
               {/* Row 1: Full Name & Company Name */}
               <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: "16px" }}>

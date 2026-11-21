@@ -110,19 +110,55 @@
 </IfModule>
 
 # ============================================================
-# ENABLE MOD_REWRITE - For SPA routing
+# ENABLE MOD_REWRITE - For SPA routing & DDoS/Exploit Shield
 # ============================================================
 <IfModule mod_rewrite.c>
-  # Redirect deprecated sitemaps
+  RewriteEngine On
+
+  # 1. Block Malicious Exploitation Scanners & Attack Tools
+  RewriteCond %{HTTP_USER_AGENT} (sqlmap|nikto|havij|acunetix|wpscan|masscan|zgrab|nmap|dirbuster|gobuster|fuzz|jbrofuzz) [NC]
+  RewriteRule .* - [F,L]
+
+  # 2. Block Common Malicious Query Strings / Injection Floods
+  RewriteCond %{QUERY_STRING} (eval\(|base64_|select%20|union%20|concat\(|drop%20table|<script|%3Cscript|benchmark\(|sleep\() [NC]
+  RewriteRule .* - [F,L]
+
+  # 3. Redirect deprecated sitemaps
   RewriteRule ^sitemap-urdu\.xml$ /sitemap.xml [R=301,L]
 
-  # Don't rewrite existing files or directories
+  # 4. Don't rewrite existing files or directories
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   
-  # Rewrite everything else to index.html for SPA routing
+  # 5. Rewrite everything else to index.html for SPA routing
   RewriteRule ^ index.html [L]
 </IfModule>
+
+# ============================================================
+# BLOCK SENSITIVE & SYSTEM FILES (Deny Access)
+# ============================================================
+<FilesMatch "^\.|\.(sql|env|bak|log|ini|sh|conf|git|svn|md|yml|yaml|dist)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order deny,allow
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+# ============================================================
+# RESTRICT DANGEROUS HTTP METHODS
+# ============================================================
+<LimitExcept GET POST HEAD OPTIONS>
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order deny,allow
+    Deny from all
+  </IfModule>
+</LimitExcept>
 
 # ============================================================
 # SECURITY HEADERS - Protect against attacks
@@ -139,6 +175,9 @@
   
   # Referrer policy
   Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Permissions policy
+  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
 </IfModule>
 
 # ============================================================
