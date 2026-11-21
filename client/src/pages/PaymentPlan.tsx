@@ -284,59 +284,6 @@ export default function PaymentPlan() {
       {/* Main Content Area */}
       <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "60px 20px" }}>
         
-        {/* Notice Badge */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            flexWrap: "wrap",
-            gap: "14px",
-            padding: "16px 24px",
-            background: "#ffffff",
-            borderRadius: "10px",
-            border: "1px solid rgba(178, 153, 106, 0.35)",
-            boxShadow: "0 4px 20px rgba(0, 0, 0, 0.04)",
-            marginBottom: "50px",
-          }}
-        >
-          <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-            <span
-              style={{
-                display: "inline-block",
-                padding: "4px 10px",
-                borderRadius: "6px",
-                background: "#0B1E2B",
-                color: "#b2996a",
-                fontSize: "11px",
-                fontWeight: 700,
-                letterSpacing: "1px",
-                textTransform: "uppercase",
-              }}
-            >
-              Official Notice
-            </span>
-            <p style={{ margin: 0, fontSize: "14px", color: "#333", fontWeight: 500 }}>
-              Contact sales desk for latest official allotment rates and limited-time priority inventory allocations.
-            </p>
-          </div>
-          <a
-            href="tel:+9242111777588"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "8px",
-              color: "#b2996a",
-              fontSize: "13px",
-              fontWeight: 700,
-              textDecoration: "none",
-            }}
-          >
-            <Phone size={14} />
-            042 111 777 588
-          </a>
-        </div>
-
         {/* Section 1: Residential Plots 4-Years Plan */}
         <section id="residential-plan" style={{ marginBottom: "60px" }}>
           <div style={{ marginBottom: "28px" }}>
