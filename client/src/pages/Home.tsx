@@ -79,6 +79,7 @@ function Anchor({ item }: { item: string }) {
 const dealersData = [
   {
     name: "WALL.PK",
+    shortName: "Wall.pk",
     phone: "03041111096",
     displayPhone: "0304 1111096",
     type: "Authorized Sales Partner",
@@ -88,6 +89,7 @@ const dealersData = [
   },
   {
     name: "REHMAN PROPERTIES & MARKETING",
+    shortName: "Rehman Properties",
     phone: "03209432689",
     displayPhone: "0320 9432689",
     type: "Authorized Sales Partner",
@@ -97,6 +99,7 @@ const dealersData = [
   },
   {
     name: "BURHAN REAL ESTATE",
+    shortName: "Burhan Estate",
     phone: "03218857005",
     displayPhone: "0321 8857005",
     type: "Authorized Sales Partner",
@@ -106,6 +109,7 @@ const dealersData = [
   },
   {
     name: "NATIONAL MARKETING REAL ESTATE & BUILDERS",
+    shortName: "National Marketing",
     phone: "03314006262",
     displayPhone: "0331 4006262",
     type: "Authorized Sales Partner",
@@ -115,6 +119,7 @@ const dealersData = [
   },
   {
     name: "PROPT.COM",
+    shortName: "PropT.Com",
     phone: "03228777722",
     displayPhone: "0322 8777722",
     type: "Authorized Sales Partner",
@@ -124,6 +129,7 @@ const dealersData = [
   },
   {
     name: "AZAN MARKETING & BUILDERS",
+    shortName: "Azan Marketing & Builders",
     phone: "03219447122",
     displayPhone: "0321 9447122",
     type: "Authorized Sales Partner",
@@ -469,15 +475,29 @@ export default function Home() {
                   }}
                   role="button"
                   tabIndex={0}
-                  title={dealer.name}
-                  aria-label={dealer.name}
+                  title={`${dealer.shortName} - ${dealer.displayPhone}`}
+                  aria-label={`${dealer.shortName} - ${dealer.displayPhone}`}
                 >
                   <div className="partner-tile-logo-wrap">
                     {dealer.logo ? (
-                      <img src={dealer.logo} alt={dealer.name} loading="lazy" />
+                      <img src={dealer.logo} alt={dealer.shortName} loading="lazy" />
                     ) : (
-                      <span style={{ fontSize: "12px", color: "#256131", fontWeight: 700 }}>{dealer.name}</span>
+                      <span style={{ fontSize: "12px", color: "#256131", fontWeight: 700 }}>{dealer.shortName}</span>
                     )}
+                  </div>
+                  <div className="partner-tile-info">
+                    <div className="partner-tile-name">{dealer.shortName}</div>
+                    <a 
+                      href={`tel:+92${dealer.phone.replace(/^0/, '')}`}
+                      className="partner-tile-phone"
+                      onClick={(e) => e.stopPropagation()}
+                      title={`Call ${dealer.shortName}`}
+                    >
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                      </svg>
+                      <span>{dealer.displayPhone}</span>
+                    </a>
                   </div>
                 </div>
               ))}
@@ -489,14 +509,29 @@ export default function Home() {
                 <div 
                   key={`group2-${i}`} 
                   className="partner-tile"
+                  onClick={() => setSelectedDealer(dealer)}
                   tabIndex={-1}
                 >
                   <div className="partner-tile-logo-wrap">
                     {dealer.logo ? (
                       <img src={dealer.logo} alt="" loading="lazy" />
                     ) : (
-                      <span style={{ fontSize: "12px", color: "#256131", fontWeight: 700 }}>{dealer.name}</span>
+                      <span style={{ fontSize: "12px", color: "#256131", fontWeight: 700 }}>{dealer.shortName}</span>
                     )}
+                  </div>
+                  <div className="partner-tile-info">
+                    <div className="partner-tile-name">{dealer.shortName}</div>
+                    <a 
+                      href={`tel:+92${dealer.phone.replace(/^0/, '')}`}
+                      className="partner-tile-phone"
+                      onClick={(e) => e.stopPropagation()}
+                      tabIndex={-1}
+                    >
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                      </svg>
+                      <span>{dealer.displayPhone}</span>
+                    </a>
                   </div>
                 </div>
               ))}

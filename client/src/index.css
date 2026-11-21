@@ -4214,42 +4214,45 @@ p,
     }
 }
 
-/* Individual Partner Tile (Icons Only) */
+/* Individual Partner Tile (Logo, Name & Phone) */
 .partner-tile {
-    width: clamp(250px, 20vw, 320px) !important;
-    height: clamp(135px, 12vw, 170px) !important;
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    border-radius: 0 !important;
-    padding: 8px 16px !important;
+    width: clamp(230px, 18vw, 280px) !important;
+    min-height: 172px !important;
+    height: auto !important;
+    background: #ffffff !important;
+    border: 1px solid rgba(26, 58, 82, 0.08) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+    border-radius: 14px !important;
+    padding: 14px 14px 12px !important;
     display: flex !important;
+    flex-direction: column !important;
     align-items: center !important;
-    justify-content: center !important;
+    justify-content: space-between !important;
     text-align: center !important;
     cursor: pointer !important;
-    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.28s ease !important;
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease, border-color 0.28s ease !important;
     box-sizing: border-box !important;
     flex-shrink: 0 !important;
     position: relative !important;
 }
 
 .partner-tile:hover {
-    transform: scale(1.08) !important;
-    background: transparent !important;
-    box-shadow: none !important;
-    border: none !important;
+    transform: translateY(-4px) scale(1.02) !important;
+    background: #ffffff !important;
+    box-shadow: 0 10px 24px rgba(26, 58, 82, 0.12) !important;
+    border-color: rgba(178, 153, 106, 0.45) !important;
 }
 
 .partner-tile-logo-wrap {
     width: 100% !important;
-    height: 100% !important;
+    height: 80px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     margin: 0 !important;
     padding: 0 !important;
     box-sizing: border-box !important;
+    overflow: hidden !important;
 }
 
 .partner-tile-logo-wrap img {
@@ -4279,62 +4282,112 @@ p,
 
 /* Other partner logos: significantly larger & highly legible on PC and mobile */
 .partner-tile-logo-wrap img[src*="NATIONAL"] {
-    max-height: 98% !important;
-    max-width: 96% !important;
-    transform: scale(1.12) !important;
+    max-height: 96% !important;
+    max-width: 95% !important;
+    transform: scale(1.05) !important;
     transform-origin: center center !important;
 }
 
 .partner-tile:hover .partner-tile-logo-wrap img[src*="NATIONAL"] {
-    transform: scale(1.16) !important;
+    transform: scale(1.08) !important;
 }
 
 .partner-tile-logo-wrap img[src*="REHMAN"] {
     max-height: 96% !important;
     max-width: 95% !important;
-    transform: scale(1.08) !important;
+    transform: scale(1.04) !important;
     transform-origin: center center !important;
 }
 
 .partner-tile:hover .partner-tile-logo-wrap img[src*="REHMAN"] {
-    transform: scale(1.12) !important;
+    transform: scale(1.08) !important;
 }
 
 .partner-tile-logo-wrap img[src*="WALL"] {
-    max-width: 98% !important;
+    max-width: 95% !important;
     max-height: 90% !important;
     width: auto !important;
-    transform: scale(1.18) !important;
+    transform: scale(1.06) !important;
     transform-origin: center center !important;
     filter: contrast(1.04) !important;
 }
 
 .partner-tile:hover .partner-tile-logo-wrap img[src*="WALL"] {
-    transform: scale(1.22) !important;
+    transform: scale(1.1) !important;
 }
 
 .partner-tile-logo-wrap img[src*="propt"] {
     max-width: 90% !important;
     max-height: 90% !important;
     width: auto !important;
-    transform: scale(1.08) !important;
+    transform: scale(1.05) !important;
     transform-origin: center center !important;
 }
 
 .partner-tile:hover .partner-tile-logo-wrap img[src*="propt"] {
-    transform: scale(1.14) !important;
+    transform: scale(1.1) !important;
 }
 
 .partner-tile-logo-wrap img[src*="azan"] {
     max-width: 92% !important;
     max-height: 92% !important;
     width: auto !important;
-    transform: scale(1.06) !important;
+    transform: scale(1.05) !important;
     transform-origin: center center !important;
 }
 
 .partner-tile:hover .partner-tile-logo-wrap img[src*="azan"] {
-    transform: scale(1.12) !important;
+    transform: scale(1.1) !important;
+}
+
+/* Tile Info: Name & Phone Number */
+.partner-tile-info {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 4px !important;
+    margin-top: 10px !important;
+    padding-top: 8px !important;
+    border-top: 1px solid rgba(26, 58, 82, 0.06) !important;
+    box-sizing: border-box !important;
+}
+
+.partner-tile-name {
+    font-family: var(--sans, 'Manrope', sans-serif) !important;
+    font-size: 13.5px !important;
+    font-weight: 700 !important;
+    color: #1a3a52 !important;
+    letter-spacing: 0.2px !important;
+    line-height: 1.25 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    max-width: 100% !important;
+}
+
+.partner-tile-phone {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    font-family: var(--sans, 'Manrope', sans-serif) !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    color: #b2996a !important;
+    text-decoration: none !important;
+    letter-spacing: 0.4px !important;
+    padding: 3px 8px !important;
+    border-radius: 6px !important;
+    transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease !important;
+}
+
+.partner-tile-phone:hover {
+    color: #8f6f32 !important;
+    background: rgba(178, 153, 106, 0.1) !important;
+    transform: scale(1.03) !important;
 }
 
 /* Call to action below carousel */
@@ -4384,51 +4437,37 @@ p,
 
     .partner-carousel-group {
         animation-duration: 26s !important;
-        gap: 28px !important;
-        padding-right: 28px !important;
+        gap: 20px !important;
+        padding-right: 20px !important;
     }
 
     .partner-tile {
-        width: 235px !important;
-        height: 140px !important;
-        padding: 6px 12px !important;
+        width: 220px !important;
+        min-height: 155px !important;
+        height: auto !important;
+        padding: 12px 10px 10px !important;
+        border-radius: 12px !important;
     }
 
     .partner-tile-logo-wrap {
         width: 100% !important;
-        height: 100% !important;
+        height: 72px !important;
     }
 
     .partner-tile-logo-wrap img {
         max-width: 100% !important;
-        max-height: 135px !important;
+        max-height: 100% !important;
         width: auto !important;
         height: auto !important;
         object-fit: contain !important;
     }
 
-    .partner-tile-logo-wrap img[src*="BURHAN"] {
-        max-height: 125px !important;
-        max-width: 92% !important;
-        transform: none !important;
+    .partner-tile-name {
+        font-size: 12.5px !important;
     }
 
-    .partner-tile-logo-wrap img[src*="NATIONAL"] {
-        max-height: 132px !important;
-        max-width: 96% !important;
-        transform: scale(1.1) !important;
-    }
-
-    .partner-tile-logo-wrap img[src*="REHMAN"] {
-        max-height: 130px !important;
-        max-width: 95% !important;
-        transform: scale(1.06) !important;
-    }
-
-    .partner-tile-logo-wrap img[src*="WALL"] {
-        max-height: 110px !important;
-        max-width: 98% !important;
-        transform: scale(1.16) !important;
+    .partner-tile-phone {
+        font-size: 12px !important;
     }
 
     .partner-cta-wrap {
@@ -4443,42 +4482,27 @@ p,
     }
 
     .partner-carousel-group {
-        gap: 22px !important;
-        padding-right: 22px !important;
+        gap: 16px !important;
+        padding-right: 16px !important;
     }
 
     .partner-tile {
-        width: 215px !important;
-        height: 135px !important;
-        padding: 4px 8px !important;
+        width: 195px !important;
+        min-height: 145px !important;
+        padding: 10px 8px 8px !important;
+        border-radius: 10px !important;
     }
 
-    .partner-tile-logo-wrap img {
-        max-height: 125px !important;
+    .partner-tile-logo-wrap {
+        height: 65px !important;
     }
 
-    .partner-tile-logo-wrap img[src*="BURHAN"] {
-        max-height: 120px !important;
-        max-width: 92% !important;
-        transform: none !important;
+    .partner-tile-name {
+        font-size: 11.5px !important;
     }
 
-    .partner-tile-logo-wrap img[src*="NATIONAL"] {
-        max-height: 125px !important;
-        max-width: 96% !important;
-        transform: scale(1.1) !important;
-    }
-
-    .partner-tile-logo-wrap img[src*="REHMAN"] {
-        max-height: 125px !important;
-        max-width: 95% !important;
-        transform: scale(1.06) !important;
-    }
-
-    .partner-tile-logo-wrap img[src*="WALL"] {
-        max-height: 105px !important;
-        max-width: 98% !important;
-        transform: scale(1.16) !important;
+    .partner-tile-phone {
+        font-size: 11px !important;
     }
 }
 
