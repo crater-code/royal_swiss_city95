@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, Instagram, Facebook, Linkedin, Youtube } from "lucide-react";
+import { ChevronDown, Instagram, Facebook, Youtube } from "lucide-react";
 
 export function SiteFooter() {
   const [openFooter, setOpenFooter] = useState<string | null>(null);
@@ -157,14 +157,6 @@ export function SiteFooter() {
         </a>
         <a href="https://facebook.com/royalswisscity" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook">
           <Facebook size={22} />
-        </a>
-        <a href="https://tiktok.com/@royalswisscity" target="_blank" rel="noopener noreferrer" title="TikTok" aria-label="TikTok">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.68v13.67a2.4 2.4 0 0 1-2.4 2.4 2.4 2.4 0 0 1-2.4-2.4 2.4 2.4 0 0 1 2.4-2.4c.34 0 .67.05.98.15V9.41a5.81 5.81 0 0 0-.98-.08 6.04 6.04 0 0 0-6.04 6.04 6.04 6.04 0 0 0 6.04 6.04 6.04 6.04 0 0 0 6.04-6.04v-3.1a7.7 7.7 0 0 0 3.77 1.01V9.81a4.77 4.77 0 0 1-.77-.06z" />
-          </svg>
-        </a>
-        <a href="https://linkedin.com/company/royalswisscity" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn">
-          <Linkedin size={22} />
         </a>
         <a href="https://youtube.com/@royalswisscity" target="_blank" rel="noopener noreferrer" title="YouTube" aria-label="YouTube">
           <Youtube size={22} />

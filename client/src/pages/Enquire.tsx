@@ -5,7 +5,6 @@ import {
   ChevronDown, 
   Instagram, 
   Facebook, 
-  Linkedin, 
   Youtube,
   Phone,
   Mail,
@@ -77,7 +76,6 @@ export default function Enquire() {
     "The City": "Discover a considered way to experience the city at Royal Swiss City.",
     "Developer": "Discover a considered way to experience developer at Royal Swiss City.",
     "FAQ": "Discover a considered way to experience faq at Royal Swiss City.",
-    "Partner": "Discover a considered way to experience partner at Royal Swiss City.",
     "Enquire": "Discover a considered way to experience enquire at Royal Swiss City."
   };
 
@@ -88,7 +86,6 @@ export default function Enquire() {
       case "Location": return "/location";
       case "Developer": return "/developer";
       case "FAQ": return "/faq";
-      case "Partner": return "/#partner";
       case "Enquire": return "/enquire";
       default: return "";
     }
@@ -865,8 +862,6 @@ export default function Enquire() {
         <div className="footer-socials">
           <a href="https://instagram.com/royalswisscity" target="_blank" rel="noopener noreferrer" title="Instagram"><Instagram size={24} /></a>
           <a href="https://facebook.com/royalswisscity" target="_blank" rel="noopener noreferrer" title="Facebook"><Facebook size={24} /></a>
-          <a href="https://tiktok.com/@royalswisscity" target="_blank" rel="noopener noreferrer" title="TikTok"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.68v13.67a2.4 2.4 0 0 1-2.4 2.4 2.4 2.4 0 0 1-2.4-2.4 2.4 2.4 0 0 1 2.4-2.4c.34 0 .67.05.98.15V9.41a5.81 5.81 0 0 0-.98-.08 6.04 6.04 0 0 0-6.04 6.04 6.04 6.04 0 0 0 6.04 6.04 6.04 6.04 0 0 0 6.04-6.04v-3.1a7.7 7.7 0 0 0 3.77 1.01V9.81a4.77 4.77 0 0 1-.77-.06z" /></svg></a>
-          <a href="https://linkedin.com/company/royalswisscity" target="_blank" rel="noopener noreferrer" title="LinkedIn"><Linkedin size={24} /></a>
           <a href="https://youtube.com/@royalswisscity" target="_blank" rel="noopener noreferrer" title="YouTube"><Youtube size={24} /></a>
           <a href="https://x.com/royalswisscity" target="_blank" rel="noopener noreferrer" title="X"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.637l-5.1-6.694-5.867 6.694h-3.306l7.733-8.835L2.25 2.25h6.814l4.882 6.45L18.244 2.25zM17.083 18.386h1.83L6.959 4.155H5.049l12.034 14.231z" /></svg></a>
         </div>

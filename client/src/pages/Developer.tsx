@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ChevronDown, Menu, X, Instagram, Facebook, Linkedin, Youtube } from "lucide-react";
+import { ChevronDown, Menu, X, Instagram, Facebook, Youtube } from "lucide-react";
 import { animateFooter } from "@/utils/sectionAnimations";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { SEOHead } from "@/components/SEOHead";
@@ -354,7 +354,6 @@ export default function Developer() {
             { title: "PAYMENT PLANS & BOOKING", description: "Explore official 4-year installment schedules for 3.5 Marla (PKR 1,850,000) and 5 Marla (PKR 2,500,000) residential plots with convenient 48 monthly payments.", link: "/payment-plan" },
             { title: "ROYAL SWISS CITY MASTER PLAN", description: "Royal Swiss City represents our evolution into premium residential development. Combining decades of engineering expertise with modern planning, we've created a master-planned community with world-class infrastructure and amenities.", link: "/the-city" },
             { title: "LOCATION & CONNECTIVITY", description: "Conveniently situated on the Ravi Riverfront with direct interchange access to Lahore Ring Road, M-2 Motorway, and rapid connection to Allama Iqbal International Airport.", link: "/location" },
-            { title: "PARTNERSHIP & DEALERS", description: "We welcome strategic partnerships in real estate development and infrastructure projects. Our track record and expertise make us a trusted partner for large-scale initiatives.", link: "/#partner" },
             { title: "SALES & SITE ENQUIRIES", description: "For inquiries about residential plots, installment schedules, or guided site tours, please contact our official sales desk at 042-111-777-588 or info@royalswisscity.com.", link: "/enquire" }
           ].filter((_, i) => i % 2 === 0).map(item => (
             <div className={openFooterItem === item.title ? "open" : ""} key={item.title}>
@@ -379,7 +378,6 @@ export default function Developer() {
             { title: "PAYMENT PLANS & BOOKING", description: "Explore official 4-year installment schedules for 3.5 Marla (PKR 1,850,000) and 5 Marla (PKR 2,500,000) residential plots with convenient 48 monthly payments.", link: "/payment-plan" },
             { title: "ROYAL SWISS CITY MASTER PLAN", description: "Royal Swiss City represents our evolution into premium residential development. Combining decades of engineering expertise with modern planning, we've created a master-planned community with world-class infrastructure and amenities.", link: "/the-city" },
             { title: "LOCATION & CONNECTIVITY", description: "Conveniently situated on the Ravi Riverfront with direct interchange access to Lahore Ring Road, M-2 Motorway, and rapid connection to Allama Iqbal International Airport.", link: "/location" },
-            { title: "PARTNERSHIP & DEALERS", description: "We welcome strategic partnerships in real estate development and infrastructure projects. Our track record and expertise make us a trusted partner for large-scale initiatives.", link: "/#partner" },
             { title: "SALES & SITE ENQUIRIES", description: "For inquiries about residential plots, installment schedules, or guided site tours, please contact our official sales desk at 042-111-777-588 or info@royalswisscity.com.", link: "/enquire" }
           ].filter((_, i) => i % 2 === 1).map(item => (
             <div className={openFooterItem === item.title ? "open" : ""} key={item.title}>
@@ -402,8 +400,6 @@ export default function Developer() {
       <div className="footer-socials">
         <a href="https://instagram.com/royalswisscity" target="_blank" rel="noopener noreferrer" title="Instagram"><Instagram size={24} /></a>
         <a href="https://facebook.com/royalswisscity" target="_blank" rel="noopener noreferrer" title="Facebook"><Facebook size={24} /></a>
-        <a href="https://tiktok.com/@royalswisscity" target="_blank" rel="noopener noreferrer" title="TikTok"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.68v13.67a2.4 2.4 0 0 1-2.4 2.4 2.4 2.4 0 0 1-2.4-2.4 2.4 2.4 0 0 1 2.4-2.4c.34 0 .67.05.98.15V9.41a5.81 5.81 0 0 0-.98-.08 6.04 6.04 0 0 0-6.04 6.04 6.04 6.04 0 0 0 6.04 6.04 6.04 6.04 0 0 0 6.04-6.04v-3.1a7.7 7.7 0 0 0 3.77 1.01V9.81a4.77 4.77 0 0 1-.77-.06z" /></svg></a>
-        <a href="https://linkedin.com/company/royalswisscity" target="_blank" rel="noopener noreferrer" title="LinkedIn"><Linkedin size={24} /></a>
         <a href="https://youtube.com/@royalswisscity" target="_blank" rel="noopener noreferrer" title="YouTube"><Youtube size={24} /></a>
         <a href="https://x.com/royalswisscity" target="_blank" rel="noopener noreferrer" title="X"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.637l-5.1-6.694-5.867 6.694h-3.306l7.733-8.835L2.25 2.25h6.814l4.882 6.45L18.244 2.25zM17.083 18.386h1.83L6.959 4.155H5.049l12.034 14.231z" /></svg></a>
       </div>

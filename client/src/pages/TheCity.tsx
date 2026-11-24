@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Menu, X, ChevronDown, Instagram, Facebook, Linkedin, Youtube } from "lucide-react";
+import { Menu, X, ChevronDown, Instagram, Facebook, Youtube } from "lucide-react";
 import { animateFooter } from "@/utils/sectionAnimations";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { SEOHead } from "@/components/SEOHead";
@@ -296,7 +296,6 @@ export default function TheCity() {
               else if (item === "Location") learnMoreLink = "/location";
               else if (item === "Developer") learnMoreLink = "/developer";
               else if (item === "FAQ") learnMoreLink = "/faq";
-              else if (item === "Partner") learnMoreLink = "/#partner";
               else if (item === "Enquire") learnMoreLink = "/enquire";
 
               return (
@@ -350,7 +349,6 @@ export default function TheCity() {
               else if (item === "Location") learnMoreLink = "/location";
               else if (item === "Developer") learnMoreLink = "/developer";
               else if (item === "FAQ") learnMoreLink = "/faq";
-              else if (item === "Partner") learnMoreLink = "/#partner";
               else if (item === "Enquire") learnMoreLink = "/enquire";
 
               return (
@@ -403,14 +401,6 @@ export default function TheCity() {
           </a>
           <a href="https://facebook.com/royalswisscity" target="_blank" rel="noopener noreferrer" title="Facebook">
             <Facebook size={24} />
-          </a>
-          <a href="https://tiktok.com/@royalswisscity" target="_blank" rel="noopener noreferrer" title="TikTok">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.68v13.67a2.4 2.4 0 0 1-2.4 2.4 2.4 2.4 0 0 1-2.4-2.4 2.4 2.4 0 0 1 2.4-2.4c.34 0 .67.05.98.15V9.41a5.81 5.81 0 0 0-.98-.08 6.04 6.04 0 0 0-6.04 6.04 6.04 6.04 0 0 0 6.04 6.04 6.04 6.04 0 0 0 6.04-6.04v-3.1a7.7 7.7 0 0 0 3.77 1.01V9.81a4.77 4.77 0 0 1-.77-.06z" />
-            </svg>
-          </a>
-          <a href="https://linkedin.com/company/royalswisscity" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-            <Linkedin size={24} />
           </a>
           <a href="https://youtube.com/@royalswisscity" target="_blank" rel="noopener noreferrer" title="YouTube">
             <Youtube size={24} />
