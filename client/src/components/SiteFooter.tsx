@@ -137,19 +137,19 @@ export function SiteFooter() {
           justifyContent: "center",
           gap: "18px 28px",
           padding: "24px 20px 10px 20px",
-          borderTop: "1px solid rgba(255, 255, 255, 0.12)",
+          borderTop: "1px solid rgba(26, 58, 82, 0.15)",
           maxWidth: "1100px",
           margin: "0 auto",
         }}
       >
-        <a href="/" style={{ color: "rgba(255,255,255,0.85)", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase" }}>Home</a>
-        <a href="/the-city" style={{ color: "rgba(255,255,255,0.85)", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase" }}>The City</a>
-        <a href="/payment-plan" style={{ color: "#b2996a", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase", fontWeight: 600 }}>Payment Plan</a>
-        <a href="/location" style={{ color: "#b2996a", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase", fontWeight: 600 }}>Location</a>
-        <a href="/developer" style={{ color: "rgba(255,255,255,0.85)", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase" }}>Developer</a>
-        <a href="/enquire" style={{ color: "rgba(255,255,255,0.85)", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase" }}>Enquire</a>
-        <a href="/faq" style={{ color: "rgba(255,255,255,0.85)", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase" }}>FAQ</a>
-        <a href="/sitemap.xml" style={{ color: "rgba(255,255,255,0.85)", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase" }}>Sitemap</a>
+        <a href="/" style={{ color: "#1a3a52", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase", fontWeight: 600, textDecoration: "none" }}>Home</a>
+        <a href="/the-city" style={{ color: "#1a3a52", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase", fontWeight: 600, textDecoration: "none" }}>The City</a>
+        <a href="/payment-plan" style={{ color: "#b2996a", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase", fontWeight: 700, textDecoration: "none" }}>Payment Plan</a>
+        <a href="/location" style={{ color: "#b2996a", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase", fontWeight: 700, textDecoration: "none" }}>Location</a>
+        <a href="/developer" style={{ color: "#1a3a52", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase", fontWeight: 600, textDecoration: "none" }}>Developer</a>
+        <a href="/enquire" style={{ color: "#1a3a52", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase", fontWeight: 600, textDecoration: "none" }}>Enquire</a>
+        <a href="/faq" style={{ color: "#1a3a52", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase", fontWeight: 600, textDecoration: "none" }}>FAQ</a>
+        <a href="/sitemap.xml" style={{ color: "#1a3a52", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase", fontWeight: 600, textDecoration: "none" }}>Sitemap</a>
       </nav>
 
       <div className="footer-socials">
