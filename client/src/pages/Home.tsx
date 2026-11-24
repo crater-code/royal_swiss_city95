@@ -24,8 +24,8 @@ const footerDescriptions = {
   "Payment Plan": "Official 2026 payment plans and 4-year monthly installment schedules for 3.5 Marla and 5 Marla residential plots.",
   "Location": "Prime location on Lahore's Ravi Riverfront with direct connectivity to Lahore Ring Road, M-2 Motorway, and Allama Iqbal International Airport.",
   "The City": "Discover sustainable riverfront urban living at Royal Swiss City featuring solar infrastructure and world-class amenities.",
-  "Developer": "Royal Swiss City is engineered and built by HRL Private Limited (Habib Rafiq) with over 60 years of infrastructure leadership.",
-  "FAQ": "Frequently asked questions regarding booking process, possession schedules, legal approvals, and HRL Private Limited development.",
+  "Developer": "Royal Swiss City is engineered and built by HRL Construction Pvt Ltd (Habib Rafiq Construction Pvt Ltd) with over 60 years of infrastructure leadership.",
+  "FAQ": "Frequently asked questions regarding booking process, possession schedules, legal approvals, and HRL Construction Pvt Ltd development.",
   "Partner": "Authorized marketing and sales partners network for Royal Swiss City.",
   "Enquire": "Connect directly with our sales team for personalized consultation, payment plans, and site visits."
 };
@@ -187,13 +187,13 @@ export default function Home() {
             <span className="legacy-plus-sign">+</span>
           </div>
           <span className="legacy-label-years">YEARS OF LEGACY</span>
-          <h2 className="legacy-label-legacy" style={{ color: "#ffffff" }}>HABIB RAFIQ</h2>
+          <h2 className="legacy-label-legacy" style={{ color: "#ffffff" }}>HABIB RAFIQ CONSTRUCTION PVT LTD</h2>
           <div className="legacy-divider-line" />
           <p className="legacy-tagline" style={{ color: "#ffffff" }}>ROYAL SWISS CITY - SHAPING COMMUNITIES, BUILDING BETTER TOMORROW</p>
         </div>
         {/* Hidden SEO content */}
         <div style={{ display: "none", fontSize: "0", overflow: "hidden" }}>
-          <p>Master Planned Community by HRL Private Limited. SIX DECADES OF ENGINEERING & INFRASTRUCTURE EXCELLENCE | Two Generations of Vision & Governance. Royal Swiss City represents the best society in lahore. Our gated community in lahore features world-class amenities. As the best place to live in lahore, Royal Swiss City offers luxury housing in lahore. This residential area in pakistan is developed by habib rafiq, delivering premium residential plots in lahore (3.5 Marla & 5 Marla). The best gated community in lahore pakistan for investment properties in lahore.</p>
+          <p>Master Planned Community by HRL Construction Pvt Ltd. SIX DECADES OF ENGINEERING & INFRASTRUCTURE EXCELLENCE | Two Generations of Vision & Governance. Royal Swiss City represents the best society in lahore. Our gated community in lahore features world-class amenities. As the best place to live in lahore, Royal Swiss City offers luxury housing in lahore. This residential area in pakistan is developed by Habib Rafiq Construction Pvt Ltd, delivering premium residential plots in lahore (3.5 Marla & 5 Marla). The best gated community in lahore pakistan for investment properties in lahore.</p>
         </div>
       </div>
 
@@ -203,7 +203,7 @@ export default function Home() {
           {/* Chairman Card */}
           <article className="legacy-card legacy-card--chairman reveal-item">
             <div className="legacy-card__image-wrapper">
-              <img src={img.chairman} alt="Shahid Rafiq - Chairman Habib Rafiq, 60 Years Real Estate Leadership" />
+              <img src={img.chairman} alt="Shahid Rafiq - Chairman Habib Rafiq Construction Pvt Ltd, 60 Years Real Estate Leadership" />
               <div className="legacy-card__image-label">
                 <span>YEARS OF TRUST, QUALITY & EXCELLENCE</span>
               </div>
@@ -225,9 +225,9 @@ export default function Home() {
               </div>
               <a href="/developer#chairman-message" style={{ display: "block", marginTop: "16px", marginBottom: "16px", color: "#b2996a", fontSize: "11px", letterSpacing: "1px", textTransform: "uppercase", textDecoration: "none", fontWeight: 500, transition: "all 0.3s ease" }} onMouseEnter={(e) => { (e.target as HTMLElement).style.opacity = "0.7"; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.opacity = "1"; }}>READ FULL MESSAGE →</a>
               <div className="legacy-card__signature">
-                <p>CHAIRMAN, HRL PRIVATE LIMITED</p>
+                <p>CHAIRMAN, HRL CONSTRUCTION PVT LTD</p>
               </div>
-              <div className="legacy-card__watermark">HRL PRIVATE LIMITED</div>
+              <div className="legacy-card__watermark">HRL CONSTRUCTION PVT LTD</div>
             </div>
           </article>
 
@@ -258,7 +258,7 @@ export default function Home() {
               <div className="legacy-card__signature">
                 <p>CHIEF EXECUTIVE OFFICER</p>
               </div>
-              <div className="legacy-card__watermark">HRL PRIVATE LIMITED</div>
+              <div className="legacy-card__watermark">HRL CONSTRUCTION PVT LTD</div>
             </div>
           </article>
         </div>
@@ -270,7 +270,7 @@ export default function Home() {
           {/* Chairman Card Mobile */}
           <div style={{ textAlign: "center" }}>
             <div style={{ width: "100%", borderRadius: "8px", overflow: "hidden", marginBottom: "10px", height: "160px" }}>
-              <img src={img.chairman} alt="Shahid Rafiq - Chairman Habib Rafiq, 60 Years Real Estate Leadership" style={{ width: "100%", height: "100%", objectFit: "cover" }} loading="lazy" />
+              <img src={img.chairman} alt="Shahid Rafiq - Chairman Habib Rafiq Construction Pvt Ltd, 60 Years Real Estate Leadership" style={{ width: "100%", height: "100%", objectFit: "cover" }} loading="lazy" />
             </div>
             <h4 style={{ fontSize: "13px", fontWeight: 400, color: "#b2996a", margin: "0 0 3px 0", fontFamily: "var(--serif)", letterSpacing: "0.05em", textTransform: "uppercase" }}>Shahid Rafiq</h4>
             <p style={{ fontSize: "10px", color: "#b2996a", margin: "0", textTransform: "uppercase", letterSpacing: "0.08em", fontFamily: "var(--serif)", fontWeight: 300 }}>Chairman</p>
@@ -545,7 +545,7 @@ export default function Home() {
         <a href="/faq" style={{ color: "rgba(255,255,255,0.85)", fontSize: "11px", letterSpacing: "1px", textTransform: "uppercase" }}>FAQ</a>
         <a href="/sitemap.xml" style={{ color: "rgba(255,255,255,0.85)", fontSize: "11px", letterSpacing: "1px", textTransform: "uppercase" }}>Sitemap</a>
       </nav>
-      <div className="footer-socials"><a href="https://instagram.com/royalswisscity" target="_blank" rel="noopener noreferrer" title="Instagram"><Instagram size={24} /></a><a href="https://facebook.com/royalswisscity" target="_blank" rel="noopener noreferrer" title="Facebook"><Facebook size={24} /></a><a href="https://tiktok.com/@royalswisscity" target="_blank" rel="noopener noreferrer" title="TikTok"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.68v13.67a2.4 2.4 0 0 1-2.4 2.4 2.4 2.4 0 0 1-2.4-2.4 2.4 2.4 0 0 1 2.4-2.4c.34 0 .67.05.98.15V9.41a5.81 5.81 0 0 0-.98-.08 6.04 6.04 0 0 0-6.04 6.04 6.04 6.04 0 0 0 6.04 6.04 6.04 6.04 0 0 0 6.04-6.04v-3.1a7.7 7.7 0 0 0 3.77 1.01V9.81a4.77 4.77 0 0 1-.77-.06z" /></svg></a><a href="https://linkedin.com/company/royalswisscity" target="_blank" rel="noopener noreferrer" title="LinkedIn"><Linkedin size={24} /></a><a href="https://youtube.com/@royalswisscity" target="_blank" rel="noopener noreferrer" title="YouTube"><Youtube size={24} /></a><a href="https://x.com/royalswisscity" target="_blank" rel="noopener noreferrer" title="X"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.637l-5.1-6.694-5.867 6.694h-3.306l7.733-8.835L2.25 2.25h6.814l4.882 6.45L18.244 2.25zM17.083 18.386h1.83L6.959 4.155H5.049l12.034 14.231z" /></svg></a></div><div className="footer-contact"><b>Where life happens.</b><span>© 2026 ROYAL SWISS CITY · HRL PRIVATE LIMITED · <a href="/sitemap.html" style={{ color: "inherit", textDecoration: "none" }}>SITEMAP</a></span></div></footer>
+      <div className="footer-socials"><a href="https://instagram.com/royalswisscity" target="_blank" rel="noopener noreferrer" title="Instagram"><Instagram size={24} /></a><a href="https://facebook.com/royalswisscity" target="_blank" rel="noopener noreferrer" title="Facebook"><Facebook size={24} /></a><a href="https://tiktok.com/@royalswisscity" target="_blank" rel="noopener noreferrer" title="TikTok"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.68v13.67a2.4 2.4 0 0 1-2.4 2.4 2.4 2.4 0 0 1-2.4-2.4 2.4 2.4 0 0 1 2.4-2.4c.34 0 .67.05.98.15V9.41a5.81 5.81 0 0 0-.98-.08 6.04 6.04 0 0 0-6.04 6.04 6.04 6.04 0 0 0 6.04 6.04 6.04 6.04 0 0 0 6.04-6.04v-3.1a7.7 7.7 0 0 0 3.77 1.01V9.81a4.77 4.77 0 0 1-.77-.06z" /></svg></a><a href="https://linkedin.com/company/royalswisscity" target="_blank" rel="noopener noreferrer" title="LinkedIn"><Linkedin size={24} /></a><a href="https://youtube.com/@royalswisscity" target="_blank" rel="noopener noreferrer" title="YouTube"><Youtube size={24} /></a><a href="https://x.com/royalswisscity" target="_blank" rel="noopener noreferrer" title="X"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.637l-5.1-6.694-5.867 6.694h-3.306l7.733-8.835L2.25 2.25h6.814l4.882 6.45L18.244 2.25zM17.083 18.386h1.83L6.959 4.155H5.049l12.034 14.231z" /></svg></a></div><div className="footer-contact"><b>Where life happens.</b><span>© 2026 ROYAL SWISS CITY · HRL CONSTRUCTION PVT LTD · <a href="/sitemap.html" style={{ color: "inherit", textDecoration: "none" }}>SITEMAP</a></span></div></footer>
 
     <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
       <div className="mobile-menu__top">
@@ -617,8 +617,8 @@ export default function Home() {
       <p>Looking for the best society in lahore or the best place to live in lahore? Royal Swiss City is Pakistan's premier gated community in lahore offering world-class amenities. This residential area in pakistan combines luxury housing in lahore with premium residential plots in lahore. Our best gated community in lahore provides everything needed.</p>
       <h3>Premium Residential Plots in Lahore (3.5 & 5 Marla)</h3>
       <p>Royal Swiss City offers residential plots in lahore in MARLA 3.5 (PKR 1,850,000) and MARLA 5 (PKR 2,500,000) on an official 4-year installment plan. These investment properties in lahore are ideal for both end-users and investors looking for the best housing in lahore.</p>
-      <h3>Habib Rafiq: Building Pakistan's Best Communities</h3>
-      <p>With over 60 years of experience, Habib Rafiq has created iconic projects across Pakistan. Royal Swiss City represents the best of this legacy - combining infrastructure expertise with modern residential planning. Our habib rafiq royal swiss city project brings best practices in gated communities to create the ultimate best place to live in lahore.</p>
+      <h3>Habib Rafiq Construction Pvt Ltd: Building Pakistan's Best Communities</h3>
+      <p>With over 60 years of experience, Habib Rafiq Construction Pvt Ltd has created iconic projects across Pakistan. Royal Swiss City represents the best of this legacy - combining infrastructure expertise with modern residential planning. Our Habib Rafiq Construction Pvt Ltd royal swiss city project brings best practices in gated communities to create the ultimate best place to live in lahore.</p>
       <h3>Sustainable Living in Lahore's Best Society</h3>
       <p>Royal Swiss City is committed to sustainable development with solar infrastructure, comprehensive water management, and environmental conservation. This eco-friendly residential community proves that the best society in lahore must be green and sustainable. Located in the riverfront development zone of lahore, it offers natural beauty with modern infrastructure.</p>
     </div>
