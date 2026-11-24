@@ -873,7 +873,7 @@ export default function Enquire() {
         
         <div className="footer-contact">
           <b>Where life happens.</b>
-          <span>© 2026 ROYAL SWISS CITY · HRL CONSTRUCTION PVT LTD · PRIVACY POLICY · <a href="/sitemap.xml" style={{ color: "inherit", textDecoration: "none" }}>SITEMAP</a></span>
+          <span>© 2026 ROYAL SWISS CITY · HRL CONSTRUCTION PVT LTD · PRIVACY POLICY</span>
         </div>
       </footer>
 
