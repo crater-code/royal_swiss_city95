@@ -779,7 +779,7 @@ export default function Enquire() {
         style={{ 
           backgroundImage: window.innerWidth > 768 ? "url('/footer_bg_desktop.jpeg')" : "url('/footer_bg_mobile.jpeg')", 
           backgroundSize: "cover", 
-          backgroundPosition: window.innerWidth > 768 ? "center -300px" : "center", 
+          backgroundPosition: "center", 
           backgroundRepeat: "no-repeat" 
         }}
       >
