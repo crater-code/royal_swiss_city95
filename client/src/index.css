@@ -6190,3 +6190,160 @@ p,
   animation: fadeInUp 0.3s ease-out forwards;
 }
 
+/* ==========================================================================
+   Payment Plan Mobile Slim Responsive Layout (<= 768px)
+   Keeps desktop 100% untouched while making mobile sleek, compact, and native
+   ========================================================================== */
+@media (max-width: 768px) {
+  .payment-plan-page .plan-hero {
+    min-height: auto !important;
+    padding: 105px 16px 42px 16px !important;
+  }
+
+  .payment-plan-page .plan-hero h1 {
+    font-size: 26px !important;
+    line-height: 1.25 !important;
+    margin-bottom: 12px !important;
+  }
+
+  .payment-plan-page .plan-hero p {
+    font-size: 13.5px !important;
+    line-height: 1.55 !important;
+    margin-bottom: 20px !important;
+  }
+
+  .payment-plan-page .plan-hero-btn {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 13px 20px !important;
+    font-size: 11.5px !important;
+  }
+
+  .payment-plan-page .plan-main-container {
+    padding: 30px 14px 44px 14px !important;
+  }
+
+  .payment-plan-page .plan-section {
+    margin-bottom: 38px !important;
+  }
+
+  .payment-plan-page .plan-section-header {
+    margin-bottom: 18px !important;
+  }
+
+  .payment-plan-page .plan-section-header h2 {
+    font-size: 21px !important;
+  }
+
+  .payment-plan-page .plan-section-header p {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Hide chunky horizontal scroll table on mobile */
+  .payment-plan-page .desktop-plan-table {
+    display: none !important;
+  }
+
+  /* Display slim native mobile cards */
+  .payment-plan-page .mobile-plan-cards {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+  }
+
+  .payment-plan-page .plan-grid-2 {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .payment-plan-page .plan-card-box {
+    padding: 20px 16px !important;
+  }
+
+  .payment-plan-page .plan-card-box ul {
+    font-size: 12.5px !important;
+    line-height: 1.6 !important;
+  }
+
+  .payment-plan-page .plan-steps-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .payment-plan-page .plan-step-item {
+    padding: 18px 16px !important;
+  }
+
+  .payment-plan-page .plan-step-num {
+    font-size: 26px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .payment-plan-page .plan-step-item h3 {
+    font-size: 15.5px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .payment-plan-page .plan-step-item p {
+    font-size: 12.5px !important;
+    line-height: 1.5 !important;
+  }
+
+  .payment-plan-page .plan-security-notice {
+    margin-top: 18px !important;
+    padding: 16px 14px !important;
+    gap: 12px !important;
+  }
+
+  .payment-plan-page .plan-security-notice h4 {
+    font-size: 13.5px !important;
+  }
+
+  .payment-plan-page .plan-security-notice p {
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+  }
+
+  .payment-plan-page .plan-faq-list {
+    gap: 10px !important;
+  }
+
+  .payment-plan-page .plan-faq-btn {
+    padding: 14px 16px !important;
+  }
+
+  .payment-plan-page .plan-faq-btn span {
+    font-size: 13.5px !important;
+  }
+
+  .payment-plan-page .plan-faq-answer {
+    padding: 0 16px 14px 16px !important;
+    font-size: 12.5px !important;
+    line-height: 1.55 !important;
+  }
+
+  .payment-plan-page .plan-cta-banner {
+    padding: 28px 16px !important;
+    margin-top: 32px !important;
+    border-radius: 12px !important;
+  }
+
+  .payment-plan-page .plan-cta-banner h3 {
+    font-size: 19px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .payment-plan-page .plan-cta-banner p {
+    font-size: 12.5px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .payment-plan-page .plan-cta-banner button,
+  .payment-plan-page .plan-cta-banner a {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+
+

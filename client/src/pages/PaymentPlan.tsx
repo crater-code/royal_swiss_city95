@@ -162,6 +162,7 @@ export default function PaymentPlan() {
 
       {/* Hero Section */}
       <section
+        className="plan-hero"
         style={{
           position: "relative",
           minHeight: "440px",
@@ -189,6 +190,7 @@ export default function PaymentPlan() {
 
         <div style={{ position: "relative", zIndex: 2, maxWidth: "960px", margin: "0 auto" }}>
           <div
+            className="plan-hero-badge"
             style={{
               display: "inline-flex",
               alignItems: "center",
@@ -247,6 +249,7 @@ export default function PaymentPlan() {
             }}
           >
             <button
+              className="plan-hero-btn"
               onClick={() => setDownloadModalOpen(true)}
               style={{
                 display: "inline-flex",
@@ -282,11 +285,11 @@ export default function PaymentPlan() {
       </section>
 
       {/* Main Content Area */}
-      <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "60px 20px" }}>
+      <div className="plan-main-container" style={{ maxWidth: "1280px", margin: "0 auto", padding: "60px 20px" }}>
         
         {/* Section 1: Residential Plots 4-Years Plan */}
-        <section id="residential-plan" style={{ marginBottom: "60px" }}>
-          <div style={{ marginBottom: "28px" }}>
+        <section id="residential-plan" className="plan-section" style={{ marginBottom: "60px" }}>
+          <div className="plan-section-header" style={{ marginBottom: "28px" }}>
             <span
               style={{
                 fontSize: "11px",
@@ -317,8 +320,9 @@ export default function PaymentPlan() {
             </p>
           </div>
 
-          {/* Responsive Residential Table */}
+          {/* Desktop Residential Table (Hidden on Mobile) */}
           <div
+            className="desktop-plan-table"
             style={{
               overflowX: "auto",
               background: "#ffffff",
@@ -411,11 +415,132 @@ export default function PaymentPlan() {
               </tbody>
             </table>
           </div>
+
+          {/* Mobile Slim Plan Cards (Shown only on Mobile <= 768px) */}
+          <div className="mobile-plan-cards" style={{ display: "none" }}>
+            {residentialPlots.map((plot) => (
+              <div
+                key={plot.size}
+                className="mobile-plan-card"
+                style={{
+                  background: "#ffffff",
+                  borderRadius: "14px",
+                  border: "1px solid #e5e7eb",
+                  boxShadow: "0 4px 16px rgba(0, 0, 0, 0.05)",
+                  overflow: "hidden",
+                }}
+              >
+                {/* Header */}
+                <div
+                  style={{
+                    background: "linear-gradient(135deg, #0B1E2B 0%, #152E40 100%)",
+                    color: "#ffffff",
+                    padding: "16px 18px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <div>
+                    <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                      <span style={{ fontSize: "18px", fontWeight: 700, fontFamily: "var(--serif)", color: "#ffffff" }}>
+                        {plot.size}
+                      </span>
+                      <span
+                        style={{
+                          fontSize: "9.5px",
+                          letterSpacing: "0.5px",
+                          textTransform: "uppercase",
+                          padding: "2px 7px",
+                          borderRadius: "4px",
+                          background: "rgba(178, 153, 106, 0.22)",
+                          color: "#c4b08a",
+                          fontWeight: 600,
+                        }}
+                      >
+                        {plot.badge}
+                      </span>
+                    </div>
+                    <span style={{ fontSize: "11.5px", color: "rgba(255, 255, 255, 0.7)", marginTop: "2px", display: "block" }}>
+                      {plot.dimension} · Residential Plot
+                    </span>
+                  </div>
+                  <div style={{ textAlign: "right" }}>
+                    <span style={{ fontSize: "9px", color: "#c4b08a", textTransform: "uppercase", letterSpacing: "1px", display: "block" }}>
+                      Total Price
+                    </span>
+                    <span style={{ fontSize: "16px", fontWeight: 700, color: "#ffffff" }}>
+                      PKR {plot.totalPrice}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Content grid */}
+                <div style={{ padding: "16px 18px" }}>
+                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px 14px", marginBottom: "14px" }}>
+                    <div style={{ borderBottom: "1px solid #f2f2f2", paddingBottom: "7px" }}>
+                      <span style={{ fontSize: "10.5px", color: "#888", textTransform: "uppercase", letterSpacing: "0.5px", display: "block" }}>
+                        Down Payment
+                      </span>
+                      <span style={{ fontSize: "13.5px", fontWeight: 700, color: "#0B1E2B" }}>
+                        PKR {plot.downPayment}
+                      </span>
+                    </div>
+                    <div style={{ borderBottom: "1px solid #f2f2f2", paddingBottom: "7px" }}>
+                      <span style={{ fontSize: "10.5px", color: "#888", textTransform: "uppercase", letterSpacing: "0.5px", display: "block" }}>
+                        Confirmation (45 Days)
+                      </span>
+                      <span style={{ fontSize: "13.5px", fontWeight: 700, color: "#0B1E2B" }}>
+                        PKR {plot.confirmation}
+                      </span>
+                    </div>
+                    <div style={{ borderBottom: "1px solid #f2f2f2", paddingBottom: "7px" }}>
+                      <span style={{ fontSize: "10.5px", color: "#888", textTransform: "uppercase", letterSpacing: "0.5px", display: "block" }}>
+                        Allocation
+                      </span>
+                      <span style={{ fontSize: "13.5px", fontWeight: 700, color: "#0B1E2B" }}>
+                        PKR {plot.allocation}
+                      </span>
+                    </div>
+                    <div style={{ borderBottom: "1px solid #f2f2f2", paddingBottom: "7px" }}>
+                      <span style={{ fontSize: "10.5px", color: "#888", textTransform: "uppercase", letterSpacing: "0.5px", display: "block" }}>
+                        Tenure
+                      </span>
+                      <span style={{ fontSize: "13.5px", fontWeight: 600, color: "#555" }}>
+                        48 Mo (4 Years)
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Highlighted monthly payment bar */}
+                  <div
+                    style={{
+                      background: "rgba(178, 153, 106, 0.09)",
+                      border: "1px solid rgba(178, 153, 106, 0.25)",
+                      borderRadius: "8px",
+                      padding: "10px 14px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <span style={{ fontSize: "11px", fontWeight: 700, color: "#8c6e3b", textTransform: "uppercase", letterSpacing: "0.5px" }}>
+                      Monthly Installment
+                    </span>
+                    <span style={{ fontSize: "14px", fontWeight: 700, color: "#0B1E2B" }}>
+                      PKR {plot.monthlyInstallment} <small style={{ fontSize: "10px", fontWeight: 400, color: "#666" }}>/ mo</small>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </section>
 
         {/* Section 2: Terms & Conditions & Investment Journey */}
-        <section style={{ marginBottom: "70px" }}>
+        <section className="plan-section plan-section-terms" style={{ marginBottom: "70px" }}>
           <div
+            className="plan-grid-2"
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
@@ -424,6 +549,7 @@ export default function PaymentPlan() {
           >
             {/* Terms & Conditions */}
             <div
+              className="plan-card-box"
               style={{
                 background: "#ffffff",
                 padding: "30px 26px",
@@ -456,6 +582,7 @@ export default function PaymentPlan() {
 
             {/* Investment Journey */}
             <div
+              className="plan-card-box"
               style={{
                 background: "#ffffff",
                 padding: "30px 26px",
@@ -517,8 +644,8 @@ export default function PaymentPlan() {
         </section>
 
         {/* Section 3: Booking Process & Guidelines */}
-        <section id="booking-process" style={{ marginBottom: "80px" }}>
-          <div style={{ textAlign: "center", maxWidth: "760px", margin: "0 auto 48px auto" }}>
+        <section id="booking-process" className="plan-section" style={{ marginBottom: "80px" }}>
+          <div className="plan-section-header" style={{ textAlign: "center", maxWidth: "760px", margin: "0 auto 48px auto" }}>
             <span
               style={{
                 fontSize: "11px",
@@ -549,6 +676,7 @@ export default function PaymentPlan() {
           </div>
 
           <div
+            className="plan-steps-grid"
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
@@ -558,6 +686,7 @@ export default function PaymentPlan() {
             {bookingSteps.map((step) => (
               <div
                 key={step.step}
+                className="plan-step-item"
                 style={{
                   background: "#ffffff",
                   padding: "32px 24px",
@@ -579,6 +708,7 @@ export default function PaymentPlan() {
                 }}
               >
                 <span
+                  className="plan-step-num"
                   style={{
                     fontSize: "36px",
                     fontFamily: "var(--serif)",
@@ -610,6 +740,7 @@ export default function PaymentPlan() {
 
           {/* Legal / Payment Safety Callout */}
           <div
+            className="plan-security-notice"
             style={{
               marginTop: "36px",
               padding: "24px 28px",
@@ -635,8 +766,8 @@ export default function PaymentPlan() {
         </section>
 
         {/* Section 4: FAQs */}
-        <section id="faq-section" style={{ marginBottom: "40px" }}>
-          <div style={{ textAlign: "center", maxWidth: "760px", margin: "0 auto 40px auto" }}>
+        <section id="faq-section" className="plan-section" style={{ marginBottom: "40px" }}>
+          <div className="plan-section-header" style={{ textAlign: "center", maxWidth: "760px", margin: "0 auto 40px auto" }}>
             <span
               style={{
                 fontSize: "11px",
@@ -666,7 +797,7 @@ export default function PaymentPlan() {
             </p>
           </div>
 
-          <div style={{ maxWidth: "880px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "14px" }}>
+          <div className="plan-faq-list" style={{ maxWidth: "880px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "14px" }}>
             {faqs.map((faq, index) => {
               const isOpen = activeFaq === index;
               return (
@@ -681,6 +812,7 @@ export default function PaymentPlan() {
                   }}
                 >
                   <button
+                    className="plan-faq-btn"
                     onClick={() => setActiveFaq(isOpen ? null : index)}
                     style={{
                       width: "100%",
@@ -707,7 +839,7 @@ export default function PaymentPlan() {
                     />
                   </button>
                   {isOpen && (
-                    <div style={{ padding: "0 24px 20px 24px", color: "#555", fontSize: "14px", lineHeight: 1.7 }}>
+                    <div className="plan-faq-answer" style={{ padding: "0 24px 20px 24px", color: "#555", fontSize: "14px", lineHeight: 1.7 }}>
                       {faq.a}
                     </div>
                   )}
@@ -719,6 +851,7 @@ export default function PaymentPlan() {
 
         {/* Bottom CTA Banner */}
         <div
+          className="plan-cta-banner"
           style={{
             background: "linear-gradient(135deg, #0B1E2B 0%, #152E40 100%)",
             borderRadius: "16px",
