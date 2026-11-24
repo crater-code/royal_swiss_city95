@@ -36,7 +36,7 @@ const nav = ["HOME", "THE CITY", "PAYMENT PLAN", "LOCATION", "DEVELOPER", "ENQUI
 const navMobile = ["HOME", "THE CITY", "PAYMENT PLAN", "LOCATION", "DEVELOPER", "ENQUIRE"];
 const footerLinks = ["Payment Plan", "Location", "The City", "Developer", "FAQ", "Enquire"];
 const footerDescriptions = {
-  "Payment Plan": "Official 4-year monthly installment schedule for residential plots engineered by HRL Construction Pvt Limited.",
+  "Payment Plan": "Official 4-year monthly installment schedule for residential plots engineered by HRL Private Limited.",
   "Location": "Prime location on Ravi Riverfront, Lahore with direct connectivity to Lahore Ring Road, M-2 Motorway, and City Center.",
   "The City": "Discover a considered way to experience the city at Royal Swiss City.",
   "Developer": "Discover a considered way to experience developer at Royal Swiss City.",
@@ -78,7 +78,7 @@ const comprehensiveFAQs: FAQItem[] = [
     question: "What is Royal Swiss City and what is its founding vision?",
     summary: "Royal Swiss City is Pakistan's premier master-planned gated residential and commercial sanctuary located in Lahore along the Ravi Riverfront corridor.",
     highlights: [
-      "Master-developed by Habib Rafiq Construction (Pvt.) Ltd. (HRL CONSTRUCTION PVT LIMITED) with 60+ years of civil engineering excellence.",
+      "Master-developed by HRL Private Limited (Habib Rafiq) with 60+ years of civil engineering excellence.",
       "Integrates Swiss-inspired environmental urbanism with cutting-edge smart city utilities.",
       "Features 40-ft to 100-ft wide boulevards, solar arrays, and high-efficiency water conservation grids."
     ],
@@ -115,26 +115,26 @@ const comprehensiveFAQs: FAQItem[] = [
     id: "dev-1",
     category: "Developer",
     question: "Who is the developer behind Royal Swiss City?",
-    summary: "The project is proudly conceived, engineered, and delivered by Habib Rafiq Construction (Pvt.) Ltd. (HRL CONSTRUCTION PVT LIMITED).",
+    summary: "The project is proudly conceived, engineered, and delivered by HRL Private Limited (Habib Rafiq).",
     highlights: [
       "Over 6 decades (since 1962) of continuous engineering and infrastructure leadership in Pakistan.",
       "Pioneers behind landmark national projects in energy, aviation, high-rise construction, and mega-societies.",
       "Led by Chairman Shahid Rafiq and CEO Sohaib Shahid Rafiq."
     ],
-    details: "Habib Rafiq Construction (Pvt.) Ltd. is Pakistan's most trusted name in infrastructure and mega-development. With an unblemished 60+ year track record, HRL CONSTRUCTION PVT LIMITED has executed complex EPC contracts across power, oil & gas, aviation, motorways, and luxury housing schemes that define modern Pakistan."
+    details: "HRL Private Limited is Pakistan's most trusted name in infrastructure and mega-development. With an unblemished 60+ year track record, HRL PRIVATE LIMITED has executed complex EPC contracts across power, oil & gas, aviation, motorways, and luxury housing schemes that define modern Pakistan."
   },
   {
     id: "dev-2",
     category: "Developer",
     question: "What iconic national developments are in Habib Rafiq's portfolio?",
-    summary: "HRL CONSTRUCTION PVT LIMITED's engineering pedigree includes some of the most celebrated high-rises, motorways, and landmarks across Pakistan.",
+    summary: "HRL PRIVATE LIMITED's engineering pedigree includes some of the most celebrated high-rises, motorways, and landmarks across Pakistan.",
     highlights: [
       "Bahria Icon Tower Karachi: 60-storey mixed-use skyscraper with advanced titanium façade.",
       "Convention Center Islamabad: State-of-the-art 2,000-seat national EPC landmark completed in record 11 months.",
       "101 Tower Lahore: Premier luxury commercial and residential high-rise.",
       "Strategic Infrastructure: M-1 Motorway (Islamabad–Peshawar), Lahore Ring Road (Package 3), and Multan International Airport."
     ],
-    details: "HRL CONSTRUCTION PVT LIMITED's profound experience in delivering foundational national infrastructure guarantees that Royal Swiss City benefits from superior civil construction quality, robust storm drainage, and flawless engineering execution."
+    details: "HRL PRIVATE LIMITED's profound experience in delivering foundational national infrastructure guarantees that Royal Swiss City benefits from superior civil construction quality, robust storm drainage, and flawless engineering execution."
   },
 
   // 3. Plots & Pricing
@@ -161,7 +161,7 @@ const comprehensiveFAQs: FAQItem[] = [
       "48 monthly installments (PKR 25,000/mo for 3.5 Marla / PKR 33,000/mo for 5 Marla) leading to possession.",
       "10% discount offered on 100% full upfront payment."
     ],
-    details: "Development charges are PKR 300,000/- per Marla. Corner, Boulevard, or Park Facing plots incur a 10% premium. All payments are drawn strictly in favor of HRL Construction Pvt Limited."
+    details: "Development charges are PKR 300,000/- per Marla. Corner, Boulevard, or Park Facing plots incur a 10% premium. All payments are drawn strictly in favor of HRL Private Limited."
   },
   {
     id: "plots-3",
@@ -195,13 +195,13 @@ const comprehensiveFAQs: FAQItem[] = [
     question: "What is the official step-by-step booking procedure?",
     summary: "A transparent, secure 5-step acquisition process handled through authorized channels.",
     highlights: [
-      "Step 1: Consultation & plot category selection with an authorized HRL CONSTRUCTION PVT LIMITED advisor.",
+      "Step 1: Consultation & plot category selection with an authorized HRL PRIVATE LIMITED advisor.",
       "Step 2: Submission of KYC documentation (CNIC / NICOP / Passport copy & passport photos).",
-      "Step 3: Deposit of down payment directly into the designated HRL CONSTRUCTION PVT LIMITED Royal Swiss City escrow account.",
+      "Step 3: Deposit of down payment directly into the designated HRL PRIVATE LIMITED Royal Swiss City escrow account.",
       "Step 4: Issuance of official verified Payment Receipt and Booking Application Form.",
-      "Step 5: Delivery of the official HRL CONSTRUCTION PVT LIMITED Allocation Certificate & Welcome Package."
+      "Step 5: Delivery of the official HRL PRIVATE LIMITED Allocation Certificate & Welcome Package."
     ],
-    details: "All financial transactions must be conducted via official banking channels (cross cheque, pay order, or direct swift/RDA transfer) made payable exclusively to Habib Rafiq Construction (Pvt.) Ltd. / Royal Swiss City."
+    details: "All financial transactions must be conducted via official banking channels (cross cheque, pay order, or direct swift/RDA transfer) made payable exclusively to HRL Private Limited / Royal Swiss City."
   },
   {
     id: "pay-3",
@@ -237,7 +237,7 @@ const comprehensiveFAQs: FAQItem[] = [
     highlights: [
       "Clear, unencumbered land titles verified and registered with provincial revenue authorities.",
       "Comprehensive planning, environmental, and infrastructure approvals in place.",
-      "Backed by HRL CONSTRUCTION PVT LIMITED's 60-year institutional compliance record with government regulatory bodies."
+      "Backed by HRL PRIVATE LIMITED's 60-year institutional compliance record with government regulatory bodies."
     ],
     details: "All layout plans, zoning demarcations, and environmental impact assessments undergo rigorous multi-tier statutory vetting. Prospective buyers are welcome to review certified legal credentials at our corporate head office."
   },
@@ -257,7 +257,7 @@ const comprehensiveFAQs: FAQItem[] = [
     id: "legal-3",
     category: "Legal & Approvals",
     question: "What is the procedure for plot resale or title transfer?",
-    summary: "A secure, biometric-verified transfer mechanism managed directly by the HRL CONSTRUCTION PVT LIMITED Customer Service Center.",
+    summary: "A secure, biometric-verified transfer mechanism managed directly by the HRL PRIVATE LIMITED Customer Service Center.",
     highlights: [
       "Issuance of No Demand Certificate (NDC) verifying zero outstanding balance.",
       "Biometric verification and photographic authentication of both seller and purchaser.",
@@ -1208,7 +1208,7 @@ export default function FAQ() {
 
         <div className="footer-contact">
           <b>Where life happens.</b>
-          <span>© 2026 ROYAL SWISS CITY · HRL CONSTRUCTION PVT LIMITED · PRIVACY POLICY · <a href="/sitemap.xml" style={{ color: "inherit", textDecoration: "none" }}>SITEMAP</a></span>
+          <span>© 2026 ROYAL SWISS CITY · HRL PRIVATE LIMITED · PRIVACY POLICY · <a href="/sitemap.xml" style={{ color: "inherit", textDecoration: "none" }}>SITEMAP</a></span>
         </div>
       </footer>
     </main>

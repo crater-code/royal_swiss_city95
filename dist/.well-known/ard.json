@@ -11,7 +11,7 @@
       "displayName": "Royal Swiss City Knowledge Base",
       "type": "application/agent-skills+md",
       "url": "https://royalswisscity.com/llms.txt",
-      "description": "Comprehensive knowledge base and discovery resource for Royal Swiss City Lahore, developed by HRL Construction Pvt Limited (Habib Rafiq). Contains verified details on 3.5 Marla and 5 Marla residential plot sizes, official 4-year installment pricing, down payments, and master plan amenities.",
+      "description": "Comprehensive knowledge base and discovery resource for Royal Swiss City Lahore, developed by HRL Private Limited (Habib Rafiq). Contains verified details on 3.5 Marla and 5 Marla residential plot sizes, official 4-year installment pricing, down payments, and master plan amenities.",
       "capabilities": [
         "PlotSearch",
         "PaymentPlanInfo",

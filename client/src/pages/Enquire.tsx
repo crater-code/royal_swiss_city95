@@ -72,7 +72,7 @@ export default function Enquire() {
   const footerLinks = ["Payment Plan", "Location", "The City", "Developer", "FAQ", "Enquire"];
   
   const footerDescriptions = {
-    "Payment Plan": "Official 4-year monthly installment schedule for residential plots engineered by HRL Construction Pvt Limited.",
+    "Payment Plan": "Official 4-year monthly installment schedule for residential plots engineered by HRL Private Limited.",
     "Location": "Prime location on Ravi Riverfront, Lahore with direct connectivity to Lahore Ring Road, M-2 Motorway, and City Center.",
     "The City": "Discover a considered way to experience the city at Royal Swiss City.",
     "Developer": "Discover a considered way to experience developer at Royal Swiss City.",
@@ -315,7 +315,7 @@ export default function Enquire() {
             <Building2 size={22} color="#b2996a" style={{ flexShrink: 0 }} />
             <div style={{ textAlign: "left" }}>
               <p style={{ margin: 0, fontSize: "12px", fontWeight: 700, color: "#1a3a52", fontFamily: "var(--serif)" }}>60+ YEARS LEGACY</p>
-              <p style={{ margin: 0, fontSize: "11px", color: "#6c665e" }}>HRL Construction Pvt Limited</p>
+              <p style={{ margin: 0, fontSize: "11px", color: "#6c665e" }}>HRL Private Limited</p>
             </div>
           </div>
 
@@ -873,7 +873,7 @@ export default function Enquire() {
         
         <div className="footer-contact">
           <b>Where life happens.</b>
-          <span>© 2026 ROYAL SWISS CITY · HRL CONSTRUCTION PVT LIMITED · PRIVACY POLICY · <a href="/sitemap.xml" style={{ color: "inherit", textDecoration: "none" }}>SITEMAP</a></span>
+          <span>© 2026 ROYAL SWISS CITY · HRL PRIVATE LIMITED · PRIVACY POLICY · <a href="/sitemap.xml" style={{ color: "inherit", textDecoration: "none" }}>SITEMAP</a></span>
         </div>
       </footer>
 

@@ -24,9 +24,9 @@ interface SEOHeadProps {
 }
 
 export function SEOHead({
-  title = "Royal Swiss City Lahore | Official Portal | HRL Construction",
-  description = "Official website of Royal Swiss City Lahore by HRL Construction Pvt Limited. Explore luxury residential plots (3.5 & 5 Marla) on Ravi Riverfront with an official 4-year installment plan.",
-  keywords = "Royal Swiss City Lahore, payment plan, installment schedule, location map, HRL Construction Pvt Limited, Habib Rafiq, Ravi Riverfront",
+  title = "Royal Swiss City Lahore | Official Portal | HRL Private Limited",
+  description = "Official website of Royal Swiss City Lahore by HRL Private Limited. Explore luxury residential plots (3.5 & 5 Marla) on Ravi Riverfront with an official 4-year installment plan.",
+  keywords = "Royal Swiss City Lahore, payment plan, installment schedule, location map, HRL Private Limited, Habib Rafiq, Ravi Riverfront",
   canonical = "https://royalswisscity.com/",
   ogImage = "https://royalswisscity.com/images/og-share.jpg",
   ogType = "website",
@@ -68,7 +68,7 @@ export function SEOHead({
     // Core Meta Tags
     setMeta("description", description);
     setMeta("keywords", keywords);
-    setMeta("author", "HRL Construction Pvt Limited");
+    setMeta("author", "HRL Private Limited");
     setMeta("viewport", "width=device-width, initial-scale=1.0, maximum-scale=5.0");
     setMeta("robots", `${noindex ? "noindex" : "index"},${nofollow ? "nofollow" : "follow"},max-snippet:-1,max-image-preview:large,max-video-preview:-1`);
     setMeta("googlebot", "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1");
