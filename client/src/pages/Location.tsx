@@ -106,7 +106,7 @@ export default function Location() {
     },
     {
       title: "Ravi Riverfront Green Embankments",
-      desc: "Naturally landscaped ecological promenades and flood-mitigation barriers engineered by HRL Private Limited.",
+      desc: "Naturally landscaped ecological promenades and flood-mitigation barriers engineered by HRL Construction Pvt Ltd.",
     },
   ];
 
@@ -616,7 +616,7 @@ export default function Location() {
               Site Master Plan & Road Infrastructure
             </h2>
             <p style={{ color: "#666", fontSize: "15px", marginTop: "8px", maxWidth: "800px" }}>
-              Developed by <strong>HRL Private Limited</strong>, Royal Swiss City incorporates six decades of premier civil and infrastructure engineering.
+              Developed by <strong>HRL Construction Pvt Ltd</strong>, Royal Swiss City incorporates six decades of premier civil and infrastructure engineering.
             </p>
           </div>
 
@@ -730,7 +730,7 @@ export default function Location() {
               Book a Guided Site Tour
             </h3>
             <p style={{ color: "rgba(255, 255, 255, 0.8)", fontSize: "15px", lineHeight: 1.6, margin: "0 0 28px 0" }}>
-              Experience the breathtaking riverfront setting, wide 40-ft boulevards, and rapid on-ground development milestones firsthand with an official HRL Private Limited property consultant.
+              Experience the breathtaking riverfront setting, wide 40-ft boulevards, and rapid on-ground development milestones firsthand with an official HRL Construction Pvt Ltd property consultant.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "12px", justifyContent: "center" }}>
               <button
@@ -914,7 +914,7 @@ export default function Location() {
                   Tour Scheduled!
                 </h4>
                 <p style={{ margin: "0 0 20px 0", fontSize: "14px", color: "#666", lineHeight: 1.6 }}>
-                  Thank you, <strong>{tourForm.name}</strong>. An HRL Private Limited site concierge will contact you on <strong>{tourForm.phone}</strong> to confirm transport logistics and gate entry clearance.
+                  Thank you, <strong>{tourForm.name}</strong>. An HRL Construction Pvt Ltd site concierge will contact you on <strong>{tourForm.phone}</strong> to confirm transport logistics and gate entry clearance.
                 </p>
                 <button
                   onClick={() => {

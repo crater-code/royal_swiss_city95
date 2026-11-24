@@ -7,7 +7,7 @@ export const SEO_CONFIG = {
   // Global Meta Tags
   site: {
     name: "Royal Swiss City",
-    description: "بہترین سوسائٹی لاہور میں - Best Residential Community in Lahore, Pakistan. Premium gated community with 60+ years of legacy by Habib Rafiq",
+    description: "بہترین سوسائٹی لاہور میں - Best Residential Community in Lahore, Pakistan. Premium gated community with 60+ years of legacy by Habib Rafiq Construction Pvt Ltd",
     url: "https://royalswisscity.com",
     language: "en",
     alternateLanguages: ["ur", "en"],
@@ -23,9 +23,9 @@ export const SEO_CONFIG = {
       "Royal Swiss Multan",
       "Royal Swiss Housing",
       "Royal Swiss Payment plan",
-      "Habib Rafiq ltd",
-      "Habib Rafiq construction",
-      "HRL PRIVATE LIMITED",
+      "Habib Rafiq Construction Pvt Ltd ltd",
+      "Habib Rafiq Construction Pvt Ltd construction",
+      "HRL CONSTRUCTION PVT LTD",
       "Smart city",
       "green city",
       "eco friendly",
@@ -95,7 +95,7 @@ export const SEO_CONFIG = {
     longtail: [
       "best gated community in lahore pakistan",
       "luxury residential plots in lahore dha",
-      "habib rafiq projects in lahore",
+      "Habib Rafiq Construction Pvt Ltd projects in lahore",
       "royal swiss city plots for sale",
       "marla plots in lahore",
       "kanal plots in lahore",
@@ -127,23 +127,23 @@ export const SEO_CONFIG = {
   // Page Configurations
   pages: {
     home: {
-      title: "Royal Swiss City Lahore | Official Portal | HRL Private Limited",
-      description: "Official website of Royal Swiss City Lahore by HRL Private Limited. Explore luxury residential plots (3.5 & 5 Marla) on Ravi Riverfront with an official 4-year installment plan.",
-      keywords: "Royal Swiss City, Royal Swiss City Lahore, payment plan, location map, HRL Private Limited, Habib Rafiq housing, residential plots Lahore, 3.5 marla, 5 marla, Ravi Riverfront",
+      title: "Royal Swiss City Lahore | Official Portal | HRL Construction Pvt Ltd",
+      description: "Official website of Royal Swiss City Lahore by HRL Construction Pvt Ltd. Explore luxury residential plots (3.5 & 5 Marla) on Ravi Riverfront with an official 4-year installment plan.",
+      keywords: "Royal Swiss City, Royal Swiss City Lahore, payment plan, location map, HRL Construction Pvt Ltd, Habib Rafiq Construction Pvt Ltd housing, residential plots Lahore, 3.5 marla, 5 marla, Ravi Riverfront",
       canonical: "https://royalswisscity.com/",
     },
     
     theCity: {
       title: "Master Plan & World-Class Amenities | Royal Swiss City Lahore",
       description: "Discover sustainable urban master planning at Royal Swiss City Lahore. Gated security, solar energy grid, civic infrastructure, and green community parks.",
-      keywords: "Master plan Royal Swiss City, amenities, solar grid, 40 feet roads, eco-friendly community, Ravi Riverfront, HRL Private Limited",
+      keywords: "Master plan Royal Swiss City, amenities, solar grid, 40 feet roads, eco-friendly community, Ravi Riverfront, HRL Construction Pvt Ltd",
       canonical: "https://royalswisscity.com/the-city",
     },
 
     developer: {
-      title: "Developer & Builder | HRL Private Limited (Habib Rafiq) - Royal Swiss City",
-      description: "Royal Swiss City is engineered and built by HRL Private Limited (Habib Rafiq). Over 60 years of national infrastructure leadership, engineering, and trust.",
-      keywords: "HRL Private Limited, Habib Rafiq, Shahid Rafiq, Sohaib Shahid Rafiq, Royal Swiss City developer, builder, EPC contractor Pakistan",
+      title: "Developer & Builder | HRL Construction Pvt Ltd (Habib Rafiq Construction Pvt Ltd) - Royal Swiss City",
+      description: "Royal Swiss City is engineered and built by HRL Construction Pvt Ltd (Habib Rafiq Construction Pvt Ltd). Over 60 years of national infrastructure leadership, engineering, and trust.",
+      keywords: "HRL Construction Pvt Ltd, Habib Rafiq Construction Pvt Ltd, Shahid Rafiq, Sohaib Shahid Rafiq, Royal Swiss City developer, builder, EPC contractor Pakistan",
       canonical: "https://royalswisscity.com/developer",
     },
 
@@ -163,15 +163,15 @@ export const SEO_CONFIG = {
 
     enquire: {
       title: "Enquire About Royal Swiss City Lahore Plots | Payment Plans & Investment Info",
-      description: "Contact Royal Swiss City for 3.5 Marla (PKR 1,850,000) and 5 Marla (PKR 2,500,000) residential plot inquiries. Official 4-year payment plans by HRL Private Limited.",
+      description: "Contact Royal Swiss City for 3.5 Marla (PKR 1,850,000) and 5 Marla (PKR 2,500,000) residential plot inquiries. Official 4-year payment plans by HRL Construction Pvt Ltd.",
       keywords: "Royal Swiss City inquiry, plot prices, payment plan, contact Royal Swiss City, 3.5 marla, 5 marla, booking information",
       canonical: "https://royalswisscity.com/enquire",
     },
 
     faq: {
-      title: "FAQ & Buyer Knowledge Base - Royal Swiss City Lahore | HRL Private Limited",
-      description: "Find verified answers to common questions about Royal Swiss City Lahore. Explore 3.5 Marla and 5 Marla residential plots, 4-year payment plans, legal approvals, and HRL Private Limited development milestones.",
-      keywords: "Royal Swiss City FAQ, frequently asked questions, royal swiss city plots, lahore gated community, property investment lahore, HRL Private Limited legacy, plot prices lahore",
+      title: "FAQ & Buyer Knowledge Base - Royal Swiss City Lahore | HRL Construction Pvt Ltd",
+      description: "Find verified answers to common questions about Royal Swiss City Lahore. Explore 3.5 Marla and 5 Marla residential plots, 4-year payment plans, legal approvals, and HRL Construction Pvt Ltd development milestones.",
+      keywords: "Royal Swiss City FAQ, frequently asked questions, royal swiss city plots, lahore gated community, property investment lahore, HRL Construction Pvt Ltd legacy, plot prices lahore",
       canonical: "https://royalswisscity.com/faq",
     },
   },
@@ -186,7 +186,7 @@ export const SEO_CONFIG = {
       "description": "Luxury gated community and master-planned residential development located on Ravi Riverfront, Lahore.",
       "provider": {
         "@type": "HomeAndConstructionBusiness",
-        "name": "HRL Private Limited",
+        "name": "HRL Construction Pvt Ltd",
         "url": "https://royalswisscity.com/developer"
       }
     },
@@ -194,14 +194,14 @@ export const SEO_CONFIG = {
     developer: {
       "@context": "https://schema.org",
       "@type": "HomeAndConstructionBusiness",
-      "name": "HRL Private Limited",
-      "alternateName": ["Habib Rafiq", "HRL Private Limited", "HRL Pvt. Ltd."],
+      "name": "HRL Construction Pvt Ltd",
+      "alternateName": ["Habib Rafiq Construction Pvt Ltd", "HRL Construction Pvt Ltd", "HRL Construction Pvt Ltd"],
       "parentOrganization": {
         "@type": "Organization",
-        "name": "Habib Rafiq Group"
+        "name": "Habib Rafiq Construction Pvt Ltd Group"
       },
       "url": "https://royalswisscity.com/developer",
-      "description": "HRL Private Limited is the official engineering and infrastructure developer behind Royal Swiss City Lahore.",
+      "description": "HRL Construction Pvt Ltd is the official engineering and infrastructure developer behind Royal Swiss City Lahore.",
       "founder": [
         {
           "@type": "Person",
@@ -270,7 +270,7 @@ export const SEO_CONFIG = {
       "description": "Discover sustainable urban master planning at Royal Swiss City Lahore. Gated security, solar energy grid, civic infrastructure, and green community parks.",
       "provider": {
         "@type": "HomeAndConstructionBusiness",
-        "name": "HRL Private Limited",
+        "name": "HRL Construction Pvt Ltd",
         "url": "https://royalswisscity.com/developer"
       }
     },
@@ -280,14 +280,14 @@ export const SEO_CONFIG = {
       "@type": "FAQPage",
       "name": "Royal Swiss City Lahore FAQs",
       "url": "https://royalswisscity.com/faq",
-      "description": "Verified answers to common questions about Royal Swiss City Lahore master plan, plot sizes, installment payment schedules, and HRL Private Limited.",
+      "description": "Verified answers to common questions about Royal Swiss City Lahore master plan, plot sizes, installment payment schedules, and HRL Construction Pvt Ltd.",
       "mainEntity": [
         {
           "@type": "Question",
           "name": "Who is the developer of Royal Swiss City Lahore?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Royal Swiss City Lahore is engineered and developed by HRL Private Limited (Habib Rafiq), with over 60 years of national mega-project infrastructure leadership."
+            "text": "Royal Swiss City Lahore is engineered and developed by HRL Construction Pvt Ltd (Habib Rafiq Construction Pvt Ltd), with over 60 years of national mega-project infrastructure leadership."
           }
         },
         {
@@ -315,7 +315,7 @@ export const SEO_CONFIG = {
       "name": "Royal Swiss City Lahore",
       "url": "https://royalswisscity.com",
       "logo": "https://royalswisscity.com/logo.webp",
-      "description": "Premium gated community on Ravi Riverfront, Lahore engineered by HRL Private Limited",
+      "description": "Premium gated community on Ravi Riverfront, Lahore engineered by HRL Construction Pvt Ltd",
       "sameAs": [
         "https://www.facebook.com/royalswisscity",
         "https://www.instagram.com/royalswisscity",
@@ -420,7 +420,7 @@ export const SEO_CONFIG = {
     googlebot: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
     bingbot: "index, follow",
     revisitAfter: "7 days",
-    author: "Habib Rafiq",
+    author: "Habib Rafiq Construction Pvt Ltd",
     rights: "© 2026 Royal Swiss City. All rights reserved.",
   },
 

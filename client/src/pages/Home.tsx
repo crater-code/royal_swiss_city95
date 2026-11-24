@@ -15,7 +15,7 @@ const SEO_KEYWORDS = {
   tertiary: "gated community lahore",
   quaternary: "residential area pakistan",
   quinary: "luxury housing lahore",
-  senary: "habib rafiq royal swiss city"
+  senary: "Habib Rafiq Construction Pvt Ltd royal swiss city"
 };
 const nav = ["HOME", "THE CITY", "PAYMENT PLAN", "LOCATION", "DEVELOPER", "ENQUIRE"];
 const navMobile = ["HOME", "THE CITY", "PAYMENT PLAN", "LOCATION", "DEVELOPER", "ENQUIRE"];

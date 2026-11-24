@@ -95,7 +95,7 @@ export default function PaymentPlan() {
     {
       step: "03",
       title: "Allocation",
-      desc: "Receive your official allocation certificate (PKR 277,500 for 3.5 Marla / PKR 375,000 for 5 Marla) under HRL Private Limited corporate governance.",
+      desc: "Receive your official allocation certificate (PKR 277,500 for 3.5 Marla / PKR 375,000 for 5 Marla) under HRL Construction Pvt Ltd corporate governance.",
     },
     {
       step: "04",
@@ -119,7 +119,7 @@ export default function PaymentPlan() {
     },
     {
       q: "Who is the official developer and builder for Royal Swiss City Lahore?",
-      a: "Royal Swiss City Lahore is exclusively developed and engineered by HRL Private Limited (Habib Rafiq), bringing over six decades of mega infrastructure excellence.",
+      a: "Royal Swiss City Lahore is exclusively developed and engineered by HRL Construction Pvt Ltd (Habib Rafiq Construction Pvt Ltd), bringing over six decades of mega infrastructure excellence.",
     },
     {
       q: "What are the development charges and extra location charges?",
@@ -233,7 +233,7 @@ export default function PaymentPlan() {
               fontWeight: 300,
             }}
           >
-            Engineered by <strong>HRL Private Limited</strong> on Lahore’s Ravi Riverfront. 
+            Engineered by <strong>HRL Construction Pvt Ltd</strong> on Lahore’s Ravi Riverfront. 
             Secure your future with flexible 3.5 to 4 year quarterly installment plans tailored for end-users and investors.
           </p>
 
@@ -313,7 +313,7 @@ export default function PaymentPlan() {
               Residential Plots (3.5 Marla & 5 Marla)
             </h2>
             <p style={{ color: "#666", fontSize: "15px", marginTop: "8px", maxWidth: "800px" }}>
-              Pre-launch booking prices on Lahore's Ravi Riverfront engineered by <strong>HRL Private Limited</strong> with 48 convenient monthly installments.
+              Pre-launch booking prices on Lahore's Ravi Riverfront engineered by <strong>HRL Construction Pvt Ltd</strong> with 48 convenient monthly installments.
             </p>
           </div>
 
@@ -544,7 +544,7 @@ export default function PaymentPlan() {
               Booking Process & Payment Guidelines
             </h2>
             <p style={{ color: "#666", fontSize: "15px", lineHeight: 1.6 }}>
-              Investing in Royal Swiss City is transparent and structured under standard corporate governance by HRL Private Limited. Follow these verified four steps.
+              Investing in Royal Swiss City is transparent and structured under standard corporate governance by HRL Construction Pvt Ltd. Follow these verified four steps.
             </p>
           </div>
 
@@ -627,8 +627,8 @@ export default function PaymentPlan() {
                 Important Security & Entity Verification Notice
               </h4>
               <p style={{ margin: 0, fontSize: "13px", color: "#555", lineHeight: 1.6 }}>
-                All payments, demand drafts, and pay orders must be issued exclusively to <strong>HRL Private Limited</strong>. 
-                Do not make cash payments to unaccredited representatives. Ensure you receive an official system-generated receipt containing HRL Private Limited corporate seal and verification barcode.
+                All payments, demand drafts, and pay orders must be issued exclusively to <strong>HRL Construction Pvt Ltd</strong>. 
+                Do not make cash payments to unaccredited representatives. Ensure you receive an official system-generated receipt containing HRL Construction Pvt Ltd corporate seal and verification barcode.
               </p>
             </div>
           </div>
@@ -742,7 +742,7 @@ export default function PaymentPlan() {
               Need a Custom Payment Schedule or Site Visit?
             </h3>
             <p style={{ color: "rgba(255, 255, 255, 0.8)", fontSize: "15px", lineHeight: 1.6, margin: "0 0 28px 0" }}>
-              Our senior property advisors from HRL Private Limited are available 7 days a week to review custom installment solutions, corner plot availability, and corporate bookings.
+              Our senior property advisors from HRL Construction Pvt Ltd are available 7 days a week to review custom installment solutions, corner plot availability, and corporate bookings.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "12px", justifyContent: "center" }}>
               <a
@@ -926,7 +926,7 @@ export default function PaymentPlan() {
                   Download Started!
                 </h4>
                 <p style={{ margin: "0 0 20px 0", fontSize: "14px", color: "#666", lineHeight: 1.6 }}>
-                  Thank you, <strong>{leadForm.name}</strong>. Your official Royal Swiss City payment schedule PDF is downloading. An HRL Private Limited representative will also share detailed allotment guidelines with you.
+                  Thank you, <strong>{leadForm.name}</strong>. Your official Royal Swiss City payment schedule PDF is downloading. An HRL Construction Pvt Ltd representative will also share detailed allotment guidelines with you.
                 </p>
                 <button
                   onClick={() => {

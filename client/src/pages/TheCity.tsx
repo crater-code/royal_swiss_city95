@@ -10,10 +10,10 @@ const nav = ["HOME", "THE CITY", "PAYMENT PLAN", "LOCATION", "DEVELOPER", "ENQUI
 const navMobile = ["HOME", "THE CITY", "PAYMENT PLAN", "LOCATION", "DEVELOPER", "ENQUIRE"];
 const footerLinks = ["Payment Plan", "Location", "The City", "Developer", "FAQ", "Enquire"];
 const footerDescriptions = {
-  "Payment Plan": "Official 4-year monthly installment schedule for residential plots engineered by HRL Private Limited.",
+  "Payment Plan": "Official 4-year monthly installment schedule for residential plots engineered by HRL Construction Pvt Ltd.",
   "Location": "Prime location on Ravi Riverfront, Lahore with direct connectivity to Lahore Ring Road, M-2 Motorway, and City Center.",
   "The City": "Discover sustainable master-planned community living with solar power, green canals, and world-class amenities at Royal Swiss City.",
-  "Developer": "Built by HRL Private Limited (Habib Rafiq) with over 60 years of national infrastructure leadership.",
+  "Developer": "Built by HRL Construction Pvt Ltd (Habib Rafiq Construction Pvt Ltd) with over 60 years of national infrastructure leadership.",
   "FAQ": "Frequently asked questions regarding plot bookings, balloting, installment plans, and project possession.",
   "Enquire": "Contact our official sales and site visit advisory team at 042-111-777-588."
 };
@@ -423,7 +423,7 @@ export default function TheCity() {
         </div>
         <div className="footer-contact">
           <b>Where life happens.</b>
-          <span>© 2026 ROYAL SWISS CITY · HRL PRIVATE LIMITED · PRIVACY POLICY · <a href="/sitemap.xml" style={{ color: "inherit", textDecoration: "none" }}>SITEMAP</a></span>
+          <span>© 2026 ROYAL SWISS CITY · HRL CONSTRUCTION PVT LTD · PRIVACY POLICY · <a href="/sitemap.xml" style={{ color: "inherit", textDecoration: "none" }}>SITEMAP</a></span>
         </div>
       </footer>
 

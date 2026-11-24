@@ -25,19 +25,19 @@ export function SiteFooter() {
     },
     {
       title: "Developer",
-      desc: "Royal Swiss City is engineered and built by HRL Private Limited (Habib Rafiq), bringing over 60 years of national mega-project EPC leadership.",
+      desc: "Royal Swiss City is engineered and built by HRL Construction Pvt Ltd (Habib Rafiq Construction Pvt Ltd), bringing over 60 years of national mega-project EPC leadership.",
       link: "/developer",
-      cta: "DISCOVER HRL PRIVATE LIMITED LEGACY →",
+      cta: "DISCOVER HRL CONSTRUCTION PVT LTD LEGACY →",
     },
     {
       title: "FAQ",
-      desc: "Browse verified answers to buyer questions regarding NOC status, plot allotment processes, possession timelines, and HRL Private Limited construction milestones.",
+      desc: "Browse verified answers to buyer questions regarding NOC status, plot allotment processes, possession timelines, and HRL Construction Pvt Ltd construction milestones.",
       link: "/faq",
       cta: "READ BUYER FAQ →",
     },
     {
       title: "Enquire",
-      desc: "Connect directly with the official HRL Private Limited sales desk for customized quotations, plot availability, site tour bookings, and dealership authorizations.",
+      desc: "Connect directly with the official HRL Construction Pvt Ltd sales desk for customized quotations, plot availability, site tour bookings, and dealership authorizations.",
       link: "/enquire",
       cta: "SUBMIT INQUIRY →",
     },
@@ -180,7 +180,7 @@ export function SiteFooter() {
       <div className="footer-contact">
         <b>Where life happens.</b>
         <span>
-          © 2026 ROYAL SWISS CITY LAHORE · DEVELOPED BY HRL PRIVATE LIMITED · ALL RIGHTS RESERVED
+          © 2026 ROYAL SWISS CITY LAHORE · DEVELOPED BY HRL CONSTRUCTION PVT LTD · ALL RIGHTS RESERVED
         </span>
       </div>
     </footer>
