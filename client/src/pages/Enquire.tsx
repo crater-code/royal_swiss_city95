@@ -18,6 +18,7 @@ import {
   AlertCircle
 } from "lucide-react";
 import { Breadcrumb } from "@/components/Breadcrumb";
+import { SiteHeader } from "@/components/SiteHeader";
 import { SEOHead } from "@/components/SEOHead";
 import { SEO_CONFIG } from "@/config/seo";
 import { animateFooter } from "@/utils/sectionAnimations";
@@ -204,20 +205,7 @@ export default function Enquire() {
       <Breadcrumb />
       
       {/* NAVBAR */}
-      <header className={`walk-header ${scrolled ? "is-scrolled" : ""}`}>
-        <button className="mobile-menu-trigger" aria-label="Menu" onClick={() => setMenuOpen(true)}>
-          <Menu size={22} strokeWidth={1.4} />
-        </button>
-        <nav className="desktop-links desktop-links--left">
-          {nav.slice(0, 3).map(item => <Anchor key={item} item={item} />)}
-        </nav>
-        <a className="centered-brand" href="/">
-          <Logo />
-        </a>
-        <nav className="desktop-links desktop-links--right">
-          {nav.slice(3).map(item => <Anchor key={item} item={item} />)}
-        </nav>
-      </header>
+      <SiteHeader scrolled={scrolled} />
 
       {/* HERO SECTION - MATCHING WEBSITE THEME */}
       <section 

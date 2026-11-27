@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { ChevronDown, Menu, X, Instagram, Facebook, Youtube } from "lucide-react";
 import { animateFooter } from "@/utils/sectionAnimations";
 import { Breadcrumb } from "@/components/Breadcrumb";
+import { SiteHeader } from "@/components/SiteHeader";
 import { SEOHead } from "@/components/SEOHead";
 import { SEO_CONFIG } from "@/config/seo";
 
@@ -122,12 +123,7 @@ export default function Developer() {
     {/* Breadcrumb Navigation */}
     <Breadcrumb />
     
-    <header className={`walk-header ${scrolled ? "is-scrolled" : ""}`}>
-      <button className="mobile-menu-trigger" aria-label="Menu" onClick={() => setMenuOpen(true)}><Menu size={22} strokeWidth={1.4} /></button>
-      <nav className="desktop-links desktop-links--left">{nav.slice(0, 3).map(item => <Anchor key={item} item={item} />)}</nav>
-      <a className="centered-brand" href="/"><Logo /></a>
-      <nav className="desktop-links desktop-links--right">{nav.slice(3).map(item => <Anchor key={item} item={item} />)}</nav>
-    </header>
+    <SiteHeader scrolled={scrolled} />
 
     <section id="home" className="walk-hero reveal-section">
       <img src={isMobileView ? img.heroMobile : img.heroDesktop} alt={"Built by HRL Construction Pvt Ltd (Habib Rafiq Construction Pvt Ltd)"} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }} loading="eager" />

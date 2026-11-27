@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { ChevronDown, ChevronRight, Menu, X, ArrowDown, Instagram, Facebook, Youtube, Leaf, Droplets, Recycle, Users } from "lucide-react";
 import { HeroCapsuleAnimation } from "@/components/HeroCapsuleAnimation";
 import { Breadcrumb } from "@/components/Breadcrumb";
+import { SiteHeader } from "@/components/SiteHeader";
 import { animateLegacySection, animateFooter } from "@/utils/sectionAnimations";
 import { SEOHead } from "@/components/SEOHead";
 import { SEO_CONFIG } from "@/config/seo";
@@ -169,7 +170,7 @@ export default function Home() {
     {/* Breadcrumb Navigation */}
     <Breadcrumb />
     
-    <header className={`walk-header ${scrolled ? "is-scrolled" : ""}`}><button className="mobile-menu-trigger" aria-label="Menu" onClick={() => setMenuOpen(true)}><Menu size={22} strokeWidth={1.4} /></button><nav className="desktop-links desktop-links--left">{nav.slice(0, 3).map(item => <Anchor key={item} item={item} />)}</nav><a className="centered-brand" href="/"><Logo /></a><nav className="desktop-links desktop-links--right">{nav.slice(3).map(item => <Anchor key={item} item={item} />)}</nav></header>
+    <SiteHeader scrolled={scrolled} />
     {/* Main H1 - Primary page topic for SEO */}
     <h1 style={{ position: "absolute", left: "-9999px", top: "-9999px", width: "1px", height: "1px", overflow: "hidden" }}>
       Royal Swiss City Lahore – Premium Riverfront Living

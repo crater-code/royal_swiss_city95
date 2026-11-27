@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Menu, X, ChevronDown, Instagram, Facebook, Youtube } from "lucide-react";
 import { animateFooter } from "@/utils/sectionAnimations";
 import { Breadcrumb } from "@/components/Breadcrumb";
+import { SiteHeader } from "@/components/SiteHeader";
 import { SEOHead } from "@/components/SEOHead";
 import { SEO_CONFIG } from "@/config/seo";
 
@@ -104,20 +105,7 @@ export default function TheCity() {
       <Breadcrumb />
       
       {/* HEADER / NAVBAR */}
-      <header className={`walk-header ${scrolled ? "is-scrolled" : ""}`}>
-        <button className="mobile-menu-trigger" aria-label="Menu" onClick={() => setMenuOpen(true)}>
-          <Menu size={22} strokeWidth={1.4} />
-        </button>
-        <nav className="desktop-links desktop-links--left">
-          {nav.slice(0, 3).map(item => <Anchor key={item} item={item} />)}
-        </nav>
-        <a className="centered-brand" href="/">
-          <Logo />
-        </a>
-        <nav className="desktop-links desktop-links--right">
-          {nav.slice(3).map(item => <Anchor key={item} item={item} />)}
-        </nav>
-      </header>
+      <SiteHeader scrolled={scrolled} />
 
       {/* CONTENT SECTIONS */}
       <div style={{ width: "100vw", height: "100vh", marginLeft: "calc(-50vw + 50%)", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", position: "relative" }}>

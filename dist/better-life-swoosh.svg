@@ -1,0 +1,11 @@
+<svg viewBox="0 0 320 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="betterLifeSwooshGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c59d53"/>
+      <stop offset="45%" stop-color="#e5a93c"/>
+      <stop offset="85%" stop-color="#fae09c"/>
+      <stop offset="100%" stop-color="#dfba73"/>
+    </linearGradient>
+  </defs>
+  <path d="M 4 10 C 60 3, 140 2, 210 6 C 250 9, 285 14, 310 22 C 280 16, 235 11, 180 8 C 110 5, 45 6, 4 14 Z" fill="url(#betterLifeSwooshGrad)"/>
+</svg>

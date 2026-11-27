@@ -2,6 +2,15 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowDown } from "lucide-react";
+import {
+  FleurDeLisOrnament,
+  BetterLifeSwoosh,
+  RudaVisionIcon,
+  QantaraCommercialIcon,
+  NatureLivingIcon,
+  SecureCommunityIcon,
+  InvestmentPotentialIcon,
+} from "./HeroSheetIcons";
 
 // Register GSAP plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -19,7 +28,7 @@ export function HeroCapsuleAnimation() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    preloadImage("/where-life-unfolds.jpg");
+    preloadImage("/where-opportunity-bg-clear.png");
     
     const checkMobile = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -320,11 +329,23 @@ export function HeroCapsuleAnimation() {
             height: "18vh",
             borderRadius: "999px",
             boxShadow: "0 20px 60px rgba(0,0,0,0.3)",
-            backgroundImage: "url(/desktop_city_aerial.webp)",
+            backgroundImage: "url(/where-opportunity-bg-clear.png)",
             backgroundSize: "cover",
-            backgroundPosition: "center 0.15%",
+            backgroundPosition: "center top",
           }}
         >
+          {/* Overlay behind text and in front of picture for maximum readability */}
+          <div
+            className="art-overlay-desktop"
+            style={{
+              position: "absolute",
+              inset: 0,
+              background: "linear-gradient(180deg, rgba(5, 17, 38, 0.72) 0%, rgba(7, 23, 50, 0.60) 48%, rgba(8, 26, 56, 0.28) 78%, rgba(0, 0, 0, 0.08) 100%)",
+              zIndex: 1,
+              pointerEvents: "none",
+            }}
+          />
+
           <div
             className="art-content-desktop"
             style={{
@@ -333,93 +354,174 @@ export function HeroCapsuleAnimation() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              color: "#111",
               position: "relative",
               zIndex: 2,
             }}
           >
             <div
               style={{
-                maxWidth: "920px",
+                maxWidth: "1160px",
                 margin: "0 auto",
                 padding: "20px 30px",
                 textAlign: "center",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
+                width: "100%",
               }}
             >
+              {/* Top Golden Ornament */}
+              <FleurDeLisOrnament size={18} />
+
+              {/* Kicker */}
+              <div
+                style={{
+                  fontSize: "11px",
+                  letterSpacing: "4px",
+                  textTransform: "uppercase",
+                  color: "#dfba73",
+                  fontWeight: 700,
+                  marginBottom: "12px",
+                }}
+              >
+                ROYAL SWISS CITY
+              </div>
+
+              {/* Main Headline */}
               <h2
                 className="hero-capsule-heading"
                 style={{
-                  fontSize: "calc(clamp(1.5rem, 3vw, 2rem) + 15px)",
+                  fontSize: "clamp(26px, 3.8vw, 50px)",
                   fontWeight: 400,
-                  letterSpacing: "-0.06em",
-                  marginBottom: "22px",
+                  letterSpacing: "-0.02em",
+                  marginBottom: "16px",
                   color: "#ffffff",
-                  lineHeight: 1.1,
+                  lineHeight: 1.15,
                   fontFamily: '"Cormorant Garamond", Georgia, serif !important',
+                  textAlign: "center",
                 }}
               >
-                Where{" "}
+                Where Opportunity Meets a{" "}
                 <span
                   style={{
                     position: "relative",
                     display: "inline-block",
                     fontStyle: "italic",
-                    color: "#b2996a",
-                    fontSize: "calc(1em + 30px)",
-                    verticalAlign: "baseline",
-                    fontFamily: '"Cormorant Garamond", Georgia, serif !important',
+                    color: "#e5a93c",
+                    fontFamily: '"Cormorant Garamond", "Playfair Display", Georgia, serif !important',
+                    fontWeight: 400,
                   }}
                 >
-                  Life
-                  <svg
-                    viewBox="0 0 900 180"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    style={{
-                      position: "absolute",
-                      left: 0,
-                      bottom: "calc(-0.22em + 8px)",
-                      width: "142%",
-                      height: "0.32em",
-                      pointerEvents: "none",
-                      overflow: "visible",
-                    }}
-                  >
-                    <path
-                      d="M 20 125 C 145 46, 278 16, 410 37 C 540 58, 610 98, 720 108 C 790 114, 850 90, 885 55 C 850 100, 788 126, 720 122 C 608 112, 538 72, 410 53 C 278 34, 145 64, 20 125 Z"
-                      fill="#b2996a"
-                    />
-                  </svg>
-                </span>{" "}
-                Happens
+                  Better Life.
+                  <BetterLifeSwoosh />
+                </span>
               </h2>
+
+              {/* Subtitle 1: RUDA Vision */}
               <p
                 style={{
-                  fontSize: "clamp(0.72rem, 0.95vw, 0.86rem)",
-                  lineHeight: 1.6,
-                  color: "#b2996a",
-                  marginTop: "12px",
-                  marginBottom: "12px",
-                  maxWidth: "920px",
-                  width: "100%",
-                  marginLeft: "auto",
-                  marginRight: "auto",
+                  fontSize: "clamp(13px, 1.3vw, 16.5px)",
+                  lineHeight: 1.5,
+                  color: "#ffffff",
+                  marginTop: "6px",
+                  marginBottom: "8px",
+                  maxWidth: "900px",
                   textAlign: "center",
+                  fontWeight: 400,
                 }}
               >
-                <span style={{ display: "block", whiteSpace: "nowrap" }}>
-                  Royal Swiss City brings a different kind of presence to Lahore's next horizon.
-                </span>
-                <span style={{ display: "block", whiteSpace: "nowrap" }}>
-                  Set within the Ravi Riverfront vision, it pairs a secure, planned setting with generous landscapes,
-                </span>
-                <span style={{ display: "block", whiteSpace: "nowrap" }}>
-                  carefully considered streets, and the everyday ease of a complete community.
-                </span>
+                A premium, future-ready community in Lahore under the visionary{" "}
+                <strong style={{ color: "#e5a93c", fontWeight: 700 }}>RUDA</strong> master plan.
               </p>
+
+              {/* Subtitle 2: Qantara Commercial */}
+              <p
+                style={{
+                  fontSize: "clamp(11.5px, 1.05vw, 14px)",
+                  lineHeight: 1.6,
+                  color: "rgba(255, 255, 255, 0.88)",
+                  marginBottom: "28px",
+                  maxWidth: "840px",
+                  textAlign: "center",
+                  fontWeight: 300,
+                }}
+              >
+                Strategically positioned to be part of{" "}
+                <strong style={{ color: "#e5a93c", fontWeight: 700 }}>Qantara Commercial</strong>, Royal Swiss City brings together modern living, business growth and long-term value — in one exceptional destination.
+              </p>
+
+              {/* 5 Feature Pillars Row */}
+              <div
+                className="sheet-pillars-desktop"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: "100%",
+                  maxWidth: "1000px",
+                  margin: "0 auto",
+                }}
+              >
+                {[
+                  { IconComponent: RudaVisionIcon, line1: "PART OF", line2: "RUDA VISION" },
+                  { IconComponent: QantaraCommercialIcon, line1: "FUTURE", line2: "QANTARA COMMERCIAL" },
+                  { IconComponent: NatureLivingIcon, line1: "NATURE-INSPIRED", line2: "LIVING" },
+                  { IconComponent: SecureCommunityIcon, line1: "A SECURE", line2: "COMMUNITY" },
+                  { IconComponent: InvestmentPotentialIcon, line1: "HIGH", line2: "INVESTMENT POTENTIAL" },
+                ].map((pillar, idx, arr) => (
+                  <div key={pillar.line2} style={{ display: "flex", alignItems: "center", flex: 1 }}>
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        textAlign: "center",
+                        flex: 1,
+                        padding: "0 8px",
+                      }}
+                    >
+                      <div style={{ marginBottom: "8px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                        <pillar.IconComponent size={32} />
+                      </div>
+                      <span
+                        style={{
+                          fontSize: "9.5px",
+                          letterSpacing: "1.2px",
+                          color: "rgba(255, 255, 255, 0.72)",
+                          textTransform: "uppercase",
+                          fontWeight: 600,
+                          lineHeight: 1.3,
+                        }}
+                      >
+                        {pillar.line1}
+                      </span>
+                      <span
+                        style={{
+                          fontSize: "10px",
+                          letterSpacing: "1.2px",
+                          color: "#ffffff",
+                          textTransform: "uppercase",
+                          fontWeight: 700,
+                          lineHeight: 1.3,
+                          marginTop: "2px",
+                        }}
+                      >
+                        {pillar.line2}
+                      </span>
+                    </div>
+                    {idx < arr.length - 1 && (
+                      <div
+                        style={{
+                          width: "1px",
+                          height: "34px",
+                          background: "linear-gradient(180deg, rgba(223, 186, 115, 0.1) 0%, rgba(223, 186, 115, 0.5) 50%, rgba(223, 186, 115, 0.1) 100%)",
+                          flexShrink: 0,
+                        }}
+                      />
+                    )}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -440,11 +542,23 @@ export function HeroCapsuleAnimation() {
             height: "65vh",
             borderRadius: "200px 200px 0px 0px",
             boxShadow: "0 20px 60px rgba(0,0,0,0.3)",
-            backgroundImage: "url(/mobile_city_aerial.webp)",
+            backgroundImage: "url(/where-opportunity-bg-clear.png)",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
+          {/* Overlay behind text and in front of picture for maximum readability */}
+          <div
+            className="art-overlay-mobile"
+            style={{
+              position: "absolute",
+              inset: 0,
+              background: "linear-gradient(180deg, rgba(5, 17, 38, 0.78) 0%, rgba(7, 23, 50, 0.65) 52%, rgba(8, 26, 56, 0.32) 80%, rgba(0, 0, 0, 0.12) 100%)",
+              zIndex: 1,
+              pointerEvents: "none",
+            }}
+          />
+
           <div
             className="art-content-mobile"
             style={{
@@ -454,9 +568,6 @@ export function HeroCapsuleAnimation() {
               alignItems: "center",
               justifyContent: "center",
               textAlign: "center",
-              color: "#111",
-              opacity: 1,
-              transform: "translateY(0)",
               position: "relative",
               zIndex: 3,
             }}
@@ -465,71 +576,145 @@ export function HeroCapsuleAnimation() {
               className="art-content-inner"
               style={{
                 width: "100%",
-                padding: "34px 22px",
-                paddingTop: "54px",
+                padding: "24px 16px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
               }}
             >
+              {/* Top Golden Ornament */}
+              <FleurDeLisOrnament size={15} />
+
+              {/* Kicker */}
+              <div
+                style={{
+                  fontSize: "9.5px",
+                  letterSpacing: "3px",
+                  textTransform: "uppercase",
+                  color: "#dfba73",
+                  fontWeight: 700,
+                  marginBottom: "8px",
+                }}
+              >
+                ROYAL SWISS CITY
+              </div>
+
+              {/* Headline */}
               <h2
                 className="hero-capsule-heading"
                 style={{
-                  fontSize: "clamp(1.75rem, 7vw, 2.75rem)",
-                  marginBottom: "24px",
+                  fontSize: "clamp(20px, 5.5vw, 30px)",
+                  marginBottom: "12px",
                   color: "#ffffff",
-                  letterSpacing: "-0.04em",
+                  lineHeight: 1.2,
+                  letterSpacing: "-0.03em",
                   fontFamily: '"Cormorant Garamond", Georgia, serif !important',
-                  fontWeight: 300,
+                  fontWeight: 400,
                 }}
               >
-                Where{" "}
+                Where Opportunity Meets a{" "}
                 <span
                   style={{
                     position: "relative",
                     display: "inline-block",
                     fontStyle: "italic",
-                    color: "#b2996a",
-                    fontSize: "calc(1em + clamp(14px, 3.5vw, 24px))",
-                    verticalAlign: "baseline",
-                    fontFamily: '"Cormorant Garamond", Georgia, serif !important',
+                    color: "#e5a93c",
+                    fontFamily: '"Cormorant Garamond", "Playfair Display", Georgia, serif !important',
                   }}
                 >
-                  Life
-                  <svg
-                    viewBox="0 0 900 180"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    style={{
-                      position: "absolute",
-                      left: 0,
-                      bottom: "calc(-0.22em + 8px)",
-                      width: "142%",
-                      height: "0.32em",
-                      pointerEvents: "none",
-                      overflow: "visible",
-                    }}
-                  >
-                    <path
-                      d="M 20 125 C 145 46, 278 16, 410 37 C 540 58, 610 98, 720 108 C 790 114, 850 90, 885 55 C 850 100, 788 126, 720 122 C 608 112, 538 72, 410 53 C 278 34, 145 64, 20 125 Z"
-                      fill="#b2996a"
-                    />
-                  </svg>
-                </span>{" "}
-                Happens
+                  Better Life.
+                  <BetterLifeSwoosh />
+                </span>
               </h2>
+
+              {/* Subtitles */}
               <p
                 style={{
-                  fontSize: "13px",
-                  lineHeight: 1.65,
-                  maxWidth: "100%",
-                  color: "#b2996a",
-                  marginTop: "14px",
+                  fontSize: "12.5px",
+                  lineHeight: 1.5,
+                  color: "#ffffff",
+                  marginTop: "6px",
+                  marginBottom: "6px",
+                  fontWeight: 400,
                 }}
               >
-                Royal Swiss City brings a different kind of presence to
-                Lahore's next horizon. Set within the Ravi Riverfront vision,
-                it pairs a secure, planned setting with generous landscapes,
-                carefully considered streets, and the everyday ease of a
-                complete community.
+                A premium, future-ready community in Lahore under the visionary{" "}
+                <strong style={{ color: "#e5a93c", fontWeight: 700 }}>RUDA</strong> master plan.
               </p>
+              <p
+                style={{
+                  fontSize: "11px",
+                  lineHeight: 1.5,
+                  color: "rgba(255, 255, 255, 0.85)",
+                  marginBottom: "18px",
+                  fontWeight: 300,
+                  maxWidth: "92%",
+                }}
+              >
+                Strategically positioned to be part of{" "}
+                <strong style={{ color: "#e5a93c", fontWeight: 700 }}>Qantara Commercial</strong>, Royal Swiss City brings together modern living, business growth and long-term value — in one exceptional destination.
+              </p>
+
+              {/* 5 Feature Pillars in 2-row clean flex */}
+              <div
+                style={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  justifyContent: "center",
+                  gap: "12px 8px",
+                  width: "100%",
+                  maxWidth: "360px",
+                }}
+              >
+                {[
+                  { IconComponent: RudaVisionIcon, line1: "PART OF", line2: "RUDA VISION" },
+                  { IconComponent: QantaraCommercialIcon, line1: "FUTURE", line2: "QANTARA COMMERCIAL" },
+                  { IconComponent: NatureLivingIcon, line1: "NATURE-INSPIRED", line2: "LIVING" },
+                  { IconComponent: SecureCommunityIcon, line1: "A SECURE", line2: "COMMUNITY" },
+                  { IconComponent: InvestmentPotentialIcon, line1: "HIGH", line2: "INVESTMENT POTENTIAL" },
+                ].map((pillar) => (
+                  <div
+                    key={pillar.line2}
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      textAlign: "center",
+                      width: "30%",
+                      minWidth: "90px",
+                    }}
+                  >
+                    <div style={{ marginBottom: "4px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                      <pillar.IconComponent size={26} />
+                    </div>
+                    <span
+                      style={{
+                        fontSize: "8.5px",
+                        letterSpacing: "0.8px",
+                        color: "rgba(255, 255, 255, 0.72)",
+                        textTransform: "uppercase",
+                        fontWeight: 600,
+                        lineHeight: 1.2,
+                      }}
+                    >
+                      {pillar.line1}
+                    </span>
+                    <span
+                      style={{
+                        fontSize: "9px",
+                        letterSpacing: "0.8px",
+                        color: "#ffffff",
+                        textTransform: "uppercase",
+                        fontWeight: 700,
+                        lineHeight: 1.2,
+                        marginTop: "1px",
+                      }}
+                    >
+                      {pillar.line2}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
